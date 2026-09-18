@@ -1,4 +1,9 @@
+/* RGB triplets for the hero wash. Declared here as well as inline on
+   .unpri-pshow in index.html, so the gradient still resolves if a build ships
+   without the inline copy. Keep in sync with --up-soft / --up-surface. */
 .unpri-pshow {
+  --up-soft-rgb: 243, 234, 248;
+  --up-surface-rgb: 250, 247, 252;
   color: var(--up-ink, #201628);
   background: var(--up-surface, #faf7fc);
 }
@@ -8,6 +13,10 @@
 .unpri-pshow a {
   text-decoration: none;
 }
+/* Light hero: a pale purple wash sits over the photograph, heaviest on the
+   left where the copy is and thinning out to the right. The rgba() stops use
+   --up-soft-rgb / --up-surface-rgb, the RGB triplets declared alongside the
+   palette on .unpri-pshow, so the wash still follows the programme colour. */
 .unpri-hero {
   position: relative;
   min-height: 560px;
@@ -17,6 +26,11 @@
   color: var(--up-ink, #201628);
   background: var(--up-soft, #f3eaf8);
 }
+/* No transform here. .unpri-hero is overflow:visible further down (so the
+   info card can hang past its bottom edge), which means a scaled background
+   is NOT clipped - it spilled a few pixels past the hero on every side, and
+   that spill was the strip of bare photo showing along the edges. Background
+   and overlay now occupy exactly the same box. */
 .unpri-hero__bg {
   position: absolute;
   inset: 0;
@@ -24,12 +38,18 @@
   background-size: cover;
   background-position: center;
   opacity: 1;
-  transform: scale(1.015);
 }
 .unpri-hero__overlay {
   position: absolute;
-  inset: -2px;
+  /* Same box as .unpri-hero__bg above, which is what guarantees full
+     coverage - the hero does not clip, so this must not overhang either. */
+  inset: 0;
   z-index: 1;
+  /* Three stacked layers, painted front to back:
+     1. the horizontal wash - opaque behind the copy, clearing to the right
+     2. a vertical wash so the top and bottom edges never show raw photo
+     3. a flat veil across the entire frame, so no pixel is left untouched
+        (this is what stops the image peeking through at the far edges) */
   background: linear-gradient(
       90deg,
       rgba(var(--up-soft-rgb, 243, 234, 248), 0.97) 0%,
@@ -730,6 +750,24 @@
     justify-content: flex-start;
   }
 }
+/* Below roughly a tablet the copy stops sitting in the left third of the hero
+   and spreads across the photo, so the left-to-right wash no longer lines up
+   with the text. From here down it becomes a vertical white wash instead:
+   plain white rather than the lavender tint, and kept see-through so the
+   photograph still reads underneath the dark purple type. */
+@media (max-width: 991px) {
+  .unpri-hero__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.42) 0%,
+      rgba(255, 255, 255, 0.7) 32%,
+      rgba(255, 255, 255, 0.78) 66%,
+      rgba(255, 255, 255, 0.82) 100%
+    );
+    opacity: 1;
+  }
+}
+
 @media (max-width: 640px) {
   .unpri-hero {
     min-height: 430px;
@@ -737,9 +775,17 @@
   .unpri-hero__wrap {
     padding: 68px 0 58px;
   }
+  /* Slightly heavier than the tablet wash above, since the copy runs edge
+     to edge here. Still white, still see-through. */
   .unpri-hero__overlay {
-    background: var(--up-deep, #240437);
-    opacity: 0.78;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.76) 30%,
+      rgba(255, 255, 255, 0.84) 64%,
+      rgba(255, 255, 255, 0.88) 100%
+    );
+    opacity: 1;
   }
   .unpri-title {
     font-size: 34px;
