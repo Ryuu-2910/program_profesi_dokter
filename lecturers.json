@@ -1,0 +1,807 @@
+{
+  "sectionTitle": "Pimpinan & Dosen",
+  "title": "Pimpinan & Dosen",
+  "intro": "",
+  "head": {
+    "name": "Dr. dr. Fioni, M.Biomed., Sp.KKLP.",
+    "role": "Ketua Program Studi",
+    "photo": "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/1488/1488-large.jpeg"
+  },
+  "sectionLabel": "Dosen Tetap",
+  "lecturers": [
+    {
+      "name": "dr. Syahrul Ramadan Rambe, M.Ked(Surg)., Sp.Ort.Tr.",
+      "gelarAkademik": "dr. - M.Ked(Surg)., Sp.Ort.Tr.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "SRR",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1385",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/3497/3497-large.jpeg"
+      ]
+    },
+    {
+      "name": "Dr. dr. Olivia Des Vinca Albahana Napitupulu, M.Ked (An)., Sp.An-TI., Subsp.TI (K).",
+      "gelarAkademik": "Dr. dr. - M.Ked (An)., Sp.An-TI., Subsp.TI (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "ODV",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1330",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2762/2762-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Arna Fransisca Millyanti Purba, Sp.An-TI., M.K.M.",
+      "gelarAkademik": "dr. - Sp.An-TI., M.K.M.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "AFM",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1332",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2862/2862-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Chrismas Gideon Bangun, M.Ked (An)., Sp.An-TI., Subsp.NA (K).",
+      "gelarAkademik": "dr. - M.Ked (An)., Sp.An-TI., Subsp.NA (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "CGB",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1333",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2848/2848-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Dewi Asih, Sp.Rad R.A. (K).",
+      "gelarAkademik": "dr. - Sp.Rad R.A. (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "DA",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1334",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2728/2728-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Nyi Raden Siti Vissy Puspa Dewi Muharam, Sp.Rad R.A. (K).",
+      "gelarAkademik": "dr. - Sp.Rad R.A. (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "NRS",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1335",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2768/2768-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Deni Setiawan, Sp.Rad.",
+      "gelarAkademik": "dr. - Sp.Rad.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "DS",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1336",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2908/2908-large.jpg"
+      ]
+    },
+    {
+      "name": "Dr. dr. Inda Kania Meilani, Sp.Rad (K) TR., (K).",
+      "gelarAkademik": "Dr. dr. - Sp.Rad (K) TR., (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "IKM",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1337",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2693/2693-large.jpg"
+    ]
+    },
+    {
+      "name": "Dr. dr. Irza Haicha Pratama, M.K.M.",
+      "gelarAkademik": "Dr. dr. - M.K.M.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Lektor",
+      "initials": "IHP",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1338",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2111/2111-large.JPG"
+      ]
+    },
+    {
+      "name": "dr. Rudolf Alponso, M.Med., M.Biomed.",
+      "gelarAkademik": "dr. - M.Med., M.Biomed.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "RA",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1339",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2404/2404-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Adi Raja Brando Lubis, M.Kes., Sp.KKLP.",
+      "gelarAkademik": "dr. - M.Kes., Sp.KKLP.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "ARB",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1340",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2719/2719-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Hesti Despita Siregar, M.K.M., Sp.KKLP.",
+      "gelarAkademik": "dr. - M.K.M., Sp.KKLP.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "HDS",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1341",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2752/2752-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Anita Merry Cisca, M.KM.",
+      "gelarAkademik": "dr. - M.KM.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "AMC",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1342",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2330/2330-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Rizki Arviandi, M.ked (For)., Sp.F.",
+      "gelarAkademik": "dr. - M.ked (For)., Sp.F.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "RA",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1343",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2761/2761-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Herlin Novita Pane, M.Ked (DV)., Sp.DVE., FINSDV.",
+      "gelarAkademik": "dr. - M.Ked (DV)., Sp.DVE., FINSDV.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "HNP",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1322",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/1247/1247-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Deza Yumardika, M.Ked., Sp.M Subsp. VR.",
+      "gelarAkademik": "dr. - M.Ked., Sp.M Subsp. VR.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "DY",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1324",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2891/2891-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Laksono Bagus Sasmito, Sp.M (K).",
+      "gelarAkademik": "dr. - Sp.M (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "LBS",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1326",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2888/2888-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Heri Purwoko, Sp.M (K).",
+      "gelarAkademik": "dr. - Sp.M (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "HP",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1327",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2861/2861-large.jpg"
+      ]
+    },
+    {
+      "name": "Prof. Dr. dr. Delfitri Munir, Sp.THT-KL(K).",
+      "gelarAkademik": "Prof. Dr. dr. - Sp.THT-KL(K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Profesor",
+      "initials": "DM",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1328",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2886/2886-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Sabar Hamonangan Victorianus Napitu, Sp.An-TI., Subsp.TI (K).",
+      "gelarAkademik": "dr. - Sp.An-TI., Subsp.TI (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "SHV",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1331",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2869/2869-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Eddy Anggiat, Sp.O.G.",
+      "gelarAkademik": "dr. - Sp.O.G.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "EA",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1384",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/3496/3496-large.jpeg"
+      ]
+    },
+    {
+      "name": "Dr. dr. Todung Donald Aposan Silalahi, Sp.PD-KKV., FINASIM., FICA., FAPSIC.",
+      "gelarAkademik": "Dr. dr. - Sp.PD-KKV., FINASIM., FICA., FAPSIC.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "TDA",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1303",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/3068/3068-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Ferdinando Motuho Baeha, Sp.PD.",
+      "gelarAkademik": "dr. - Sp.PD.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "FMB",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1304",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2918/2918-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Haryadi, Sp.JP (K) EP., FIHA., FAsCC., (K).",
+      "gelarAkademik": "dr. - Sp.JP (K) EP., FIHA., FAsCC., (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "H",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1305",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2860/2860-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Denny Suwanto, Sp.J.P.",
+      "gelarAkademik": "dr. - Sp.J.P.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "DS",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1306",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2911/2911-large.jpg"
+      ]
+    },
+    {
+      "name": "Dr. dr. Faskanita Maristella Nadapdap, Sp.P.",
+      "gelarAkademik": "Dr. dr. - Sp.P.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "FMN",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1307",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2543/2543-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Dhini Sylvana, M.Ked (P.D.)., Sp.P.D.",
+      "gelarAkademik": "dr. - M.Ked (P.D.)., Sp.P.D.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "DS",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1308",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2636/2636-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Muhammad Fauzi Nasution, Sp.BTKV(K).",
+      "gelarAkademik": "dr. - Sp.BTKV(K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "MFN",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1309",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2865/2865-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Syahroni Ibnu, Sp. BTKV(K).",
+      "gelarAkademik": "dr. - Sp. BTKV(K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "SI",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1311",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/653/653-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Ari Rahman Iskandar, Sp.B.Subsp.Ped.(K).",
+      "gelarAkademik": "dr. - Sp.B.Subsp.Ped.(K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "ARI",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1313",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2867/2867-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Riri Virzan Putri, M.Ked (Ped)., Sp.A.",
+      "gelarAkademik": "dr. - M.Ked (Ped)., Sp.A.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "RVP",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1314",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2778/2778-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Monalisa Elizabeth, M.Ked (Ped)., Sp.A.",
+      "gelarAkademik": "dr. - M.Ked (Ped)., Sp.A.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "ME",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1315",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2635/2635-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Trishna, M.Ked (OG)., Sp.O.G.",
+      "gelarAkademik": "dr. - M.Ked (OG)., Sp.O.G.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "T",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1316",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2760/2760-large.jpeg"
+      ]
+    },
+    {
+      "name": "Dr. dr. Mangatas Silaen, Sp.OG., M.K.M.",
+      "gelarAkademik": "Dr. dr. - Sp.OG., M.K.M.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Lektor",
+      "initials": "MS",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1317",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/1232/1232-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Lili Kuswani, Sp.OG.",
+      "gelarAkademik": "dr. - Sp.OG.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "LK",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1318",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2672/2672-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Setia Budi Tarigan, Sp.S.",
+      "gelarAkademik": "dr. - Sp.S.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Lektor",
+      "initials": "SBT",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1319",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/649/649-large.JPG"
+      ]
+    },
+    {
+      "name": "dr. Hendy Million, Sp.N.",
+      "gelarAkademik": "dr. - Sp.N.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "HM",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1320",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2003/2003-large.jpg"
+      ]
+    },
+    {
+      "name": "Dr. dr. Sindy Boru Sembiring, Sp.M Subsp. VR.",
+      "gelarAkademik": "Dr. dr. - Sp.M Subsp. VR.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "SBS",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1325",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2889/2889-large.JPG"
+      ]
+    },
+    {
+      "name": "Dr. dr. Djohan, M.Biomed.",
+      "gelarAkademik": "Dr. dr. - M.Biomed.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "D",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1321",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2217/2217-large.jpg"
+      ]
+    },
+    {
+      "name": "Dr. dr. Dewi Sartika, M.Ked (DV)., Sp.DVE",
+      "gelarAkademik": "Dr. dr. - M.Ked (DV)., Sp.DVE",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "DS",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1323",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2707/2707-large.jpeg"
+      ]
+    },
+    {
+      "name": "Dr. dr. Boyke Marthin Simbolon, M.Ked (An)., Sp.An-TI., Subsp.MN (K).",
+      "gelarAkademik": "Dr. dr. - M.Ked (An)., Sp.An-TI., Subsp.MN (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Lektor Kepala",
+      "initials": "BMS",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1329",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/960/960-large.JPG"
+      ]
+    },
+    {
+      "name": "dr. Erwin Sopacua, Sp.PD.",
+      "gelarAkademik": "dr. - Sp.PD.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "ES",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/110",
+      "photos": [
+        "https://unprimdn.ac.id/images/missing-large.jpg"
+      ]
+    },
+    {
+      "name": "Dr. dr. Dewi Fibrini, Sp.BP-RE(K).",
+      "gelarAkademik": "Dr. dr. - Sp.BP-RE(K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Lektor",
+      "initials": "DF",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/124",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/1795/1795-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Tri Adi Mylano, Sp.Jp (K).",
+      "gelarAkademik": "dr. - Sp.Jp (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "TAM",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/123",
+      "photos": [
+        "https://unprimdn.ac.id/images/missing-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Khainir Akbar, Sp.A.",
+      "gelarAkademik": "dr. - Sp.A.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "KA",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/594",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/1780/1780-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Cut Elvira Novita, Sp.THT-KL.",
+      "gelarAkademik": "dr. - Sp.THT-KL.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "CEN",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/128",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/1444/1444-large.JPG"
+      ]
+    },
+    {
+      "name": "Dr. dr. Muhammad Chairul, M.Ked (Neurosurg)., Sp.B.",
+      "gelarAkademik": "Dr. dr. - M.Ked (Neurosurg)., Sp.B.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "MC",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/114",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/1554/1554-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Adhayani Lubis, Sp.K.J.",
+      "gelarAkademik": "dr. - Sp.K.J.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Lektor",
+      "initials": "AL",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/119",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/1555/1555-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Andrico Napolin Lumban Tobing, Sp.JP (K).",
+      "gelarAkademik": "dr. - Sp.JP (K).",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "ANL",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/585",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2074/2074-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Fahrul Azmi Tanjung, Sp.A.",
+      "gelarAkademik": "dr. - Sp.A.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "FAT",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/590",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2022/2022-large.jpg"
+      ]
+    },
+    {
+      "name": "Dr. dr. Oliviti Natali, M.Ked (DV.), Sp.DVE., FINSDV.",
+      "gelarAkademik": "Dr. dr. - M.Ked (DV.), Sp.DVE., FINSDV.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Lektor",
+      "initials": "ON",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/597",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/651/651-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Widya Pasca Amir, Sp.KK.",
+      "gelarAkademik": "dr. - Sp.KK.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "WPA",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/601",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2021/2021-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Yeni Puspawani, Sp.B.",
+      "gelarAkademik": "dr. - Sp.B.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "YP",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/602",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/1480/1480-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Andika Zayani Tambunan, M.Ked (OR - HNS)., Sp.T.H.T.K.I.",
+      "gelarAkademik": "dr. - M.Ked (OR - HNS)., Sp.T.H.T.K.I.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "AZT",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/784",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2608/2608-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Taufik Delfian, M.Ked (Cardio)., Sp.,J.P.",
+      "gelarAkademik": "dr. - M.Ked (Cardio)., Sp.,J.P.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "TD",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/795",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2613/2613-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Widyaningsih Oentari, M.Ked (D.V.)., Sp.D.V",
+      "gelarAkademik": "dr. - M.Ked (D.V.)., Sp.D.V",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "WO",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/836",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2500/2500-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Yensuari, Sp.PD-KEMD.",
+      "gelarAkademik": "dr. - Sp.PD-KEMD.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "Y",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/840",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2495/2495-large.jpeg"
+      ]
+    },
+    {
+      "name": "dr. Herlina Yani, M.Ked (P.D.)., Sp.PD-KR.",
+      "gelarAkademik": "dr. - M.Ked (P.D.)., Sp.PD-KR.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "HY",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/846",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2444/2444-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Rudi Chandra, M.Ked (D.V.)., Sp.D.V.",
+      "gelarAkademik": "dr. - M.Ked (D.V.)., Sp.D.V.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Lektor",
+      "initials": "RC",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/848",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2319/2319-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Jeri Yuliansyah, Sp.B.",
+      "gelarAkademik": "dr. - Sp.B.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Tenaga Pengajar",
+      "initials": "JY",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/977",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2609/2609-large.jpg"
+      ]
+    },
+    {
+      "name": "dr. Putri Handayani, M.Ked (P.D)., Sp.P.D.",
+      "gelarAkademik": "dr. - M.Ked (P.D)., Sp.P.D.",
+      "sertifikasi": "",
+      "bidangIlmu": "",
+      "fokusKeahlian": "",
+      "jabatanAkademik": "Asisten Ahli",
+      "initials": "PH",
+      "href": "https://unprimdn.ac.id/id/permanent_lecturers/1098",
+      "photos": [
+        "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/2817/2817-large.jpeg"
+      ]
+    }
+  ],
+  "placeholder": "Coming Soon"
+}

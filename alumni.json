@@ -1,0 +1,74 @@
+{
+  "sectionTitle": "Alumni",
+
+  "video": {
+    "title": "Cerita Alumni",
+    "src": "",
+    "poster": ""
+  },
+
+  "profil": {
+    "title": "Profil Alumni",
+    "intro": "",
+    "items": [
+      {
+        "photo": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80",
+        "name": "dr. Contoh Nama Alumni",
+        "role": "Angkatan 2018",
+        "details": [
+          { "label": "Tempat Kerja", "value": "RSU Royal Prima Medan" },
+          { "label": "Posisi", "value": "Dokter Umum" },
+          { "label": "Tahun Lulus", "value": "2024" },
+          { "label": "Domisili", "value": "Medan, Sumatera Utara" }
+        ],
+        "quote": "Contoh testimoni alumni tentang pengalaman belajar selama menempuh pendidikan profesi dokter."
+      },
+      {
+        "photo": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80",
+        "name": "dr. Contoh Nama Alumni",
+        "role": "Angkatan 2018",
+        "details": [
+          { "label": "Tempat Kerja", "value": "Puskesmas Kota Medan" },
+          { "label": "Posisi", "value": "Dokter Layanan Primer" },
+          { "label": "Tahun Lulus", "value": "2024" },
+          { "label": "Domisili", "value": "Medan, Sumatera Utara" }
+        ],
+        "quote": "Contoh testimoni alumni tentang pengalaman belajar selama menempuh pendidikan profesi dokter."
+      },
+      {
+        "photo": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80",
+        "name": "dr. Contoh Nama Alumni",
+        "role": "Angkatan 2017",
+        "details": [
+          { "label": "Tempat Kerja", "value": "RS Mata Prima Vision" },
+          { "label": "Posisi", "value": "Dokter Umum" },
+          { "label": "Tahun Lulus", "value": "2023" },
+          { "label": "Domisili", "value": "Medan, Sumatera Utara" }
+        ],
+        "quote": "Contoh testimoni alumni tentang pengalaman belajar selama menempuh pendidikan profesi dokter."
+      },
+      {
+        "photo": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",
+        "name": "dr. Contoh Nama Alumni",
+        "role": "Angkatan 2017",
+        "details": [
+          { "label": "Tempat Kerja", "value": "RSUD Sidikalang" },
+          { "label": "Posisi", "value": "Dokter Umum" },
+          { "label": "Tahun Lulus", "value": "2023" },
+          { "label": "Domisili", "value": "Dairi, Sumatera Utara" }
+        ],
+        "quote": "Contoh testimoni alumni tentang pengalaman belajar selama menempuh pendidikan profesi dokter."
+      }
+    ],
+    "placeholder": "Coming Soon"
+  },
+
+  "intro": "",
+  "blocks": [
+    { "title": "Data Tracer Study", "text": "" },
+    { "title": "Tingkat Serapan Lulusan", "text": "" },
+    { "title": "Peluang Karier", "text": "" }
+  ],
+
+  "placeholder": "Coming Soon"
+}

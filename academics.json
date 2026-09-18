@@ -1,0 +1,293 @@
+{
+  "sectionTitle": "Akademik & Karier",
+  "kurikulum": {
+    "title": "Kurikulum dan Pembelajaran",
+    "intro": "",
+    "blocks": [
+      {
+        "title": "Kurikulum Berbasis OBE",
+        "text": ""
+      },
+      {
+        "title": "Struktur Kurikulum per Semester",
+        "text": ""
+      },
+      {
+        "title": "Mata Kuliah Unggulan",
+        "text": ""
+      },
+      {
+        "title": "Sistem Stase",
+        "text": "",
+        "items": [
+          "Stase Bawah",
+          "Stase Atas"
+        ]
+      },
+      {
+        "title": "Metode Pembelajaran",
+        "text": "",
+        "items": [
+          "Bedside Teaching",
+          "Mini CEX",
+          "OSLER",
+          "Skills Lab",
+          "Community-based Learning",
+          "Morning Report",
+          "Review Article"
+        ]
+      },
+      {
+        "title": "Sistem Penilaian",
+        "text": "",
+        "items": [
+          "CBT dan OSCE sesuai UKOMNAS"
+        ]
+      }
+    ]
+  },
+  "peluangKarier": {
+    "title": "Peluang Karier Lulusan Profesi Dokter",
+    "tagline": "Membangun Masa Depan, Melayani Kesehatan, Menciptakan Dampak",
+    "paragraphs": [
+      "Memilih Profesi Dokter berarti memilih perjalanan menuju profesi dokter sekaligus membangun fondasi untuk berbagai bidang pengembangan profesional. Di tengah perkembangan ilmu pengetahuan, teknologi, dan kebutuhan kesehatan masyarakat, lulusan memiliki ruang untuk berkembang dalam praktik klinis setelah menyelesaikan pendidikan profesi maupun dalam bidang non-klinis yang relevan."
+    ],
+    "cards": [
+      {
+        "number": "1",
+        "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80",
+        "alt": "Pendidikan Profesi Dokter dan Praktik Klinis",
+        "title": "Pendidikan Profesi Dokter dan Praktik Klinis",
+        "description": "Setelah menyelesaikan pendidikan sarjana, lulusan dapat melanjutkan ke Pendidikan Profesi Dokter untuk memperoleh kompetensi klinis sesuai ketentuan. Tahap ini menjadi jembatan dari pembelajaran akademik menuju pelayanan pasien secara profesional.",
+        "opportunities": [
+          "Pendidikan Profesi Dokter",
+          "Dokter layanan primer setelah memenuhi seluruh persyaratan",
+          "Dokter klinik dan rumah sakit",
+          "Pengembangan menuju pendidikan spesialis"
+        ]
+      },
+      {
+        "number": "2",
+        "image": "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80",
+        "alt": "Peneliti Kesehatan",
+        "title": "Peneliti Kesehatan",
+        "description": "Lulusan dengan minat ilmiah dapat mengembangkan karier melalui penelitian biomedis, klinis, kesehatan masyarakat, maupun inovasi pelayanan kesehatan.",
+        "opportunities": [
+          "*Research Assistant*",
+          "*Clinical Researcher*",
+          "*Health Scientist*",
+          "*Research and Development Officer*"
+        ]
+      },
+      {
+        "number": "3",
+        "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
+        "alt": "Akademisi dan Dosen",
+        "title": "Akademisi dan Dosen",
+        "description": "Bidang akademik memberi kesempatan untuk terus belajar, melakukan penelitian, mengembangkan kurikulum, dan membimbing generasi tenaga kesehatan berikutnya. Jalur ini umumnya memerlukan pendidikan lanjutan sesuai jabatan akademik yang dituju.",
+        "opportunities": [
+          "Dosen Perguruan Tinggi",
+          "Peneliti Akademik",
+          "Pengembang Kurikulum",
+          "Trainer Profesional"
+        ]
+      },
+      {
+        "number": "4",
+        "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80",
+        "alt": "Manajemen dan Administrasi Pelayanan Kesehatan",
+        "title": "Manajemen dan Administrasi Pelayanan Kesehatan",
+        "description": "Pemahaman klinis dapat menjadi modal untuk berkembang dalam pengelolaan rumah sakit, klinik, organisasi kesehatan, mutu pelayanan, dan kebijakan kesehatan, dengan kompetensi tambahan yang sesuai.",
+        "opportunities": [
+          "Healthcare Manager",
+          "Hospital Administrator",
+          "Quality Assurance Officer",
+          "Health Policy Officer"
+        ]
+      },
+      {
+        "number": "5",
+        "image": "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=800&q=80",
+        "alt": "Industri Alat Kesehatan dan Produk Kesehatan",
+        "title": "Industri Alat Kesehatan dan Produk Kesehatan",
+        "description": "Perkembangan teknologi medis membuka peluang keterlibatan tenaga kesehatan dalam pengembangan produk, advisory klinis, regulasi, dan quality assurance.",
+        "opportunities": [
+          "*Product Development Specialist*",
+          "*Clinical Product Advisor*",
+          "*Regulatory Affairs Officer*",
+          "*Quality Assurance Specialist*"
+        ]
+      },
+      {
+        "number": "6",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+        "alt": "Digital Health dan Health Innovation",
+        "title": "Digital Health dan Health Innovation",
+        "description": "AI, telehealth, rekam medis elektronik, analitik data, dan teknologi kesehatan membuka bidang baru bagi profesional yang mampu menjembatani kebutuhan klinis dengan teknologi.",
+        "opportunities": [
+          "*Health Technology Specialist*",
+          "*Digital Health Consultant*",
+          "*Health Data Analyst*",
+          "*Healthcare Innovation Officer*"
+        ]
+      },
+      {
+        "number": "7",
+        "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
+        "alt": "Konsultan dan Edukator Kesehatan",
+        "title": "Konsultan dan Edukator Kesehatan",
+        "description": "Lulusan dapat berperan dalam edukasi kesehatan, promosi kesehatan, pelatihan, dan komunikasi berbasis bukti untuk membantu masyarakat membuat keputusan kesehatan yang lebih baik.",
+        "opportunities": [
+          "*Health Consultant*",
+          "*Health Educator*",
+          "*Community Health Facilitator*",
+          "*Corporate Wellness Advisor*"
+        ]
+      },
+      {
+        "number": "8",
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
+        "alt": "Healthpreneur dan Wirausaha Kesehatan",
+        "title": "Healthpreneur dan Wirausaha Kesehatan",
+        "description": "Pengetahuan kesehatan dapat dikombinasikan dengan teknologi dan kewirausahaan untuk membangun solusi kesehatan yang bernilai ekonomi sekaligus memberikan dampak sosial.",
+        "opportunities": [
+          "Founder Startup Kesehatan",
+          "Pemilik klinik setelah memenuhi persyaratan",
+          "Pengembang Produk Kesehatan",
+          "Konsultan Bisnis Kesehatan"
+        ]
+      },
+      {
+        "number": "9",
+        "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+        "alt": "Organisasi Kesehatan Nasional dan Internasional",
+        "title": "Organisasi Kesehatan Nasional dan Internasional",
+        "description": "Lulusan dengan kompetensi dan pengalaman tambahan dapat berkontribusi dalam organisasi pemerintah, NGO, lembaga kesehatan, pusat penelitian, dan berbagai program kesehatan nasional maupun internasional.",
+        "opportunities": [
+          "Program Officer Kesehatan",
+          "Public Health Consultant",
+          "Research Coordinator",
+          "NGO & International Organization Staff"
+        ]
+      }
+    ]
+  },
+  "cpl": {
+    "title": "Capaian Pembelajaran Lulusan (CPL)",
+    "intro": "",
+    "blocks": [
+      {
+        "title": "Kompetensi Utama Lulusan",
+        "text": ""
+      },
+      {
+        "title": "Soft Skills",
+        "text": ""
+      },
+      {
+        "title": "Leadership",
+        "text": ""
+      },
+      {
+        "title": "Communication Skills",
+        "text": ""
+      },
+      {
+        "title": "Professionalism",
+        "text": ""
+      },
+      {
+        "title": "Digital Literacy",
+        "text": ""
+      }
+    ]
+  },
+  "fasilitas": {
+    "title": "Fasilitas Pendidikan",
+    "intro": "",
+    "blocks": [],
+    "placeholder": "Coming Soon"
+  },
+  "rumahSakit": {
+    "title": "Rumah Sakit dan Clinical Learning Ecosystem",
+    "intro": "",
+    "blocks": [
+      {
+        "title": "Rumah Sakit dan Fasilitas Kesehatan Pendidikan",
+        "text": ""
+      },
+      {
+        "title": "Clinical Exposure",
+        "text": ""
+      },
+      {
+        "title": "Skills dan Simulation-based Learning",
+        "text": ""
+      },
+      {
+        "title": "Peran Masing-masing Fasilitas",
+        "text": ""
+      }
+    ]
+  },
+  "kehidupanMahasiswa": {
+    "title": "Kehidupan Mahasiswa",
+    "intro": "",
+    "blocks": [
+      {
+        "title": "Organisasi Mahasiswa",
+        "text": ""
+      },
+      {
+        "title": "BEM / HMJ",
+        "text": ""
+      },
+      {
+        "title": "Kegiatan Kemahasiswaan",
+        "text": ""
+      },
+      {
+        "title": "Pengabdian Masyarakat",
+        "text": ""
+      },
+      {
+        "title": "Kompetisi Mahasiswa",
+        "text": ""
+      },
+      {
+        "title": "Kegiatan Olahraga dan Seni",
+        "text": ""
+      }
+    ]
+  },
+  "prestasi": {
+    "title": "Prestasi dan Penghargaan",
+    "intro": "",
+    "blocks": [
+      {
+        "title": "Prestasi Mahasiswa",
+        "text": ""
+      },
+      {
+        "title": "Prestasi Dosen",
+        "text": ""
+      },
+      {
+        "title": "Hibah Penelitian",
+        "text": ""
+      },
+      {
+        "title": "Kompetisi Nasional",
+        "text": ""
+      },
+      {
+        "title": "Kompetisi Internasional",
+        "text": ""
+      },
+      {
+        "title": "Penghargaan Institusi",
+        "text": ""
+      }
+    ]
+  }
+}

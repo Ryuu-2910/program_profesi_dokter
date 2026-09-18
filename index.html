@@ -1,0 +1,2551 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="program, education, university, lecturers, research, teaching, UNPRI, Universitas Prima Indonesia"
+      name="keywords"
+    />
+    <meta
+      content="Program of UNPRI - Universitas Prima Indonesia"
+      name="description"
+    />
+    <meta content="Universitas Prima Indonesia" name="author" />
+    <title>Program | UNPRI - Universitas Prima Indonesia</title>
+    <!-- Favicons -->
+    <link
+      href="https://s3.amazonaws.com/assets.unprimdn.ac.id/images/landing_page_images/f9f35dc11091514d53165ce1ef8012a2ee971e5b.ico"
+      rel="shortcut icon"
+    />
+    <!-- Base CSS -->
+    <link
+      href="Untitled-1.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="Untitled-2.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div id="preloader">
+      <img
+        alt="Loading..."
+        class="loader-gif"
+        src="/assets/landing_page/preloader-638ab4c439a3aa8d909852aa796e3261.gif"
+      />
+    </div>
+    <!-- The main navigation remains managed by the landing-page record. -->
+    <style>
+      /* ==========================================================================
+   UNPRI SALES NAVBAR
+   Self-contained navbar for legacy UNPRI landing page.
+   Prefix: usn-
+   ========================================================================== */
+
+      #usn-header,
+      #usn-header * {
+        box-sizing: border-box;
+      }
+
+      #usn-header {
+        position: sticky;
+        top: 0;
+        z-index: 20000;
+
+        display: block;
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        border: 0;
+        border-bottom: 1px solid #eee8f7;
+
+        background: #ffffff;
+
+        box-shadow: 0 5px 22px rgba(43, 7, 95, 0.07);
+
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #usn-header a {
+        text-decoration: none;
+      }
+
+      /* ==========================================================================
+   Main container
+   ========================================================================== */
+
+      .usn-container {
+        display: flex;
+
+        width: 100%;
+        max-width: 1440px;
+        min-height: 76px;
+
+        margin: 0 auto;
+        padding: 0 24px;
+
+        align-items: center;
+      }
+
+      /* ==========================================================================
+   Brand / Logos
+   ========================================================================== */
+
+      .usn-brand {
+        display: flex;
+
+        width: 285px;
+        min-width: 285px;
+        max-width: 285px;
+
+        height: 56px;
+        min-height: 56px;
+        max-height: 56px;
+
+        margin: 0 22px 0 0;
+        padding: 3px 0;
+
+        overflow: hidden;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        flex: 0 0 285px;
+
+        border: 0;
+        border-radius: 0;
+
+        background: transparent;
+
+        box-shadow: none;
+
+        text-decoration: none;
+      }
+
+      .usn-brand:hover,
+      .usn-brand:focus {
+        background: transparent;
+        text-decoration: none;
+        outline: none;
+      }
+
+      .usn-brand__unpri {
+        position: static !important;
+
+        display: block !important;
+
+        width: auto !important;
+        height: 44px !important;
+
+        min-width: 0 !important;
+        min-height: 0 !important;
+
+        max-width: 176px !important;
+        max-height: 44px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border: 0 !important;
+
+        object-fit: contain;
+        object-position: left center;
+
+        transform: none !important;
+      }
+
+      .usn-brand__unggul {
+        position: static !important;
+
+        display: block !important;
+
+        width: auto !important;
+        height: 43px !important;
+
+        min-width: 0 !important;
+        min-height: 0 !important;
+
+        max-width: 88px !important;
+        max-height: 43px !important;
+
+        margin: 0 0 0 17px !important;
+        padding: 0 !important;
+
+        border: 0 !important;
+
+        object-fit: contain;
+        object-position: center;
+
+        transform: none !important;
+      }
+
+      /* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+      .usn-navigation {
+        display: flex;
+
+        min-width: 0;
+
+        align-items: center;
+
+        flex: 1;
+      }
+
+      .usn-menu {
+        display: flex;
+
+        min-width: 0;
+
+        margin: 0;
+        padding: 0;
+
+        align-items: center;
+        justify-content: flex-end;
+
+        flex: 1;
+
+        list-style: none;
+      }
+
+      .usn-item {
+        position: relative;
+
+        margin: 0 1px;
+        padding: 0;
+      }
+
+      /* ==========================================================================
+   Main navigation links
+   ========================================================================== */
+
+      .usn-link,
+      .usn-dropdown-toggle {
+        display: inline-flex;
+
+        min-height: 44px;
+
+        margin: 0;
+        padding: 12px 9px;
+
+        border: 0;
+        border-radius: 9px;
+
+        align-items: center;
+
+        gap: 6px;
+
+        background: transparent;
+
+        color: #292333;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 20px;
+
+        text-align: left;
+        white-space: nowrap;
+
+        cursor: pointer;
+
+        transition:
+          background-color 0.18s ease,
+          color 0.18s ease;
+      }
+
+      button.usn-dropdown-toggle {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      .usn-link:hover,
+      .usn-link:focus,
+      .usn-dropdown-toggle:hover,
+      .usn-dropdown-toggle:focus,
+      .usn-item.usn-open > .usn-dropdown-toggle {
+        background: #f5f0fc;
+
+        color: #42138a;
+
+        text-decoration: none;
+
+        outline: none;
+      }
+
+      /* ==========================================================================
+   Chevron
+   ========================================================================== */
+
+      .usn-chevron {
+        display: block;
+
+        width: 7px;
+        min-width: 7px;
+
+        height: 7px;
+
+        margin-top: -3px;
+
+        border-right: 1.7px solid currentColor;
+        border-bottom: 1.7px solid currentColor;
+
+        flex: 0 0 7px;
+
+        transform: rotate(45deg);
+
+        transition:
+          margin-top 0.18s ease,
+          transform 0.18s ease;
+      }
+
+      .usn-item.usn-open .usn-chevron {
+        margin-top: 3px;
+
+        transform: rotate(225deg);
+      }
+
+      /* ==========================================================================
+   General dropdown
+   ========================================================================== */
+
+      .usn-dropdown {
+        position: absolute;
+
+        top: calc(100% + 10px);
+        left: 0;
+
+        z-index: 20100;
+
+        display: none;
+
+        width: 300px;
+
+        padding: 9px;
+
+        overflow: hidden;
+
+        border: 1px solid #ece6f5;
+        border-radius: 15px;
+
+        background: #ffffff;
+
+        box-shadow: 0 20px 50px rgba(43, 7, 95, 0.15);
+      }
+
+      .usn-item.usn-open > .usn-dropdown {
+        display: block;
+      }
+
+      .usn-dropdown--right {
+        right: 0;
+        left: auto;
+      }
+
+      .usn-dropdown a {
+        display: block;
+
+        width: 100%;
+        min-height: 40px;
+
+        margin: 0 0 2px;
+        padding: 10px 13px;
+
+        border-radius: 9px;
+
+        color: #342d3d;
+
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+
+        white-space: normal;
+
+        transition:
+          background-color 0.18s ease,
+          color 0.18s ease;
+      }
+
+      .usn-dropdown a:last-child {
+        margin-bottom: 0;
+      }
+
+      .usn-dropdown a:hover,
+      .usn-dropdown a:focus {
+        background: #f5f0fc;
+
+        color: #42138a;
+
+        text-decoration: none;
+
+        outline: none;
+      }
+
+      .usn-dropdown__divider {
+        height: 1px;
+
+        margin: 7px 5px;
+
+        background: #eeeaf3;
+      }
+
+      .usn-dropdown__heading {
+        display: block;
+
+        padding: 6px 13px 5px;
+
+        color: #42138a;
+
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 17px;
+
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      /* ==========================================================================
+   Program Study Mega Menu
+   ========================================================================== */
+
+      .usn-programs {
+        left: 50%;
+
+        width: 660px;
+
+        padding: 18px;
+
+        transform: translateX(-50%);
+      }
+
+      .usn-programs__top {
+        margin-bottom: 12px;
+        padding: 2px 5px 14px;
+
+        border-bottom: 1px solid #eeeaf3;
+      }
+
+      .usn-programs__top strong {
+        display: block;
+
+        margin-bottom: 3px;
+
+        color: #35106d;
+
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+
+      .usn-programs__top span {
+        display: block;
+
+        color: #716a7c;
+
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 19px;
+      }
+
+      .usn-programs__grid {
+        display: grid;
+
+        grid-template-columns:
+          minmax(0, 1fr)
+          minmax(0, 1fr);
+
+        column-gap: 12px;
+      }
+
+      .usn-programs__all {
+        margin-top: 10px;
+        padding-top: 10px;
+
+        border-top: 1px solid #eeeaf3;
+      }
+
+      .usn-programs__all a {
+        color: #42138a;
+
+        font-weight: 700;
+      }
+
+      /* ==========================================================================
+   Portal
+   ========================================================================== */
+
+      .usn-portal {
+        width: 520px;
+
+        padding: 15px;
+      }
+
+      .usn-portal__grid {
+        display: grid;
+
+        grid-template-columns:
+          minmax(0, 1fr)
+          minmax(0, 1fr);
+
+        gap: 12px;
+      }
+
+      .usn-portal__column {
+        min-width: 0;
+
+        padding: 5px;
+      }
+
+      .usn-portal__title {
+        display: block;
+
+        margin-bottom: 6px;
+        padding: 7px 9px;
+
+        border-bottom: 1px solid #eee8f7;
+
+        color: #42138a;
+
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 17px;
+
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      /* ==========================================================================
+   Right actions
+   ========================================================================== */
+
+      .usn-actions {
+        display: flex;
+
+        margin-left: 8px;
+
+        align-items: center;
+
+        gap: 8px;
+
+        flex-shrink: 0;
+      }
+
+      /* Language */
+
+      .usn-language {
+        display: flex;
+
+        align-items: center;
+
+        gap: 2px;
+      }
+
+      .usn-language a {
+        display: flex;
+
+        width: 31px;
+        height: 31px;
+
+        border-radius: 8px;
+
+        align-items: center;
+        justify-content: center;
+      }
+
+      .usn-language a:hover,
+      .usn-language a:focus {
+        background: #f5f0fc;
+
+        outline: none;
+      }
+
+      .usn-language img {
+        position: static !important;
+
+        display: block !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        max-width: 25px !important;
+        max-height: 19px !important;
+
+        margin: 0 !important;
+
+        object-fit: contain;
+
+        transform: none !important;
+      }
+
+      /* ==========================================================================
+   CTA
+   ========================================================================== */
+
+      .usn-register {
+        display: inline-flex;
+
+        min-height: 46px;
+
+        padding: 12px 18px;
+
+        border: 1px solid #ffc400;
+        border-radius: 11px;
+
+        align-items: center;
+        justify-content: center;
+
+        background: #ffc400;
+
+        box-shadow: 0 8px 18px rgba(255, 196, 0, 0.23);
+
+        color: #2b075f !important;
+
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 20px;
+
+        white-space: nowrap;
+
+        transition:
+          background-color 0.18s ease,
+          box-shadow 0.18s ease,
+          transform 0.18s ease;
+      }
+
+      .usn-register:hover,
+      .usn-register:focus {
+        background: #ffd23f;
+
+        box-shadow: 0 11px 23px rgba(255, 196, 0, 0.3);
+
+        color: #2b075f !important;
+
+        text-decoration: none;
+
+        outline: none;
+
+        transform: translateY(-1px);
+      }
+
+      /* ==========================================================================
+   Desktop hidden mobile elements
+   ========================================================================== */
+
+      .usn-mobile-toggle,
+      .usn-mobile-head,
+      .usn-overlay {
+        display: none;
+      }
+
+      /* ==========================================================================
+   Compact desktop 1200 - 1365
+   ========================================================================== */
+
+      @media (min-width: 1200px) and (max-width: 1365px) {
+        .usn-container {
+          padding-right: 14px;
+          padding-left: 14px;
+        }
+
+        .usn-brand {
+          width: 245px;
+          min-width: 245px;
+          max-width: 245px;
+
+          margin-right: 12px;
+
+          flex-basis: 245px;
+        }
+
+        .usn-brand__unpri {
+          height: 39px !important;
+
+          max-width: 151px !important;
+          max-height: 39px !important;
+        }
+
+        .usn-brand__unggul {
+          height: 38px !important;
+
+          max-width: 76px !important;
+          max-height: 38px !important;
+
+          margin-left: 13px !important;
+        }
+
+        .usn-link,
+        .usn-dropdown-toggle {
+          padding-right: 6px;
+          padding-left: 6px;
+
+          font-size: 12px;
+        }
+
+        .usn-actions {
+          gap: 5px;
+        }
+
+        .usn-register {
+          padding-right: 13px;
+          padding-left: 13px;
+
+          font-size: 12px;
+        }
+      }
+
+      /* ==========================================================================
+   Tablet + Mobile
+   ========================================================================== */
+
+      @media (max-width: 1199px) {
+        body.usn-lock {
+          overflow: hidden;
+        }
+
+        .usn-container {
+          min-height: 70px;
+
+          padding-right: 16px;
+          padding-left: 16px;
+
+          justify-content: space-between;
+        }
+
+        /* Brand */
+
+        .usn-brand {
+          width: 238px;
+          min-width: 238px;
+          max-width: 238px;
+
+          height: 50px;
+          min-height: 50px;
+          max-height: 50px;
+
+          margin-right: 10px;
+          padding: 2px 0;
+
+          flex-basis: 238px;
+        }
+
+        .usn-brand__unpri {
+          height: 37px !important;
+
+          max-width: 145px !important;
+          max-height: 37px !important;
+        }
+
+        .usn-brand__unggul {
+          height: 36px !important;
+
+          max-width: 74px !important;
+          max-height: 36px !important;
+
+          margin-left: 13px !important;
+        }
+
+        /* Hamburger */
+
+        .usn-mobile-toggle {
+          display: block;
+
+          width: 44px;
+          min-width: 44px;
+
+          height: 44px;
+          min-height: 44px;
+
+          margin: 0;
+          padding: 10px;
+
+          border: 0;
+          border-radius: 11px;
+
+          background: #f5f0fc;
+
+          cursor: pointer;
+
+          flex: 0 0 44px;
+        }
+
+        .usn-mobile-toggle:hover,
+        .usn-mobile-toggle:focus {
+          background: #eee4fa;
+
+          outline: none;
+        }
+
+        .usn-mobile-toggle span {
+          display: block;
+
+          width: 24px;
+          height: 2px;
+
+          margin: 5px 0;
+
+          border-radius: 2px;
+
+          background: #42138a;
+        }
+
+        /* Drawer */
+
+        .usn-navigation {
+          position: fixed;
+
+          top: 0;
+          right: 0;
+
+          z-index: 20200;
+
+          display: flex;
+
+          width: 390px;
+          max-width: 92%;
+
+          height: 100%;
+
+          padding: 0;
+
+          overflow: hidden;
+
+          align-items: stretch;
+
+          flex-direction: column;
+
+          background: #ffffff;
+
+          box-shadow: -12px 0 36px rgba(20, 7, 43, 0.2);
+
+          transform: translateX(105%);
+          visibility: hidden;
+
+          transition:
+            transform 0.24s ease,
+            visibility 0.24s ease;
+        }
+
+        .usn-navigation.usn-mobile-open {
+          transform: translateX(0);
+
+          visibility: visible;
+        }
+
+        /* Drawer head */
+
+        .usn-mobile-head {
+          display: flex;
+
+          min-height: 70px;
+
+          padding: 0 16px;
+
+          border-bottom: 1px solid #eee8f7;
+
+          align-items: center;
+          justify-content: space-between;
+
+          flex-shrink: 0;
+        }
+
+        .usn-mobile-head strong {
+          color: #42138a;
+
+          font-size: 15px;
+          font-weight: 700;
+        }
+
+        /* Close button */
+
+        .usn-mobile-close {
+          position: relative;
+
+          width: 40px;
+          min-width: 40px;
+
+          height: 40px;
+          min-height: 40px;
+
+          padding: 0;
+
+          border: 0;
+          border-radius: 10px;
+
+          background: #f5f0fc;
+
+          cursor: pointer;
+        }
+
+        .usn-mobile-close:hover,
+        .usn-mobile-close:focus {
+          background: #eee4fa;
+
+          outline: none;
+        }
+
+        .usn-mobile-close:before,
+        .usn-mobile-close:after {
+          position: absolute;
+
+          top: 19px;
+          left: 10px;
+
+          width: 20px;
+          height: 2px;
+
+          border-radius: 2px;
+
+          background: #42138a;
+
+          content: "";
+        }
+
+        .usn-mobile-close:before {
+          transform: rotate(45deg);
+        }
+
+        .usn-mobile-close:after {
+          transform: rotate(-45deg);
+        }
+
+        /* Menu */
+
+        .usn-menu {
+          display: block;
+
+          width: 100%;
+          min-height: 0;
+
+          padding: 12px 12px 5px;
+
+          overflow-x: hidden;
+          overflow-y: auto;
+
+          flex: 1;
+
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .usn-item {
+          display: block;
+
+          width: 100%;
+
+          margin: 0 0 5px;
+
+          overflow: hidden;
+
+          border: 1px solid #eeeaf3;
+          border-radius: 11px;
+        }
+
+        .usn-link,
+        .usn-dropdown-toggle {
+          display: flex;
+
+          width: 100%;
+          min-height: 46px;
+
+          padding: 12px 13px;
+
+          border-radius: 10px;
+
+          justify-content: space-between;
+
+          font-size: 13px;
+
+          white-space: normal;
+        }
+
+        /* Mobile dropdown */
+
+        .usn-dropdown,
+        .usn-dropdown--right,
+        .usn-programs,
+        .usn-portal {
+          position: static;
+
+          top: auto;
+          right: auto;
+          left: auto;
+
+          display: none;
+
+          width: 100%;
+
+          margin: 0;
+          padding: 7px;
+
+          border: 0;
+          border-top: 1px solid #eeeaf3;
+          border-radius: 0;
+
+          background: #fbfafc;
+
+          box-shadow: none;
+
+          transform: none;
+        }
+
+        .usn-item.usn-open > .usn-dropdown {
+          display: block;
+        }
+
+        .usn-dropdown a {
+          padding: 10px 11px;
+        }
+
+        /* Program Study mobile */
+
+        .usn-programs__top {
+          padding: 7px 7px 11px;
+        }
+
+        .usn-programs__top strong {
+          font-size: 15px;
+          line-height: 22px;
+        }
+
+        .usn-programs__grid {
+          display: block;
+        }
+
+        /* Portal mobile */
+
+        .usn-portal__grid {
+          display: block;
+        }
+
+        .usn-portal__column + .usn-portal__column {
+          margin-top: 8px;
+          padding-top: 8px;
+
+          border-top: 1px solid #eeeaf3;
+        }
+
+        /* Actions */
+
+        .usn-actions {
+          display: flex;
+
+          margin: 0;
+          padding: 12px 16px 16px;
+
+          border-top: 1px solid #eee8f7;
+
+          justify-content: space-between;
+
+          gap: 10px;
+
+          flex-shrink: 0;
+        }
+
+        .usn-register {
+          min-height: 44px;
+        }
+
+        /* Overlay */
+
+        .usn-overlay {
+          position: fixed;
+
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+
+          z-index: 20150;
+
+          display: block;
+
+          width: 100%;
+          height: 100%;
+
+          margin: 0;
+          padding: 0;
+
+          border: 0;
+
+          background: rgba(22, 9, 42, 0.55);
+
+          opacity: 0;
+          visibility: hidden;
+
+          cursor: pointer;
+
+          transition:
+            opacity 0.24s ease,
+            visibility 0.24s ease;
+        }
+
+        .usn-overlay.usn-overlay-open {
+          opacity: 1;
+
+          visibility: visible;
+        }
+      }
+
+      /* ==========================================================================
+   Small phones
+   ========================================================================== */
+
+      @media (max-width: 480px) {
+        .usn-container {
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+
+        .usn-brand {
+          width: 204px;
+          min-width: 204px;
+          max-width: 204px;
+
+          height: 46px;
+          min-height: 46px;
+          max-height: 46px;
+
+          margin-right: 7px;
+
+          flex-basis: 204px;
+        }
+
+        .usn-brand__unpri {
+          height: 32px !important;
+
+          max-width: 126px !important;
+          max-height: 32px !important;
+        }
+
+        .usn-brand__unggul {
+          height: 31px !important;
+
+          max-width: 64px !important;
+          max-height: 31px !important;
+
+          margin-left: 10px !important;
+        }
+
+        .usn-mobile-toggle {
+          width: 41px;
+          min-width: 41px;
+
+          height: 41px;
+          min-height: 41px;
+
+          padding: 8px;
+
+          flex-basis: 41px;
+        }
+
+        .usn-navigation {
+          width: 100%;
+          max-width: 94%;
+        }
+      }
+
+      /* ==========================================================================
+   Very small phones
+   ========================================================================== */
+
+      @media (max-width: 360px) {
+        .usn-brand {
+          width: 188px;
+          min-width: 188px;
+          max-width: 188px;
+
+          flex-basis: 188px;
+        }
+
+        .usn-brand__unpri {
+          max-width: 116px !important;
+        }
+
+        .usn-brand__unggul {
+          max-width: 58px !important;
+
+          margin-left: 8px !important;
+        }
+      }
+
+      /* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+
+      @media (prefers-reduced-motion: reduce) {
+        .usn-navigation,
+        .usn-overlay,
+        .usn-register,
+        .usn-link,
+        .usn-dropdown-toggle,
+        .usn-chevron,
+        .usn-dropdown a {
+          transition: none;
+        }
+      }
+    </style>
+
+    <header id="usn-header">
+      <div class="usn-container">
+        <!-- =========================================================
+         BRAND
+         ========================================================= -->
+
+        <a
+          href="/"
+          class="usn-brand"
+          aria-label="Beranda Universitas Prima Indonesia"
+        >
+          <img
+            src="/assets/public/general/logo.png"
+            alt="Universitas Prima Indonesia"
+            class="usn-brand__unpri"
+            style="
+              display: block;
+              width: auto;
+              height: 44px;
+              max-width: 176px;
+              max-height: 44px;
+            "
+          />
+
+          <img
+            src="https://s3.amazonaws.com/assets.unprimdn.ac.id/images/landing_page_images/ddbe3fa5d4afeef67425d8574d094950cbd56462.png"
+            alt="Akreditasi Institusi Unggul"
+            class="usn-brand__unggul"
+            style="
+              display: block;
+              width: auto;
+              height: 43px;
+              max-width: 88px;
+              max-height: 43px;
+              margin-left: 17px;
+            "
+          />
+        </a>
+
+        <!-- =========================================================
+         MOBILE TOGGLE
+         ========================================================= -->
+
+        <button
+          type="button"
+          id="usn-mobile-toggle"
+          class="usn-mobile-toggle"
+          aria-label="Buka navigasi"
+          aria-controls="usn-navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
+
+        <nav
+          id="usn-navigation"
+          class="usn-navigation"
+          aria-label="Navigasi utama"
+        >
+          <!-- Mobile drawer header -->
+
+          <div class="usn-mobile-head">
+            <strong> Menu UNPRI </strong>
+
+            <button
+              type="button"
+              class="usn-mobile-close"
+              data-usn-close="true"
+              aria-label="Tutup navigasi"
+            ></button>
+          </div>
+
+          <ul class="usn-menu">
+            <!-- =====================================================
+             TENTANG UNPRI
+             ===================================================== -->
+
+            <li class="usn-item usn-has-dropdown">
+              <button
+                type="button"
+                class="usn-dropdown-toggle"
+                data-usn-dropdown="true"
+                aria-expanded="false"
+              >
+                <span> Tentang UNPRI </span>
+
+                <span class="usn-chevron" aria-hidden="true"></span>
+              </button>
+
+              <div class="usn-dropdown">
+                <a href="/id/pages/16-Tentang"> Profil Universitas </a>
+
+                <a href="/id/pages/6-Sambutan"> Sambutan Rektor </a>
+
+                <a href="/id/pages/21-Pimpinan"> Pimpinan Universitas </a>
+
+                <a href="/id/pages/9-Sejarah"> Sejarah UNPRI </a>
+
+                <a href="/id/pages/10-Visi-Misi">
+                  Visi, Misi, Tujuan dan Sasaran
+                </a>
+
+                <a href="/id/pages/23-unpri-berdampak-2025">
+                  UNPRI Berdampak
+                </a>
+
+                <div class="usn-dropdown__divider"></div>
+
+                <span class="usn-dropdown__heading">
+                  Identitas Universitas
+                </span>
+
+                <a href="/id/pages/11-Logo"> Logo UNPRI </a>
+
+                <a href="/id/pages/12-Hymne"> Hymne UNPRI </a>
+
+                <a href="/id/pages/13-Mars-UNPRI"> Mars UNPRI </a>
+
+                <a href="/id/pages/20-Indonesia-Raya"> Lagu Indonesia Raya </a>
+              </div>
+            </li>
+
+            <!-- =====================================================
+             PROGRAM STUDI
+             ===================================================== -->
+
+            <li class="usn-item usn-has-dropdown">
+              <button
+                type="button"
+                class="usn-dropdown-toggle"
+                data-usn-dropdown="true"
+                aria-expanded="false"
+              >
+                <span> Program Studi </span>
+
+                <span class="usn-chevron" aria-hidden="true"></span>
+              </button>
+
+              <div class="usn-dropdown usn-programs">
+                <div class="usn-programs__top">
+                  <strong> Temukan Program Studi </strong>
+
+                  <span>
+                    Jelajahi fakultas dan program pendidikan yang sesuai dengan
+                    minat dan rencana kariermu.
+                  </span>
+                </div>
+
+                <div class="usn-programs__grid">
+                  <a href="/id/faculties/18-faculty-of-medicine-and-dentistry">
+                    Kedokteran &amp; Kedokteran Gigi
+                  </a>
+
+                  <a href="/id/faculties/19-faculty-of-health-sciences">
+                    Ilmu Kesehatan
+                  </a>
+
+                  <a href="/id/faculties/3-faculty-of-nursing-and-midwifery">
+                    Keperawatan &amp; Kebidanan
+                  </a>
+
+                  <a href="/id/faculties/16-faculty-of-science-and-technology">
+                    Sains &amp; Teknologi
+                  </a>
+
+                  <a href="/id/faculties/5-faculty-of-economics">
+                    Ekonomi &amp; Bisnis
+                  </a>
+
+                  <a href="/id/faculties/9-faculty-of-law"> Hukum </a>
+
+                  <a href="/id/faculties/20-fakultas-bahasa-dan-komunikasi">
+                    Bahasa &amp; Komunikasi
+                  </a>
+
+                  <a href="/id/faculties/7-faculty-of-agriculture">
+                    Pertanian
+                  </a>
+
+                  <a href="/id/faculties/10-faculty-of-psychology">
+                    Psikologi
+                  </a>
+
+                  <a href="/id/faculties/17-campus-of-pekanbaru">
+                    UNPRI Pekanbaru
+                  </a>
+                </div>
+
+                <div class="usn-programs__all">
+                  <a href="/id/programs"> Lihat Semua Program Studi → </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- =====================================================
+             PENDAFTARAN
+             ===================================================== -->
+
+            <li class="usn-item">
+              <a href="https://unprimdn.ac.id/pmb" class="usn-link">
+                Pendaftaran
+              </a>
+            </li>
+
+            <!-- =====================================================
+             KEHIDUPAN KAMPUS
+             ===================================================== -->
+
+            <li class="usn-item usn-has-dropdown">
+              <button
+                type="button"
+                class="usn-dropdown-toggle"
+                data-usn-dropdown="true"
+                aria-expanded="false"
+              >
+                <span> Kehidupan Kampus </span>
+
+                <span class="usn-chevron" aria-hidden="true"></span>
+              </button>
+
+              <div class="usn-dropdown">
+                <a href="/id/posts"> Galeri &amp; Kegiatan Kampus </a>
+
+                <a href="/id/pages/14-basic-science-laboratory">
+                  Laboratorium Sains Dasar
+                </a>
+
+                <a
+                  href="https://perpustakaan.unprimdn.ac.id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Perpustakaan
+                </a>
+
+                <div class="usn-dropdown__divider"></div>
+
+                <span class="usn-dropdown__heading">
+                  Rumah Sakit Pendidikan
+                </span>
+
+                <a
+                  href="https://royalprima.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rumah Sakit Royal Prima
+                </a>
+
+                <a
+                  href="http://rsgmprima.unprimdn.ac.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rumah Sakit Gigi &amp; Mulut Prima
+                </a>
+
+                <a
+                  href="https://primavisionhospital.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Rumah Sakit Mata Prima Vision
+                </a>
+              </div>
+            </li>
+
+            <!-- =====================================================
+             PENELITIAN & KERJA SAMA
+             ===================================================== -->
+
+            <li class="usn-item usn-has-dropdown">
+              <button
+                type="button"
+                class="usn-dropdown-toggle"
+                data-usn-dropdown="true"
+                aria-expanded="false"
+              >
+                <span> Penelitian &amp; Kerja Sama </span>
+
+                <span class="usn-chevron" aria-hidden="true"></span>
+              </button>
+
+              <div class="usn-dropdown">
+                <a href="/id/pages/19"> LPPM </a>
+
+                <a
+                  href="https://lppm.unprimdn.ac.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Penelitian &amp; Pengabdian
+                </a>
+
+                <a
+                  href="http://jurnal.unprimdn.ac.id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Jurnal Ilmiah
+                </a>
+
+                <a
+                  href="http://publikasi.unprimdn.ac.id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Publikasi
+                </a>
+
+                <div class="usn-dropdown__divider"></div>
+
+                <a
+                  href="https://kui.unprimdn.ac.id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Kantor Urusan Internasional
+                </a>
+              </div>
+            </li>
+
+            <!-- =====================================================
+             BERITA
+             ===================================================== -->
+
+            <li class="usn-item usn-has-dropdown">
+              <button
+                type="button"
+                class="usn-dropdown-toggle"
+                data-usn-dropdown="true"
+                aria-expanded="false"
+              >
+                <span> Berita </span>
+
+                <span class="usn-chevron" aria-hidden="true"></span>
+              </button>
+
+              <div class="usn-dropdown usn-dropdown--right">
+                <a href="/id/news"> Berita UNPRI </a>
+
+                <a href="/#berita-terbaru"> Berita Terbaru </a>
+
+                <a href="/id/lecturer_blogs"> Blog Dosen </a>
+
+                <a href="/id/posts"> Galeri </a>
+
+                <div class="usn-dropdown__divider"></div>
+
+                <a
+                  href="https://books.unprimdn.ac.id/bookcase/mshqo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Buletin UNPRI
+                </a>
+
+                <a
+                  href="https://books.unprimdn.ac.id/bookcase/rcxru"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Buletin PRIMA
+                </a>
+              </div>
+            </li>
+
+            <!-- =====================================================
+             PORTAL
+             ===================================================== -->
+
+            <li class="usn-item usn-has-dropdown">
+              <button
+                type="button"
+                class="usn-dropdown-toggle"
+                data-usn-dropdown="true"
+                aria-expanded="false"
+              >
+                <span> Portal </span>
+
+                <span class="usn-chevron" aria-hidden="true"></span>
+              </button>
+
+              <div class="usn-dropdown usn-dropdown--right usn-portal">
+                <div class="usn-portal__grid">
+                  <div class="usn-portal__column">
+                    <span class="usn-portal__title"> Portal Akademik </span>
+
+                    <a href="/login"> Portal Mahasiswa </a>
+
+                    <a href="/dosen/login"> Portal Dosen </a>
+
+                    <a href="/alumni/login"> Portal Alumni </a>
+                  </div>
+
+                  <div class="usn-portal__column">
+                    <span class="usn-portal__title"> Informasi Akademik </span>
+
+                    <a href="/id/pages/22-academic-calender-2026-2027">
+                      Kalender Akademik 2026/2027
+                    </a>
+
+                    <a href="/id/pages/15-academic-calender-2025-2026">
+                      Kalender Akademik 2025/2026
+                    </a>
+
+                    <a href="/id/pages/18"> Unit Manajemen Mutu </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- =======================================================
+           LANGUAGE + CTA
+           ======================================================= -->
+
+          <div class="usn-actions">
+            <div class="usn-language" aria-label="Pilihan bahasa">
+              <a
+                href="/en/programs/3"
+                class="tooltip-wrapper"
+                data-bs-toggle="tooltip"
+                title="English"
+                ><img
+                  alt="English"
+                  height="15"
+                  src="/assets/landing_page/uk-ed41257babdb001aaa8dc96dc689b58e.png"
+                  width="20"
+              /></a>
+              <a
+                href="/zh-CN/programs/3"
+                class="tooltip-wrapper"
+                data-bs-toggle="tooltip"
+                title="Chinese"
+                ><img
+                  alt="Chinese"
+                  height="15"
+                  src="/assets/landing_page/cn-d52f3ed52968fc20caebcacb55265ef3.png"
+                  width="20"
+              /></a>
+            </div>
+
+            <a href="https://unprimdn.ac.id/pmb" class="usn-register">
+              Daftar Sekarang
+            </a>
+          </div>
+        </nav>
+      </div>
+
+      <!-- ===========================================================
+       MOBILE OVERLAY
+       =========================================================== -->
+
+      <button
+        type="button"
+        id="usn-overlay"
+        class="usn-overlay"
+        data-usn-close="true"
+        aria-label="Tutup navigasi"
+        tabindex="-1"
+      ></button>
+    </header>
+
+    <script>
+      (function (window, document) {
+        "use strict";
+
+        var MOBILE_BREAKPOINT = 1199;
+
+        function addEvent(element, eventName, handler) {
+          if (!element) {
+            return;
+          }
+
+          if (element.addEventListener) {
+            element.addEventListener(eventName, handler, false);
+
+            return;
+          }
+
+          if (element.attachEvent) {
+            element.attachEvent("on" + eventName, handler);
+          }
+        }
+
+        function hasClass(element, className) {
+          if (!element) {
+            return false;
+          }
+
+          return (
+            (" " + element.className + " ").indexOf(" " + className + " ") !==
+            -1
+          );
+        }
+
+        function addClass(element, className) {
+          if (!element || hasClass(element, className)) {
+            return;
+          }
+
+          element.className += " " + className;
+        }
+
+        function removeClass(element, className) {
+          var expression;
+
+          if (!element) {
+            return;
+          }
+
+          expression = new RegExp("(^|\\s)" + className + "(?=\\s|$)", "g");
+
+          element.className = element.className
+            .replace(expression, " ")
+            .replace(/^\s+|\s+$/g, "")
+            .replace(/\s{2,}/g, " ");
+        }
+
+        function getViewportWidth() {
+          return (
+            window.innerWidth ||
+            document.documentElement.clientWidth ||
+            document.body.clientWidth
+          );
+        }
+
+        function initializeUnpriSalesNavbar() {
+          var header;
+          var navigation;
+          var mobileToggle;
+          var overlay;
+
+          var dropdownButtons;
+          var closeButtons;
+
+          var lastFocusedElement = null;
+
+          header = document.getElementById("usn-header");
+
+          navigation = document.getElementById("usn-navigation");
+
+          mobileToggle = document.getElementById("usn-mobile-toggle");
+
+          overlay = document.getElementById("usn-overlay");
+
+          if (!header || !navigation || !mobileToggle) {
+            return;
+          }
+
+          /*
+           * Prevent duplicate initialization.
+           */
+          if (header.getAttribute("data-usn-ready") === "true") {
+            return;
+          }
+
+          header.setAttribute("data-usn-ready", "true");
+
+          dropdownButtons = header.querySelectorAll("[data-usn-dropdown]");
+
+          closeButtons = header.querySelectorAll("[data-usn-close]");
+
+          function isMobileViewport() {
+            return getViewportWidth() <= MOBILE_BREAKPOINT;
+          }
+
+          function closeDropdown(item) {
+            var button;
+
+            if (!item) {
+              return;
+            }
+
+            button = item.querySelector("[data-usn-dropdown]");
+
+            removeClass(item, "usn-open");
+
+            if (button) {
+              button.setAttribute("aria-expanded", "false");
+            }
+          }
+
+          function closeAllDropdowns(exceptItem) {
+            var items;
+            var index;
+
+            items = header.querySelectorAll(".usn-has-dropdown");
+
+            for (index = 0; index < items.length; index += 1) {
+              if (items[index] !== exceptItem) {
+                closeDropdown(items[index]);
+              }
+            }
+          }
+
+          function toggleDropdown(button) {
+            var item;
+            var currentlyOpen;
+
+            if (!button) {
+              return;
+            }
+
+            item = button.parentNode;
+
+            currentlyOpen = hasClass(item, "usn-open");
+
+            closeAllDropdowns(item);
+
+            if (currentlyOpen) {
+              closeDropdown(item);
+              return;
+            }
+
+            addClass(item, "usn-open");
+
+            button.setAttribute("aria-expanded", "true");
+          }
+
+          function openMobileMenu() {
+            if (!isMobileViewport()) {
+              return;
+            }
+
+            lastFocusedElement = document.activeElement;
+
+            addClass(navigation, "usn-mobile-open");
+
+            addClass(document.body, "usn-lock");
+
+            addClass(overlay, "usn-overlay-open");
+
+            mobileToggle.setAttribute("aria-expanded", "true");
+
+            mobileToggle.setAttribute("aria-label", "Tutup navigasi");
+          }
+
+          function closeMobileMenu(restoreFocus) {
+            removeClass(navigation, "usn-mobile-open");
+
+            removeClass(document.body, "usn-lock");
+
+            removeClass(overlay, "usn-overlay-open");
+
+            mobileToggle.setAttribute("aria-expanded", "false");
+
+            mobileToggle.setAttribute("aria-label", "Buka navigasi");
+
+            closeAllDropdowns(null);
+
+            if (
+              restoreFocus &&
+              lastFocusedElement &&
+              lastFocusedElement.focus
+            ) {
+              lastFocusedElement.focus();
+            }
+          }
+
+          function toggleMobileMenu() {
+            if (hasClass(navigation, "usn-mobile-open")) {
+              closeMobileMenu(true);
+            } else {
+              openMobileMenu();
+            }
+          }
+
+          /*
+           * Mobile hamburger.
+           */
+          addEvent(mobileToggle, "click", function (event) {
+            event = event || window.event;
+
+            if (event.preventDefault) {
+              event.preventDefault();
+            }
+
+            toggleMobileMenu();
+
+            return false;
+          });
+
+          /*
+           * Dropdown toggles.
+           */
+          (function bindDropdowns() {
+            var index;
+
+            for (index = 0; index < dropdownButtons.length; index += 1) {
+              addEvent(dropdownButtons[index], "click", function (event) {
+                event = event || window.event;
+
+                if (event.preventDefault) {
+                  event.preventDefault();
+                }
+
+                if (event.stopPropagation) {
+                  event.stopPropagation();
+                }
+
+                toggleDropdown(this);
+
+                return false;
+              });
+            }
+          })();
+
+          /*
+           * Drawer close buttons.
+           */
+          (function bindCloseButtons() {
+            var index;
+
+            for (index = 0; index < closeButtons.length; index += 1) {
+              addEvent(closeButtons[index], "click", function (event) {
+                event = event || window.event;
+
+                if (event.preventDefault) {
+                  event.preventDefault();
+                }
+
+                closeMobileMenu(true);
+
+                return false;
+              });
+            }
+          })();
+
+          /*
+           * Close dropdown when clicking
+           * outside navbar on desktop.
+           */
+          addEvent(document, "click", function (event) {
+            var target;
+
+            event = event || window.event;
+
+            target = event.target || event.srcElement;
+
+            if (!target) {
+              return;
+            }
+
+            if (!isMobileViewport() && !header.contains(target)) {
+              closeAllDropdowns(null);
+            }
+          });
+
+          /*
+           * Escape closes dropdown/drawer.
+           */
+          addEvent(document, "keydown", function (event) {
+            var keyCode;
+
+            event = event || window.event;
+
+            keyCode = event.keyCode || event.which;
+
+            if (keyCode !== 27) {
+              return;
+            }
+
+            closeAllDropdowns(null);
+
+            if (hasClass(navigation, "usn-mobile-open")) {
+              closeMobileMenu(true);
+            }
+          });
+
+          /*
+           * Close drawer when actual link
+           * is selected on mobile.
+           */
+          (function bindNavigationLinks() {
+            var links;
+            var index;
+
+            links = navigation.getElementsByTagName("a");
+
+            for (index = 0; index < links.length; index += 1) {
+              addEvent(links[index], "click", function () {
+                if (isMobileViewport()) {
+                  closeMobileMenu(false);
+                }
+              });
+            }
+          })();
+
+          /*
+           * Reset drawer when resizing
+           * back to desktop.
+           */
+          addEvent(window, "resize", function () {
+            if (!isMobileViewport()) {
+              closeMobileMenu(false);
+            }
+
+            closeAllDropdowns(null);
+          });
+        }
+
+        if (document.readyState === "loading") {
+          addEvent(document, "DOMContentLoaded", initializeUnpriSalesNavbar);
+        } else {
+          initializeUnpriSalesNavbar();
+        }
+      })(window, document);
+    </script>
+
+    <!-- Program page content. -->
+
+    <div
+      class="unpri-pshow"
+      style="
+        --up-primary: #591093;
+        --up-primary-dark: #420a70;
+        --up-deep: #240437;
+        --up-soft: #f3eaf8;
+        --up-accent: #f4c542;
+        --up-ink: #201628;
+        --up-muted: #6f6577;
+        --up-surface: #faf7fc;
+        --up-border: #e7ddf0;
+        /* RGB triplets of the two tints above, for the rgba() stops in the
+           hero gradient. Keep these in sync with --up-soft / --up-surface. */
+        --up-soft-rgb: 243, 234, 248;
+        --up-surface-rgb: 250, 247, 252;
+      "
+    >
+      <section class="unpri-hero">
+        <div
+          class="unpri-hero__bg"
+          style="
+            background-image: url(&quot;http://s3.amazonaws.com/assets.unprimdn.ac.id/images/programs/969aa57c83984dd2eb7a948024c621a6b7189573.jpg&quot;);
+          "
+        ></div>
+        <div class="unpri-hero__overlay"></div>
+
+        <div class="unpri-hero__wrap">
+          <div class="container">
+            <div class="unpri-hero__content">
+              <p class="unpri-hero__eyebrow">
+                Program Studi · Universitas Prima Indonesia
+              </p>
+
+              <h1 class="unpri-title">
+                Profesi <strong>Profesi Dokter</strong>
+              </h1>
+
+              <p class="unpri-sub">Pendidikan Klinis untuk Menjadi Dokter.</p>
+
+              <div class="unpri-ctaRow">
+                <a
+                  href="/program_informations/2/register"
+                  class="unpri-btn unpri-btn--gold"
+                  target="_blank"
+                >
+                  Form Pendaftaran
+                </a>
+                <a href="#overview" class="unpri-btn unpri-btn--ghost"
+                  >Gambaran Umum</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Info card. Sits after the hero so it is never a flex
+           item of it; CSS pulls it up into the hero on desktop. -->
+        <div class="info-card">
+          <div class="info-item">
+            <span class="info-icon"><svg class="unpri-svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="14.6" r="5.4"/><path d="M12 12.4l.8 1.7 1.8.3-1.3 1.3.3 1.8-1.6-.9-1.6.9.3-1.8-1.3-1.3 1.8-.3z"/><path d="M8.6 9.8L6.2 3.6h11.6l-2.4 6.2"/></svg></span>
+            <span class="info-label">Jenjang</span>
+            <strong>Profesi</strong>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="info-item">
+            <span class="info-icon"><svg class="unpri-svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.4" y="5" width="19.2" height="14" rx="2.2"/><circle cx="8.4" cy="10.6" r="2.1"/><path d="M5.2 15.8c.6-1.4 1.8-2.1 3.2-2.1s2.6.7 3.2 2.1"/><path d="M14.6 9.6h4.4M14.6 13.2h4.4"/></svg></span>
+            <span class="info-label">Gelar Lulusan</span>
+            <strong>dr.</strong>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="info-item">
+            <span class="info-icon"><svg class="unpri-svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.8" r="5.2"/><path d="M12 6.6l.9 1.8 2 .3-1.5 1.4.4 2-1.8-1-1.8 1 .4-2-1.5-1.4 2-.3z"/><path d="M8.6 13.2L7.2 20.6 12 18.2l4.8 2.4-1.4-7.4"/></svg></span>
+            <span class="info-label">Akreditasi</span>
+            <strong>-</strong>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="info-item">
+            <span class="info-icon"><svg class="unpri-svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.4"/><path d="M12 6.8V12l3.4 2.1"/></svg></span>
+            <span class="info-label">Durasi Studi</span>
+            <strong>-</strong>
+          </div>
+        </div>
+
+      <!-- BREADCRUMB -->
+      <div
+        id="position"
+        style="
+          background: #fff;
+          border-bottom: 1px solid var(--up-border, #e7ddf0);
+        "
+      >
+        <div class="container">
+          <ul style="margin: 0; padding: 12px 0">
+            <li><a href="/">Beranda</a></li>
+            <li><a href="/id/faculties">Unit Pengelola Program Studi</a></li>
+            <li>
+              <a href="/id/faculties/18"
+                >Fakultas Kedokteran dan Kedokteran Gigi</a
+              >
+            </li>
+            <li><a href="/id/programs">Program Studi</a></li>
+            <li>Profesi Profesi Dokter</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="unpri-body">
+        <div class="container">
+          <div class="unpri-nav">
+            <div class="unpri-nav__row" data-tabs>
+              <a href="#overview" data-tab="overview" class="is-active"
+                >Gambaran Umum</a
+              >
+              <a href="#academics" data-tab="academics"
+                >Akademik &amp; Karier</a
+              >
+              <a href="#lecturers" data-tab="lecturers"
+                >Pimpinan &amp; Dosen</a
+              >
+              <a href="#news" data-tab="news"
+                >Berita &amp; Agenda</a
+              >
+              <a href="#partners" data-tab="partners"
+                >Mitra</a
+              >
+              <a href="#faq" data-tab="faq"
+                >FAQ</a
+              >
+            </div>
+          </div>
+
+          <!-- TAB PANELS. Every panel is filled by program-content.js
+               from the JSON file named in the comment above it. -->
+          <div class="unpri-tabPanels">
+            <!-- GAMBARAN UMUM  -> overview.json  (+ alumni.json, rendered
+                 into the Alumni slot before Visi & Misi) -->
+            <section
+              class="unpri-panel is-active"
+              id="overview"
+              data-panel="overview"
+            ></section>
+
+            <!-- AKADEMIK & KARIER -> academics.json -->
+            <section
+              class="unpri-panel"
+              id="academics"
+              data-panel="academics"
+            ></section>
+
+            <!-- PIMPINAN & DOSEN  -> lecturers.json -->
+            <section
+              class="unpri-panel"
+              id="lecturers"
+              data-panel="lecturers"
+            ></section>
+
+            <!-- BERITA & AGENDA  -> news.json  (agenda, aktivitas & galeri) -->
+            <section
+              class="unpri-panel"
+              id="news"
+              data-panel="news"
+            ></section>
+
+            <!-- MITRA  -> partners.json -->
+            <section
+              class="unpri-panel"
+              id="partners"
+              data-panel="partners"
+            ></section>
+
+            <!-- FAQ  -> faq.json -->
+            <section
+              class="unpri-panel"
+              id="faq"
+              data-panel="faq"
+            ></section>
+
+          </div>
+
+          <!-- TEMUKAN PROGRAM STUDI LAINNYA -->
+          <div class="unpri-findCard">
+            <span class="unpri-badge"
+              ><svg class="unpri-svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 5px"><circle cx="10.6" cy="10.6" r="6.4"/><path d="M15.3 15.3l5.2 5.2"/></svg>More
+              Programs</span
+            >
+
+            <div class="unpri-findCard__head">
+              <div>
+                <h3>Temukan Program Studi Lainnya</h3>
+                <p>
+                  Cari jenjang, gelar, dan fakultas yang sesuai dengan minatmu
+                  di UNPRI.
+                </p>
+              </div>
+
+              <div class="unpri-findCard__search">
+                <svg class="unpri-svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.6" cy="10.6" r="6.4"/><path d="M15.3 15.3l5.2 5.2"/></svg>
+                <input
+                  type="text"
+                  placeholder="Cari program..."
+                  data-find-input
+                  onkeyup="
+                    (function (inp) {
+                      var q = inp.value.toLowerCase();
+                      var box = document.querySelector('[data-find-grid]');
+                      var items = box.querySelectorAll('[data-find-title]');
+                      for (var i = 0; i < items.length; i++) {
+                        var t = (
+                          items[i].getAttribute('data-find-title') || ''
+                        ).toLowerCase();
+                        items[i].style.display =
+                          t.indexOf(q) > -1 ? '' : 'none';
+                      }
+                    })(this)
+                  "
+                />
+              </div>
+            </div>
+
+            <div class="unpri-findGrid" data-find-grid>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/1"
+                data-find-title="Sarjana Pendidikan Dokter"
+              >
+                <span class="unpri-badge unpri-badge--sm">S1</span>
+                <p>Sarjana Pendidikan Dokter</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/3"
+                data-find-title="Sarjana Pendidikan Dokter Gigi"
+              >
+                <span class="unpri-badge unpri-badge--sm">S1</span>
+                <p>Sarjana Pendidikan Dokter Gigi</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/4"
+                data-find-title="Profesi Profesi Dokter Gigi"
+              >
+                <span class="unpri-badge unpri-badge--sm">Profesi</span>
+                <p>Profesi Profesi Dokter Gigi</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/31"
+                data-find-title="Magister Sains Biomedis"
+              >
+                <span class="unpri-badge unpri-badge--sm">S2</span>
+                <p>Magister Sains Biomedis</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/36"
+                data-find-title="Magister Ilmu Kedokteran Gigi"
+              >
+                <span class="unpri-badge unpri-badge--sm">S2</span>
+                <p>Magister Ilmu Kedokteran Gigi</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/32"
+                data-find-title="Magister Kesehatan Masyarakat"
+              >
+                <span class="unpri-badge unpri-badge--sm">S2</span>
+                <p>Magister Kesehatan Masyarakat</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/37"
+                data-find-title="Magister Kedokteran Klinis"
+              >
+                <span class="unpri-badge unpri-badge--sm">S2</span>
+                <p>Magister Kedokteran Klinis</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/38"
+                data-find-title="Magister Kedokteran Tropis"
+              >
+                <span class="unpri-badge unpri-badge--sm">S2</span>
+                <p>Magister Kedokteran Tropis</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/49"
+                data-find-title="Spesialis Kedokteran Keluarga Layanan Primer"
+              >
+                <span class="unpri-badge unpri-badge--sm">Spesialis</span>
+                <p>Spesialis Kedokteran Keluarga Layanan Primer</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/50"
+                data-find-title="Spesialis Radiologi"
+              >
+                <span class="unpri-badge unpri-badge--sm">Spesialis</span>
+                <p>Spesialis Radiologi</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/61"
+                data-find-title="Spesialis Ilmu Kesehatan Mata"
+              >
+                <span class="unpri-badge unpri-badge--sm">Spesialis</span>
+                <p>Spesialis Ilmu Kesehatan Mata</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/62"
+                data-find-title="Spesialis Jantung dan Pembuluh Darah"
+              >
+                <span class="unpri-badge unpri-badge--sm">Spesialis</span>
+                <p>Spesialis Jantung dan Pembuluh Darah</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/63"
+                data-find-title="Spesialis Obstetri dan Ginekologi"
+              >
+                <span class="unpri-badge unpri-badge--sm">Spesialis</span>
+                <p>Spesialis Obstetri dan Ginekologi</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/64"
+                data-find-title="Spesialis Anestesiologi dan Terapi Intensif"
+              >
+                <span class="unpri-badge unpri-badge--sm">Spesialis</span>
+                <p>Spesialis Anestesiologi dan Terapi Intensif</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/65"
+                data-find-title="Spesialis Penyakit Dalam"
+              >
+                <span class="unpri-badge unpri-badge--sm">Spesialis</span>
+                <p>Spesialis Penyakit Dalam</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/67"
+                data-find-title="- Bedah"
+              >
+                <span class="unpri-badge unpri-badge--sm">Spesialis</span>
+                <p>- Bedah</p>
+              </a>
+              <a
+                class="unpri-findTile"
+                href="/id/programs/40"
+                data-find-title="Doktor Ilmu Kedokteran"
+              >
+                <span class="unpri-badge unpri-badge--sm">S3</span>
+                <p>Doktor Ilmu Kedokteran</p>
+              </a>
+            </div>
+
+            <div style="margin-top: 14px; text-align: center">
+              <a
+                href="/id/programs"
+                class="unpri-btn unpri-btn--ghost"
+                style="
+                  color: var(--up-primary, #591093);
+                  background: var(--up-soft, #f3eaf8);
+                  border-color: var(--up-border, #e7ddf0);
+                "
+                >Lihat Semua Program</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA. Content comes from cta.json via program-content.js. -->
+      <section class="unpri-cta">
+        <div class="container" data-cta></div>
+      </section>
+    </div>
+
+    <script>
+      (function () {
+        function initTabs() {
+          var nav = document.querySelector("[data-tabs]");
+          if (!nav) return;
+
+          var links = nav.querySelectorAll("[data-tab]");
+          var panels = document.querySelectorAll("[data-panel]");
+
+          function activate(name, updateHash) {
+            for (var i = 0; i < links.length; i++) {
+              if (links[i].getAttribute("data-tab") === name) {
+                links[i].className = "is-active";
+              } else {
+                links[i].className = "";
+              }
+            }
+            for (var j = 0; j < panels.length; j++) {
+              if (panels[j].getAttribute("data-panel") === name) {
+                panels[j].className = "unpri-panel is-active";
+              } else {
+                panels[j].className = "unpri-panel";
+              }
+            }
+            if (updateHash && history && history.replaceState) {
+              history.replaceState(null, "", "#" + name);
+            }
+          }
+
+          for (var k = 0; k < links.length; k++) {
+            (function (link) {
+              link.addEventListener("click", function (e) {
+                var name = link.getAttribute("data-tab");
+                if (!name) return;
+                e.preventDefault();
+                activate(name, true);
+                var target = document.getElementById(name);
+                if (target) {
+                  var y =
+                    target.getBoundingClientRect().top +
+                    window.pageYOffset -
+                    90;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              });
+            })(links[k]);
+          }
+
+          function fromHash() {
+            var h = (window.location.hash || "").replace("#", "");
+            if (!h) return;
+            var exists = false;
+            for (var i = 0; i < links.length; i++) {
+              if (links[i].getAttribute("data-tab") === h) {
+                exists = true;
+                break;
+              }
+            }
+            if (exists) activate(h, false);
+          }
+
+          window.addEventListener("hashchange", fromHash);
+          fromHash();
+        }
+
+        function boot() {
+          initTabs();
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", boot);
+        } else {
+          boot();
+        }
+
+        document.addEventListener("page:load", boot);
+        document.addEventListener("turbolinks:load", boot);
+      })();
+    </script>
+
+    <!-- Simple program-specific footer. No LandingPage footer record is loaded. -->
+    <footer
+      class="program-footer"
+      style="--up-primary: #591093; --up-deep: #240437; --up-soft: #f3eaf8"
+    >
+      <div class="container">
+        <div class="program-footer__main">
+          <div class="program-footer__identity">
+            <p class="program-footer__eyebrow">UNIVERSITAS PRIMA INDONESIA</p>
+            <h2 class="program-footer__title">Profesi Profesi Dokter</h2>
+            <p class="program-footer__description">
+              Halaman resmi program studi Universitas Prima Indonesia.
+            </p>
+          </div>
+          <nav
+            aria-label="Program footer navigation"
+            class="program-footer__navigation"
+          >
+            <a href="/">Beranda</a>
+            <a href="#overview">Ringkasan Program</a>
+            <a href="/id/faculties/18">Fakultas</a>
+            <a
+              href="/program_informations/2/register"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Pendaftaran</a
+            >
+          </nav>
+        </div>
+        <div class="program-footer__bottom">
+          <p>© 2026 Universitas Prima Indonesia. All rights reserved.</p>
+          <div class="program-footer__social">
+            <a
+              href="https://www.instagram.com/unpri_medan/"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Instagram</a
+            >
+            <a
+              href="https://www.youtube.com/user/UNPRIMedan/"
+              rel="noopener noreferrer"
+              target="_blank"
+              >YouTube</a
+            >
+            <a
+              href="https://www.tiktok.com/@joinunpri"
+              rel="noopener noreferrer"
+              target="_blank"
+              >TikTok</a
+            >
+            <a
+              href="https://www.facebook.com/unpri"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Facebook</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Common scripts -->
+    <script src="Untitled-1.js" type="text/javascript"></script>
+    <script src="program-content.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,3311 @@
+.unpri-pshow {
+  color: var(--up-ink, #201628);
+  background: var(--up-surface, #faf7fc);
+}
+.unpri-pshow * {
+  box-sizing: border-box;
+}
+.unpri-pshow a {
+  text-decoration: none;
+}
+.unpri-hero {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--up-ink, #201628);
+  background: var(--up-soft, #f3eaf8);
+}
+.unpri-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  transform: scale(1.015);
+}
+.unpri-hero__overlay {
+  position: absolute;
+  inset: -2px;
+  z-index: 1;
+  background: linear-gradient(
+      90deg,
+      rgba(var(--up-soft-rgb, 243, 234, 248), 0.97) 0%,
+      rgba(var(--up-soft-rgb, 243, 234, 248), 0.95) 26%,
+      rgba(var(--up-soft-rgb, 243, 234, 248), 0.78) 44%,
+      rgba(var(--up-soft-rgb, 243, 234, 248), 0.4) 63%,
+      rgba(var(--up-soft-rgb, 243, 234, 248), 0.12) 84%,
+      rgba(var(--up-soft-rgb, 243, 234, 248), 0) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(var(--up-soft-rgb, 243, 234, 248), 0.42) 0%,
+      rgba(var(--up-soft-rgb, 243, 234, 248), 0.05) 22%,
+      rgba(var(--up-soft-rgb, 243, 234, 248), 0.08) 64%,
+      rgba(var(--up-soft-rgb, 243, 234, 248), 0.6) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(var(--up-surface-rgb, 250, 247, 252), 0.08),
+      rgba(var(--up-surface-rgb, 250, 247, 252), 0.08)
+    );
+  opacity: 1;
+}
+.unpri-hero:after {
+  position: absolute;
+  right: -120px;
+  bottom: -220px;
+  z-index: 1;
+  width: 520px;
+  height: 520px;
+  content: "";
+  border-radius: 999px;
+  background: var(--up-primary, #591093);
+  opacity: 0.1;
+  filter: blur(2px);
+}
+.unpri-hero__wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 96px 0 84px;
+}
+.unpri-hero__content {
+  max-width: 780px;
+}
+.unpri-hero__eyebrow {
+  margin: 0 0 14px;
+  color: var(--up-primary, #591093);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+.unpri-title {
+  margin: 0 0 14px;
+  color: var(--up-deep, #240437);
+  font-weight: 900;
+  letter-spacing: -0.6px;
+  line-height: 1.06;
+  font-size: 54px;
+  text-transform: none;
+}
+.unpri-title strong {
+  color: inherit;
+}
+.unpri-sub {
+  margin: 0;
+  color: var(--up-ink, #201628);
+  line-height: 1.65;
+  font-size: 16px;
+  max-width: 58ch;
+}
+.unpri-ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.unpri-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.16s ease;
+}
+.unpri-btn--gold {
+  background: var(--up-accent, #f4c542);
+  color: var(--up-ink, #201628);
+}
+.unpri-btn--gold:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.98);
+}
+.unpri-btn--ghost {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.92);
+}
+.unpri-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+.unpri-facts {
+  position: relative;
+  z-index: 3;
+  background: #fff;
+  border-bottom: 1px solid var(--up-border, #e7ddf0);
+}
+.unpri-facts__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.unpri-fact {
+  min-width: 0;
+  padding: 20px 22px;
+  border-right: 1px solid var(--up-border, #e7ddf0);
+}
+.unpri-fact:first-child {
+  border-left: 1px solid var(--up-border, #e7ddf0);
+}
+.unpri-fact span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--up-muted, #6f6577);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+}
+.unpri-fact strong {
+  display: block;
+  overflow: hidden;
+  color: var(--up-ink, #201628);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+}
+.unpri-body {
+  background: var(--up-surface, #faf7fc);
+  padding: 24px 0 50px;
+}
+.unpri-card {
+  background: #fff;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(32, 22, 40, 0.045);
+  height: 100%;
+  margin-bottom: 14px;
+}
+.unpri-card__body {
+  padding: 16px 16px;
+  color: var(--up-muted, #6f6577);
+  line-height: 1.9;
+  font-size: 14px;
+}
+.unpri-card__body p {
+  margin: 0 0 10px;
+}
+.unpri-card__body p:last-child {
+  margin-bottom: 0;
+}
+.unpri-card__body strong {
+  color: var(--up-primary, #591093);
+  font-weight: 900;
+}
+.unpri-card__body a {
+  color: var(--up-primary, #591093);
+  font-weight: 900;
+}
+.unpri-card__body a:hover {
+  text-decoration: underline;
+}
+.unpri-nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin: 0 0 18px;
+  padding: 9px 0;
+  background: var(--up-surface, #faf7fc);
+  border-bottom: 1px solid var(--up-border, #e7ddf0);
+}
+.unpri-nav__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+}
+.unpri-nav__row::-webkit-scrollbar {
+  display: none;
+}
+.unpri-nav a {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  height: 36px;
+  padding: 0 13px;
+  border-radius: 999px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  background: #fff;
+  color: var(--up-primary, #591093);
+  font-weight: 900;
+  font-size: 12px;
+  transition: 0.15s ease;
+}
+.unpri-nav a:hover {
+  background: var(--up-soft, #f3eaf8);
+  transform: translateY(-1px);
+}
+.unpri-nav a.unpri-nav__apply {
+  margin-left: auto;
+  color: var(--up-ink, #201628);
+  background: var(--up-accent, #f4c542);
+  border-color: var(--up-accent, #f4c542);
+}
+.unpri-ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.unpri-ul li {
+  margin: 6px 0;
+}
+.unpri-asideCard {
+  position: sticky;
+  top: 64px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(32, 22, 40, 0.045);
+  overflow: hidden;
+}
+.unpri-asideHead {
+  padding: 14px;
+  background: var(--up-soft, #f3eaf8);
+  border-bottom: 1px solid var(--up-border, #e7ddf0);
+}
+.unpri-asideBody {
+  padding: 12px;
+}
+.unpri-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: var(--up-soft, #f3eaf8);
+  border: 1px solid var(--up-border, #e7ddf0);
+  color: var(--up-primary, #591093);
+  font-weight: 900;
+  font-size: 11px;
+}
+.unpri-chip--gold {
+  background: var(--up-soft, #f3eaf8);
+  border-color: var(--up-accent, #f4c542);
+  color: var(--up-ink, #201628);
+}
+.unpri-asideSection {
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.unpri-asideSection__head {
+  padding: 12px;
+  background: #fff;
+  border-bottom: 1px solid var(--up-border, #e7ddf0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.unpri-asideSection__title {
+  font-weight: 900;
+  color: var(--up-ink, #201628);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.unpri-asideSection__body {
+  padding: 12px;
+}
+.unpri-asideLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.unpri-asideLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 10px;
+  border-radius: 14px;
+  border: 1px solid var(--up-soft, #f3eaf8);
+  background: #fff;
+  color: var(--up-primary, #591093);
+  font-weight: 900;
+  font-size: 12px;
+  transition: 0.15s ease;
+}
+.unpri-asideLink:hover {
+  border-color: var(--up-primary, #591093);
+  box-shadow: 0 12px 22px rgba(16, 24, 40, 0.06);
+  transform: translateY(-1px);
+}
+.unpri-asideLink span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.unpri-miniBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  background: #fff;
+  color: var(--up-primary, #591093);
+  transition: 0.15s ease;
+}
+.unpri-miniBtn:hover {
+  background: var(--up-soft, #f3eaf8);
+  transform: translateY(-1px);
+}
+.unpri-activeItem {
+  border-color: var(--up-accent, #f4c542) !important;
+  box-shadow: 0 14px 26px var(--up-soft, #f3eaf8) !important;
+}
+.unpri-pmuGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.unpri-pmuCard {
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 14px 26px rgba(16, 24, 40, 0.06);
+  overflow: hidden;
+}
+.unpri-pmuTop {
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.unpri-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: var(--up-soft, #f3eaf8);
+  border: 1px solid var(--up-border, #e7ddf0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  color: var(--up-primary, #591093);
+  overflow: hidden;
+}
+.unpri-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+.unpri-pmuName {
+  margin: 0;
+  font-weight: 900;
+  color: var(--up-ink, #201628);
+  font-size: 13px;
+  line-height: 1.25;
+}
+.unpri-pmuRole {
+  margin: 3px 0 0;
+  color: var(--up-muted, #6f6577);
+  font-weight: 800;
+  font-size: 12px;
+}
+/* MITRA */
+.unpri-partnerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1px;
+  overflow: visible;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 16px;
+  background: var(--up-border, #e7ddf0);
+}
+.unpri-partnerCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 138px;
+  padding: 20px 16px;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+  text-align: center;
+  transition: 0.16s ease;
+  position: relative !important;
+}
+.unpri-partnerCard[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  z-index: 20;
+  margin-bottom: 10px;
+  transform: translate(-50%, 6px) scale(0.96);
+
+  width: 260px;
+  padding: 8px 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 10px;
+  background: #fff;
+
+  color: var(--up-ink, #201628);
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .15s ease, transform .15s ease, visibility .15s;
+}
+.unpri-partnerCard[data-tooltip]:hover::after,
+.unpri-partnerCard[data-tooltip]:focus-within::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0) scale(1);
+}
+.unpri-partnerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.unpri-partnerLogo img {
+  width: var(--logo-w, 100%);
+  height: var(--logo-h, 74px);
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+.unpri-partnerName {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  color: var(--up-ink, #201628);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.45;
+}
+.unpri-partnerLogo img + .unpri-partnerName {
+  display: none;
+}
+.unpri-partnerMeta {
+  display: none;
+}
+.unpri-collapseBtn {
+  width: 100%;
+  border: 0;
+  background: #fff;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+}
+.unpri-collapseBtn:hover {
+  background: var(--up-soft, #f3eaf8);
+}
+.unpri-collapseBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--up-border, #e7ddf0);
+}
+.unpri-card__ttl {
+  margin: 0;
+  font-weight: 900;
+  color: var(--up-ink, #201628);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.unpri-ic {
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  background: var(--up-soft, #f3eaf8);
+  border: 1px solid var(--up-border, #e7ddf0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--up-primary, #591093);
+  font-size: 17px;
+}
+.unpri-collapseRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.unpri-collapseChevron {
+  width: 30px;
+  height: 30px;
+  border-radius: 12px;
+  background: var(--up-soft, #f3eaf8);
+  border: 1px solid var(--up-border, #e7ddf0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--up-primary, #591093);
+  transition: transform 0.18s ease;
+}
+.unpri-collapseBtn[aria-expanded="true"] .unpri-collapseChevron {
+  transform: rotate(180deg);
+}
+.unpri-collapse {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.28s ease;
+  will-change: max-height;
+}
+.unpri-card .unpri-btn--ghost {
+  color: var(--up-primary, #591093);
+  background: var(--up-soft, #f3eaf8);
+  border-color: var(--up-border, #e7ddf0);
+}
+.unpri-card .unpri-btn--ghost:hover {
+  color: #fff;
+  background: var(--up-primary, #591093);
+  border-color: var(--up-primary, #591093);
+}
+.program-footer {
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    var(--up-deep, #240437),
+    var(--up-primary, #591093)
+  );
+  border-top: 5px solid var(--up-accent, #f4c542);
+}
+.program-footer .container {
+  width: calc(100% - 40px);
+  max-width: 1180px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.program-footer__main {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 48px 0 34px;
+}
+.program-footer__identity {
+  max-width: 620px;
+}
+.program-footer__eyebrow {
+  margin: 0 0 8px;
+  color: var(--up-accent, #f4c542);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+}
+.program-footer__title {
+  margin: 0;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.program-footer__description {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+}
+.program-footer__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 9px;
+}
+.program-footer__navigation a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 7px 13px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.program-footer__navigation a:hover {
+  color: var(--up-deep, #240437);
+  background: var(--up-accent, #f4c542);
+  border-color: var(--up-accent, #f4c542);
+}
+.program-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 0 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.program-footer__bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 12px;
+}
+.program-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.program-footer__social a {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 800;
+}
+.program-footer__social a:hover {
+  color: var(--up-accent, #f4c542);
+}
+@media (max-width: 991px) {
+  .unpri-hero {
+    min-height: 500px;
+  }
+  .unpri-hero__wrap {
+    padding: 82px 0 72px;
+  }
+  .unpri-facts__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .unpri-fact:nth-child(2) {
+    border-right: 0;
+  }
+  .unpri-fact:nth-child(n + 3) {
+    border-top: 1px solid var(--up-border, #e7ddf0);
+  }
+  .unpri-asideCard {
+    position: static;
+    margin-top: 8px;
+  }
+  .unpri-nav a.unpri-nav__apply {
+    margin-left: 0;
+  }
+  .unpri-pmuGrid {
+    grid-template-columns: 1fr;
+  }
+  .unpri-partnerGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .program-footer__main,
+  .program-footer__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .program-footer__navigation,
+  .program-footer__social {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 640px) {
+  .unpri-hero {
+    min-height: 430px;
+  }
+  .unpri-hero__wrap {
+    padding: 68px 0 58px;
+  }
+  .unpri-hero__overlay {
+    background: var(--up-deep, #240437);
+    opacity: 0.78;
+  }
+  .unpri-title {
+    font-size: 34px;
+  }
+  .unpri-sub {
+    font-size: 14px;
+  }
+  .unpri-btn {
+    width: 100%;
+  }
+  .unpri-facts__grid {
+    grid-template-columns: 1fr;
+  }
+  .unpri-fact,
+  .unpri-fact:first-child {
+    border-right: 0;
+    border-left: 0;
+    border-top: 1px solid var(--up-border, #e7ddf0);
+  }
+  .unpri-fact:first-child {
+    border-top: 0;
+  }
+  .unpri-nav {
+    top: 0;
+  }
+  .program-footer .container {
+    width: calc(100% - 30px);
+  }
+  .program-footer__main {
+    padding: 38px 0 28px;
+  }
+  .program-footer__title {
+    font-size: 23px;
+  }
+}
+
+
+/* ==========================================================================
+   RESTORED PROGRAM-PAGE STYLES
+   Rebuilt to match the reference screenshots. Everything below was missing.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO INFO CARD (Jenjang / Gelar / Akreditasi / Durasi)
+   -------------------------------------------------------------------------- */
+.unpri-hero {
+  overflow: visible;
+  padding-bottom: 40px;
+}
+.unpri-hero:after {
+  content: none;
+}
+
+.info-card {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: -36px;
+  transform: translateX(-50%);
+  width: min(1120px, calc(100% - 40px));
+  display: flex;
+  align-items: stretch;
+  padding: 22px 8px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 18px 44px rgba(36, 4, 55, 0.16);
+}
+.info-item {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0 26px;
+}
+.info-card .divider {
+  flex: 0 0 1px;
+  width: 1px;
+  align-self: stretch;
+  background: var(--up-border, #e7ddf0);
+}
+.info-icon {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 22px;
+  color: var(--up-primary, #591093);
+  font-size: 20px;
+  line-height: 1;
+}
+.info-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--up-primary, #591093);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
+.info-item strong {
+  display: block;
+  color: var(--up-ink, #201628);
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+/* Keep the breadcrumb clear of the overhanging info card. */
+#position .container > ul {
+  padding-top: 62px !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. TABS + PANELS
+   -------------------------------------------------------------------------- */
+.unpri-tabPanels {
+  position: relative;
+}
+.unpri-panel {
+  display: none;
+}
+.unpri-panel.is-active {
+  display: block;
+  animation: unpri-fade 0.24s ease;
+}
+@keyframes unpri-fade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.unpri-nav a.is-active {
+  color: #fff;
+  background: var(--up-primary, #591093);
+  border-color: var(--up-primary, #591093);
+}
+.unpri-nav a.unpri-nav__apply {
+  margin-left: auto;
+  color: var(--up-primary, #591093);
+  background: #fff;
+  border-color: var(--up-border, #e7ddf0);
+}
+.unpri-nav a.unpri-nav__apply:hover {
+  color: #fff;
+  background: var(--up-primary, #591093);
+  border-color: var(--up-primary, #591093);
+}
+
+/* --------------------------------------------------------------------------
+   3. OVERVIEW PANEL — text + gallery, Visi, Misi
+   -------------------------------------------------------------------------- */
+.unpri-sectionTitle {
+  margin: 0 0 12px;
+  color: var(--up-deep, #240437);
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+.unpri-kicker {
+  margin: 0 0 8px;
+  color: var(--up-deep, #240437);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.unpri-overview {
+  margin-bottom: 24px;
+}
+
+.unpri-overview__desc {
+  margin: 0;
+  color: var(--up-ink, #201628);
+  font-size: 14px;
+  line-height: 1.9;
+}
+/*Videos*/
+.unpri-video {
+  margin: 0 auto 22px;
+}
+.unpri-video__title {
+  margin: 0 0 10px;
+  color: var(--up-deep, #240437);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+}
+.unpri-video__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 20 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--up-soft, #f3eaf8);
+}
+.unpri-video__player {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+  background: #000;
+}
+.unpri-video__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+.unpri-video__play {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 999px;
+  background: var(--up-primary, #591093);
+  color: #fff;
+  font-size: 30px;
+}
+.unpri-video__play .unpri-svg {
+  margin-left: 3px;
+}
+.unpri-video__caption {
+  max-width: 42ch;
+  margin: 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 13px;
+  font-weight: 700;
+}
+.unpri-video--alumni {
+  max-width: 860px;
+  margin: 75px auto 40px;
+}
+.unpri-video--alumni .unpri-video__title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 1500;
+  margin-bottom: 25px;
+}
+.unpri-video--alumni .unpri-video__frame {
+  background: var(--up-deep, #240437);
+}
+.unpri-video--alumni .unpri-video__empty {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+.unpri-video--alumni .unpri-video__play {
+  background: var(--up-accent, #f4c542);
+  color: var(--up-deep, #240437);
+}
+.unpri-video--alumni .unpri-video__caption {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Stats */
+.unpri-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 4px;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 22px 26px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+.unpri-stat {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 0 4px;
+}
+.unpri-stat__num {
+  color: var(--up-primary, #591093);
+  font-size: 28px;
+  white-space: nowrap;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+.unpri-stat__label {
+  color: var(--up-ink, #201628);
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.unpri-stat__sep {
+  flex: 0 0 auto;
+  width: 1px;
+  height: 34px;
+  background: var(--up-border, #e7ddf0);
+}
+
+/* Inline SVG icons (replace the missing Pe-icon-7-stroke font). */
+/* Inline SVG icons. Do NOT set fill or stroke here: a CSS declaration beats
+   the fill="none" presentation attribute on the paths and fills every outline
+   icon solid. Colour comes from currentColor on the attributes instead. */
+.unpri-svg {
+  display: inline-block;
+  vertical-align: -0.125em;
+  overflow: visible;
+}
+.unpri-svg--lead {
+  margin-right: 6px;
+}
+
+.unpri-vm {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+.unpri-visi {
+  margin-bottom: 0;
+}
+.unpri-visi__box {
+  padding: 16px 18px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 14px;
+  background: var(--up-soft, #f3eaf8);
+  color: var(--up-ink, #201628);
+  line-height: 1.85;
+}
+.unpri-visi__box p {
+  margin: 0;
+}
+
+.unpri-misi__list {
+  display: grid;
+  gap: 12px;
+}
+.unpri-misi__item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(36, 4, 55, 0.05);
+}
+.unpri-misi__num {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: var(--up-primary, #591093);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+}
+.unpri-misi__item p {
+  margin: 0;
+  color: var(--up-ink, #201628);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* --------------------------------------------------------------------------
+   4. BADGES / DOTS
+   -------------------------------------------------------------------------- */
+.unpri-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 26px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--up-primary, #591093);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+.unpri-badge--outline {
+  background: var(--up-soft, #f3eaf8);
+  border-color: var(--up-border, #e7ddf0);
+  color: var(--up-primary, #591093);
+}
+.unpri-badge--sm {
+  height: 20px;
+  padding: 0 9px;
+  font-size: 10px;
+}
+.unpri-dot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--up-accent, #f4c542);
+}
+
+/* --------------------------------------------------------------------------
+   5. AKADEMIK & KARIER 
+   -------------------------------------------------------------------------- */
+.unpri-cardIntro {
+  margin: 0 0 16px;
+  color: var(--up-muted, #6f6577);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.unpri-conGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.unpri-con {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 14px;
+  background: #fff;
+  transition: 0.16s ease;
+}
+.unpri-con:hover {
+  border-color: var(--up-primary, #591093);
+  transform: translateY(-2px);
+}
+.unpri-con__img {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--up-soft, #f3eaf8);
+}
+.unpri-con__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.unpri-con__body {
+  padding: 13px 15px 15px;
+}
+.unpri-con__ttl {
+  margin: 0 0 6px;
+  color: var(--up-ink, #201628);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+.unpri-con__body p {
+  margin: 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.unpri-cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.unpri-ul li::marker {
+  color: var(--up-primary, #591093);
+}
+.unpri-card__body .unpri-ul li {
+  color: var(--up-muted, #6f6577);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* --------------------------------------------------------------------------
+   6. PIMPINAN & DOSEN
+   -------------------------------------------------------------------------- */
+.unpri-pmuLead {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 18px;
+  padding: 22px 24px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(36, 4, 55, 0.06);
+}
+.unpri-avatar--lg {
+  flex: 0 0 auto;
+  width: 125px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  font-size: 34px;
+}
+.unpri-pmuLead__body {
+  min-width: 0;
+}
+.unpri-pmuLead__name {
+  margin: 10px 0 0;
+  color: var(--up-ink, #201628);
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.unpri-pmuLead__role {
+  margin: 4px 0 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 17px;
+  font-weight: 800;
+}
+.unpri-pmuLead__desc {
+  margin: 10px 0 0;
+  max-width: 62ch;
+  color: var(--up-ink, #201628);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.unpri-pmuLead__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.unpri-pmuLead__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 999px;
+  background: var(--up-soft, #f3eaf8);
+  color: var(--up-primary, #591093);
+  font-size: 11px;
+  font-weight: 800;
+}
+.unpri-lecturers {
+  padding: 18px 20px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(36, 4, 55, 0.06);
+}
+.unpri-lecturers__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  gap: 12px;
+  max-height: 470px;
+  margin-top: 14px;
+  padding-right: 10px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.unpri-lecturers__grid::-webkit-scrollbar {
+  width: 8px;
+}
+.unpri-lecturers__grid::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--up-border, #e7ddf0);
+}
+.unpri-lecturerChip {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 18px 14px;       
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 16px;
+  background: #fff;
+  transition: 0.15s ease;
+}
+.unpri-lecturerChip:hover {
+  transform: translateY(-2px);
+}
+.unpri-lecturerAvatar {
+position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;              
+  height: 110px;              
+  overflow: hidden;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 20px;
+  background: var(--up-soft, #f3eaf8);
+  color: var(--up-primary, #591093);
+  font-size: 18px;           
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.5px;}
+.unpri-lecturerAvatar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.unpri-lecturerChip__text {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+.unpri-lecturerChip__name {
+  display: block;
+  margin: 0;
+  color: var(--up-ink, #201628);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.unpri-lecturerChip__meta {
+  display: block;
+  margin: 3px 0 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   7. BERITA
+   -------------------------------------------------------------------------- */
+.unpri-newsHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.unpri-newsHead p {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.unpri-newsSep {
+  margin: 16px 0 20px;
+  border: 0;
+  border-top: 1px dashed var(--up-border, #e7ddf0);
+}
+.unpri-newsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.unpri-newsCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 26px rgba(36, 4, 55, 0.06);
+  transition: 0.16s ease;
+}
+.unpri-newsCard:hover {
+  border-color: var(--up-primary, #591093);
+  transform: translateY(-2px);
+}
+.unpri-newsCard__img {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--up-soft, #f3eaf8);
+}
+.unpri-newsCard__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.unpri-newsCard__body {
+  padding: 14px 16px 16px;
+}
+.unpri-newsDate {
+  margin: 0 0 6px;
+  color: var(--up-primary, #591093);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+.unpri-newsTitle {
+  margin: 0 0 8px;
+  color: var(--up-ink, #201628);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.unpri-newsExcerpt {
+  margin: 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.unpri-newsMore {
+  display: inline-block;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--up-border, #e7ddf0);
+  width: 100%;
+  color: var(--up-primary, #591093);
+  font-size: 13px;
+  font-weight: 900;
+}
+.unpri-newsMore:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   8. EMPTY STATE
+   -------------------------------------------------------------------------- */
+.unpri-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 48px 20px;
+  border: 1px dashed var(--up-border, #e7ddf0);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--up-muted, #6f6577);
+  text-align: center;
+  font-size: 14px;
+}
+.unpri-placeholder p {
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   9. TEMUKAN PROGRAM STUDI LAINNYA
+   -------------------------------------------------------------------------- */
+.unpri-findCard {
+  margin-top: 22px;
+  padding: 18px 20px 20px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(36, 4, 55, 0.06);
+}
+.unpri-findCard__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 12px 0 16px;
+}
+.unpri-findCard__head h3 {
+  margin: 0 0 5px;
+  color: var(--up-ink, #201628);
+  font-size: 20px;
+  font-weight: 900;
+}
+.unpri-findCard__head p {
+  margin: 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 13px;
+}
+.unpri-findCard__search {
+  position: relative;
+  flex: 0 1 280px;
+}
+.unpri-findCard__search .unpri-svg {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  color: var(--up-muted, #6f6577);
+  font-size: 16px;
+  pointer-events: none;
+}
+.unpri-findCard__search input {
+  width: 100%;
+  height: 40px;
+  padding: 0 14px 0 34px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--up-ink, #201628);
+  font-size: 13px;
+  outline: none;
+}
+.unpri-findCard__search input:focus {
+  border-color: var(--up-primary, #591093);
+  box-shadow: 0 0 0 3px var(--up-soft, #f3eaf8);
+}
+.unpri-findGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.unpri-findTile {
+  display: block;
+  padding: 12px 14px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(36, 4, 55, 0.05);
+  transition: 0.15s ease;
+}
+.unpri-findTile:hover {
+  border-color: var(--up-primary, #591093);
+  transform: translateY(-2px);
+}
+.unpri-findTile p {
+  margin: 8px 0 0;
+  color: var(--up-ink, #201628);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+/* --------------------------------------------------------------------------
+   9b. CTA — AJAKAN MENDAFTAR
+   -------------------------------------------------------------------------- */
+.unpri-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 96px 0 104px;
+  background: var(--up-deep, #240437);
+}
+/* Soft lighter circle bleeding off the bottom-right, as on the faculty page. */
+.unpri-cta::after {
+  content: "";
+  position: absolute;
+  right: -180px;
+  bottom: -340px;
+  width: 760px;
+  height: 760px;
+  border-radius: 999px;
+  background: var(--up-primary, #591093);
+  opacity: 0.55;
+  pointer-events: none;
+}
+.unpri-cta__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) auto;
+  gap: 48px;
+  align-items: center;
+}
+.unpri-cta__eyebrow {
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.unpri-cta__title {
+  max-width: 16ch;
+  margin: 0 0 32px;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 62px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.6px;
+}
+.unpri-cta__desc {
+  max-width: 66ch;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.9;
+}
+.unpri-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 66px;
+  padding: 0 46px;
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--up-deep, #240437);
+  font-size: 16px;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+  transition: 0.16s ease;
+}
+.unpri-cta__btn:hover {
+  border-color: var(--up-accent, #f4c542);
+  background: var(--up-accent, #f4c542);
+  color: var(--up-deep, #240437);
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   10. RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .unpri-vm,
+  .unpri-conGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .unpri-cta {
+    padding: 62px 0 68px;
+  }
+  .unpri-cta__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    justify-items: start;
+  }
+  .unpri-cta__title {
+    max-width: none;
+    font-size: 40px;
+  }
+  .unpri-findGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .unpri-newsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .info-card {
+    position: static;
+    transform: none;
+    width: auto;
+    margin: 26px 16px 0;
+    flex-wrap: wrap;
+  }
+  .info-item {
+    flex: 1 1 45%;
+    padding: 10px 16px;
+  }
+  .info-card .divider {
+    display: none;
+  }
+  #position .container > ul {
+    padding-top: 12px !important;
+  }
+  .unpri-hero {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .unpri-lecturers__grid,
+  .unpri-findGrid,
+  .unpri-newsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .unpri-stats {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px 20px;
+  }
+  .unpri-stat {
+    justify-content: flex-start;
+  }
+  .unpri-stat__sep {
+    width: 100%;
+    height: 1px;
+  }
+  .unpri-cta__title {
+    font-size: 30px;
+  }
+  .unpri-cta__btn {
+    width: 100%;
+  }
+  .unpri-findCard__head,
+  .unpri-newsHead {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .unpri-findCard__search {
+    flex: 1 1 auto;
+  }
+  .info-item {
+    flex: 1 1 100%;
+  }
+}
+/* --------------------------------------------------------------------------
+   11. FALLBACKS FOR MISSING ICON FONTS
+   Untitled-1.css references "Pe-icon-7-stroke" and "fontello" font files that
+   are not shipped with this folder, so their glyphs render as empty boxes.
+   Icons in the markup are inline SVG now; these rules clean up the leftover
+   pseudo-element glyphs in the breadcrumb.
+   -------------------------------------------------------------------------- */
+#position ul li:first-child {
+  padding-left: 0;
+}
+#position ul li:first-child:before {
+  content: none;
+}
+#position ul li:after {
+  content: "\203A";
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--up-muted, #6f6577);
+}
+#position ul li:last-child:after {
+  content: "";
+}
+
+/* ==========================================================================
+   12. RESPONSIVE LAYER
+   Appended deliberately: everything here is an override that sits after the
+   rules above, so no existing declaration had to be edited. Breakpoints:
+
+     1199px  small desktop / landscape tablet (site navbar drops to 70px)
+      991px  portrait tablet
+      767px  large phone
+      575px  phone
+      400px  small phone
+
+   The site navbar (#usn-header) has its own responsive rules inside
+   index.html and is not touched here.
+   ========================================================================== */
+
+/* Long unbroken strings (URLs, long titles) must not push the page wider
+   than the viewport on narrow screens. */
+.unpri-pshow p,
+.unpri-pshow h1,
+.unpri-pshow h2,
+.unpri-pshow h3,
+.unpri-pshow h4,
+.unpri-pshow li,
+.unpri-pshow a {
+  overflow-wrap: break-word;
+}
+
+/* Media never overflows its column. */
+.unpri-pshow img,
+.unpri-pshow svg,
+.unpri-pshow iframe,
+.unpri-pshow video {
+  max-width: 100%;
+}
+
+/* The tab row scrolls sideways rather than squashing. Flex items shrink by
+   default, so without flex-shrink:0 the tabs compress into unreadable slivers
+   instead of triggering the overflow-x already set on .unpri-nav__row. */
+.unpri-nav__row {
+  -webkit-overflow-scrolling: touch;
+}
+.unpri-nav__row > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* Keep the sticky tab bar clear of the sticky site navbar (76px tall). */
+.unpri-nav {
+  top: 76px;
+}
+
+@media (max-width: 1199px) {
+  .unpri-nav {
+    top: 70px;
+  }
+  .unpri-title {
+    font-size: 44px;
+  }
+  .unpri-cta__title {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 991px) {
+  .unpri-title {
+    font-size: 38px;
+  }
+
+  /* Konsentrasi keeps two columns here — the container is still 750px wide,
+     so a single column would leave the cards uncomfortably long. */
+  .unpri-conGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Five nowrap counts overflow a 750px container, so the strip becomes a
+     grid and the separators are dropped. */
+  .unpri-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px 10px;
+    padding: 20px 22px;
+  }
+  .unpri-stat__sep {
+    display: none;
+  }
+
+  .unpri-video--alumni {
+    margin: 48px auto 32px;
+  }
+  .unpri-video--alumni .unpri-video__title {
+    font-size: 21px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .unpri-hero {
+    min-height: 460px;
+  }
+
+  /* 20/9 is very letterboxed once the frame is only ~340px wide. */
+  .unpri-video__frame {
+    aspect-ratio: 16 / 9;
+  }
+  .unpri-video--alumni {
+    margin: 36px auto 28px;
+  }
+
+  .unpri-conGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .unpri-cta {
+    padding: 52px 0 58px;
+  }
+  .unpri-cta__title {
+    font-size: 34px;
+    margin-bottom: 22px;
+  }
+  .unpri-cta__desc {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* Lecturer chips stay multi-column; one per row wastes the whole screen. */
+  .unpri-lecturers__grid {
+    grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
+    max-height: 420px;
+  }
+  .unpri-partnerGrid {
+    grid-template-columns: repeat(auto-fill, minmax(126px, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .unpri-hero {
+    min-height: 400px;
+  }
+  .unpri-hero__eyebrow {
+    font-size: 11px;
+  }
+  .unpri-ctaRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  /* Counts: two per row, and labels are allowed to wrap because
+     "Tenaga Kependidikan" cannot fit a ~150px cell on one line. */
+  .unpri-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 18px;
+  }
+  .unpri-stat {
+    justify-content: center;
+    gap: 7px;
+  }
+  .unpri-stat__num {
+    font-size: 24px;
+  }
+  .unpri-stat__label {
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  .unpri-video__play {
+    width: 52px;
+    height: 52px;
+    font-size: 25px;
+  }
+  .unpri-video__caption {
+    font-size: 12px;
+  }
+  .unpri-video--alumni {
+    margin: 28px auto 24px;
+  }
+  .unpri-video--alumni .unpri-video__title {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .unpri-card__body {
+    padding: 16px;
+  }
+  .unpri-cardHead {
+    flex-wrap: wrap;
+  }
+  .unpri-sectionTitle {
+    font-size: 18px;
+  }
+  .unpri-overview__desc {
+    font-size: 13.5px;
+    line-height: 1.85;
+  }
+
+  /* Head of programme: photo above the name instead of beside it. */
+  .unpri-pmuLead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px;
+  }
+  .unpri-pmuLead__name {
+    font-size: 20px;
+  }
+  .unpri-pmuLead__role {
+    font-size: 14px;
+  }
+  .unpri-lecturers {
+    padding: 16px;
+  }
+  .unpri-lecturerAvatar {
+    width: 92px;
+    height: 92px;
+  }
+
+  .unpri-visi__box,
+  .unpri-misi__item {
+    padding: 14px;
+  }
+  .unpri-findCard {
+    padding: 16px;
+  }
+  .unpri-cta {
+    padding: 44px 0 48px;
+  }
+  .unpri-cta__desc {
+    font-size: 14px;
+  }
+
+  #position ul {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .unpri-title {
+    font-size: 26px;
+  }
+  .unpri-stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .unpri-stat {
+    justify-content: flex-start;
+  }
+  .unpri-lecturers__grid,
+  .unpri-partnerGrid {
+    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  }
+  .unpri-cta__title {
+    font-size: 27px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12b. INFO CARD — RESPONSIVE GRID
+   The desktop layout is one flex row with <span class="divider"> elements
+   between the items. Below 991px that fell back to flex-wrap with
+   flex: 1 1 45%, which stretched the cells unevenly and dropped every rule
+   line, leaving four values floating with no structure.
+
+   Here the card becomes a real grid instead. The separators are drawn with a
+   1px gap over a coloured card background rather than by the .divider spans
+   (which stay display:none), so rules appear between every neighbouring cell
+   automatically at both 2 and 1 column — no :nth-child bookkeeping, and
+   nothing to adjust if the number of items ever changes.
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .info-card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    padding: 0;
+    overflow: hidden;
+    background: var(--up-border, #e7ddf0);
+  }
+  .info-item {
+    padding: 20px 24px;
+    background: #fff;
+  }
+}
+
+@media (max-width: 575px) {
+  .info-card {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 22px 15px 0;
+  }
+  .info-item {
+    padding: 16px 18px;
+  }
+  .info-icon {
+    margin-bottom: 6px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12c. INFO CARD PLACEMENT — hero overlap on desktop/tablet, below on phones
+
+   The card now sits AFTER </section class="unpri-hero"> in index.html rather
+   than inside it. That matters: .unpri-hero is display:flex, so while the card
+   lived inside it, dropping position:absolute at 991px turned the card into a
+   flex item of the hero and it got laid out beside the hero content. That is
+   what looked cramped and forced — no amount of padding could fix it, because
+   the card was in the wrong formatting context.
+
+   As a sibling it is a normal block, so placement is just margin:
+     >= 768px  negative top margin lifts it into the bottom of the hero
+     <  768px  positive margin, fully clear of the hero
+
+   This also retires the old bottom:-36px / breadcrumb padding-top:62px pair,
+   which had to be kept in sync by hand.
+   -------------------------------------------------------------------------- */
+.info-card {
+  position: relative;
+  z-index: 4;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  width: min(1120px, calc(100% - 40px));
+  margin: -80px auto 0;
+}
+
+/* The card is in normal flow now, so the breadcrumb no longer has to reserve
+   room for an overhang. */
+#position .container > ul {
+  padding-top: 26px !important;
+}
+
+@media (max-width: 991px) {
+  /* Still overlapping the hero, just a shallower bite since the card is
+     taller here (two rows instead of one). */
+  .unpri-hero {
+    padding-bottom: 40px;
+  }
+  .info-card {
+    margin: -80px auto 0;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Fully outside the hero. */
+  .unpri-hero {
+    padding-bottom: 0;
+  }
+  .info-card {
+    width: calc(100% - 30px);
+    margin: 24px auto 0;
+  }
+  #position .container > ul {
+    padding-top: 20px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   13. MITRA — DOKUMENTASI KEGIATAN
+   A band of video cards above the logo grid, built from any partner in
+   partners.json that carries a "video" key. Remove the key and its card goes;
+   remove them all and the whole band disappears, leaving the logo grid as it
+   was. Nothing here needs to know how many videos exist.
+   -------------------------------------------------------------------------- */
+.unpri-partnerDocs {
+  margin-bottom: 30px;
+}
+.unpri-docHead {
+  margin-bottom: 16px;
+}
+.unpri-docHead__ttl {
+  margin: 0 0 6px;
+  color: var(--up-deep, #240437);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+.unpri-docHead__ttl--sub {
+  margin: 0 0 14px;
+  padding-top: 4px;
+  border-top: 1px dashed var(--up-border, #e7ddf0);
+  padding-top: 22px;
+}
+.unpri-docHead__intro {
+  max-width: 68ch;
+  margin: 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* auto-fill keeps empty tracks, so one card stays ~350px rather than
+   stretching the full width. Two cards sit side by side, three fill the row,
+   four wrap to a second row. No per-count rules needed. */
+.unpri-docGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+.unpri-docCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 14px;
+  background: #fff;
+}
+/* The shared .unpri-video sets a centring margin and a 20/9 frame; inside a
+   card it needs neither. */
+.unpri-docCard__video {
+  margin: 0;
+}
+.unpri-docCard__video .unpri-video__frame {
+  aspect-ratio: 16 / 9;
+  border-radius: 0;
+}
+.unpri-docCard__video .unpri-video__empty {
+  border-radius: 0;
+}
+.unpri-docCard__video .unpri-video__play {
+  width: 46px;
+  height: 46px;
+  font-size: 22px;
+}
+.unpri-docCard__video .unpri-video__caption {
+  font-size: 12px;
+}
+.unpri-docCard__body {
+  padding: 13px 15px 15px;
+}
+.unpri-docCard__ttl {
+  margin: 0;
+  color: var(--up-ink, #201628);
+  font-size: 13.5px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+.unpri-docCard__desc {
+  margin: 6px 0 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+.unpri-docCard__date {
+  margin: 8px 0 0;
+  color: var(--up-primary, #591093);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 575px) {
+  .unpri-docGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .unpri-docHead__ttl {
+    font-size: 16px;
+  }
+}
+
+/* ==========================================================================
+   11. SECTION BLOCKS  (Gambaran Umum / Akademik & Karier / Alumni / FAQ ...)
+   Added for the Profesi Dokter content structure. Everything below uses the
+   page palette variables only - no colour is hard-coded outside the var()
+   fallbacks, so the whole block follows --up-* set on .unpri-pshow.
+   ========================================================================== */
+
+.unpri-blockSub {
+  margin: -4px 0 12px;
+  color: var(--up-primary, #591093);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.unpri-prose p {
+  margin: 0 0 12px;
+  color: var(--up-ink, #201628);
+  font-size: 14px;
+  line-height: 1.9;
+}
+.unpri-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.unpri-defEmpty {
+  margin: 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* --- title + paragraph stack ------------------------------------------- */
+.unpri-defList {
+  display: grid;
+  gap: 12px;
+}
+.unpri-def {
+  padding: 15px 17px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-left: 3px solid var(--up-primary, #591093);
+  border-radius: 14px;
+  background: #fff;
+}
+.unpri-def__ttl {
+  margin: 0 0 6px;
+  color: var(--up-deep, #240437);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+.unpri-def__body p {
+  margin: 0 0 8px;
+  color: var(--up-ink, #201628);
+  font-size: 13.5px;
+  line-height: 1.85;
+}
+.unpri-def__body p:last-child {
+  margin-bottom: 0;
+}
+.unpri-def__body .unpri-ul {
+  margin: 8px 0 0;
+}
+
+/* --- keunggulan cards (mengapa memilih kami) ----------------------------
+   Flex rather than grid on purpose: a full row of four fills the width
+   exactly, and a trailing row of one, two or three centres itself instead
+   of hanging on the left. -------------------------------------------------- */
+.unpri-whyGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+.unpri-whyCard {
+  display: flex;
+  flex: 0 1 calc((100% - 42px) / 4);
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+  padding: 16px 16px 22px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(36, 4, 55, 0.05);
+  transition: transform 260ms cubic-bezier(0.22, 0.75, 0.3, 1),
+    box-shadow 260ms ease, border-color 260ms ease;
+}
+.unpri-whyCard:hover {
+  transform: scale(1.02);
+  border-color: var(--up-primary, #591093);
+  box-shadow: 0 16px 30px rgba(36, 4, 55, 0.1);
+}
+
+/* Round number badge. On hover a yellow arc appears and circles it. */
+.unpri-whyCard__num {
+  position: relative;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: var(--up-primary, #591093);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+/* The ring draws itself around the badge once - head travelling round until
+   it meets the tail - then holds. Retracts the same way on mouse-out.
+   stroke-dasharray is the full circumference (2 x pi x r, r = 20). */
+.unpri-whyCard__ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Sized explicitly rather than by insets: an <svg> is a replaced element,
+     so with width/height:auto it falls back to its intrinsic size instead of
+     stretching to the four insets - which is what threw the ring off centre.
+     max-width:none beats `.unpri-pshow svg { max-width: 100% }`. */
+  width: 44px;
+  height: 44px;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  overflow: visible;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+.unpri-whyCard__ring circle {
+  fill: none;
+  stroke: var(--up-accent, #f4c542);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  /* full circumference: 2 x pi x 19.5 = 122.52 */
+  stroke-dasharray: 122.52;
+  stroke-dashoffset: 122.52;
+  transition: stroke-dashoffset 760ms cubic-bezier(0.32, 0.72, 0.3, 1);
+}
+.unpri-whyCard:hover .unpri-whyCard__ring circle {
+  stroke-dashoffset: 0;
+}
+
+/* Icon in a plain pale-purple circle. */
+.unpri-whyCard__blob {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 86px;
+  height: 86px;
+  margin: 14px 0 16px;
+  border-radius: 999px;
+  background: var(--up-soft, #f3eaf8);
+  transition: transform 300ms cubic-bezier(0.22, 0.75, 0.3, 1);
+}
+.unpri-whyCard:hover .unpri-whyCard__blob {
+  transform: scale(1.05);
+}
+.unpri-whyCard__icon {
+  color: var(--up-primary, #591093);
+  font-size: 36px;
+  line-height: 1;
+}
+.unpri-whyCard__ttl {
+  margin: 0;
+  color: var(--up-deep, #240437);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .unpri-whyCard,
+  .unpri-whyCard__blob,
+  .unpri-whyCard__ring circle {
+    transition-duration: 1ms;
+  }
+}
+
+/* --- sambutan ketua program studi ---------------------------------------
+   Structure: .unpri-sambutan is a bare positioning wrapper holding two
+   full-size sheets and then .unpri-sambutan__inner, which carries the
+   background and the actual two-column layout. Ordinary source order puts
+   the sheets behind the letter - no negative z-index, which is what forced
+   the old version to live outside the card as floating strips.
+   -------------------------------------------------------------------------- */
+.unpri-sambutan {
+  position: relative;
+  /* Deliberately tight at rest - the card head above already contributes
+     12px. The room the deck needs is opened on hover by the letter dropping
+     down, rather than reserved permanently as a gap. */
+  margin-top: 2px;
+}
+
+.unpri-sambutan__sheet {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 20px;
+  background: var(--up-soft, #f3eaf8);
+  opacity: 0;
+  /* at rest each sheet sits exactly under the letter, so the section reads
+     as a single card */
+  transform: translateY(0) scaleX(1);
+  transition: opacity 320ms ease, transform 440ms cubic-bezier(0.22, 0.75, 0.3, 1);
+  pointer-events: none;
+}
+/* scaleX, never scale(): a uniform scale shrinks the height too, which on a
+   card this tall drags the top edge down by roughly the same distance the
+   translate lifts it - the sheets rise and hide behind the card again.
+   Horizontal-only narrowing leaves the vertical offset intact. */
+/* The sheets rise only a little; most of the separation comes from the
+   letter dropping the other way, so the deck opens from the middle. */
+.unpri-sambutan:hover .unpri-sambutan__sheet--near {
+  opacity: 1;
+  transform: translateY(-2px) scaleX(0.985);
+  transition-delay: 30ms;
+}
+.unpri-sambutan:hover .unpri-sambutan__sheet--far {
+  opacity: 0.62;
+  transform: translateY(-10px) scaleX(0.963);
+  transition-delay: 100ms;
+}
+
+.unpri-sambutan__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 26px;
+  padding: 26px 28px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 20px;
+  background: var(--up-surface, #faf7fc);
+  transition: transform 440ms cubic-bezier(0.22, 0.75, 0.3, 1),
+    box-shadow 440ms ease;
+}
+/* the letter drops away from the sheets as they rise - net separation is
+   16px to the near sheet and 24px to the far one */
+.unpri-sambutan:hover .unpri-sambutan__inner {
+  transform: translateY(14px);
+  box-shadow: 0 18px 36px rgba(36, 4, 55, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .unpri-sambutan__sheet,
+  .unpri-sambutan__inner {
+    transition-duration: 1ms;
+    transition-delay: 0ms;
+  }
+}
+.unpri-sambutan__media {
+  align-self: start;
+}
+.unpri-sambutan__photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 16px;
+  background: #fff;
+}
+.unpri-sambutan__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.unpri-sambutan__ph {
+  padding: 0 18px;
+  color: var(--up-muted, #6f6577);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.unpri-sambutan__caption {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--up-border, #e7ddf0);
+}
+.unpri-sambutan__name {
+  margin: 0;
+  color: var(--up-deep, #240437);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.unpri-sambutan__role {
+  margin: 4px 0 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+.unpri-sambutan__text p {
+  font-size: 14px;
+  line-height: 1.95;
+}
+/* --- nilai-nilai prodi --------------------------------------------------- */
+.unpri-valueGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 12px;
+}
+.unpri-value {
+  position: relative;
+  padding: 18px 18px 16px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(36, 4, 55, 0.05);
+}
+.unpri-value__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: var(--up-soft, #f3eaf8);
+  color: var(--up-primary, #591093);
+  font-size: 12px;
+  font-weight: 900;
+}
+.unpri-value__ttl {
+  margin: 0 0 6px;
+  color: var(--up-deep, #240437);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+.unpri-value p {
+  margin: 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* --- akreditasi & sertifikasi -------------------------------------------- */
+.unpri-akredBand {
+  padding: 24px 22px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    var(--up-soft, #f3eaf8) 0%,
+    var(--up-surface, #faf7fc) 100%
+  );
+  text-align: center;
+}
+.unpri-akredBand__line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: baseline;
+  justify-content: center;
+  margin: 0;
+}
+.unpri-akredBand__label {
+  color: var(--up-deep, #240437);
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
+.unpri-akredBand__sep {
+  color: var(--up-muted, #6f6577);
+  font-size: 22px;
+  font-weight: 900;
+}
+.unpri-akredBand__value {
+  color: var(--up-primary, #591093);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  line-height: 1.2;
+}
+.unpri-akredBand__empty {
+  display: inline-block;
+  padding: 6px 16px;
+  border: 1px dashed var(--up-border, #e7ddf0);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--up-muted, #6f6577);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.unpri-akredBand__note {
+  margin: 10px 0 0;
+  color: var(--up-ink, #201628);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.unpri-akredSub {
+  margin: 24px 0 12px;
+  color: var(--up-deep, #240437);
+  text-align: center;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  line-height: 1.45;
+}
+.unpri-certGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
+}
+.unpri-cert {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(36, 4, 55, 0.05);
+  transition: 0.15s ease;
+}
+.unpri-cert:hover {
+  transform: translateY(-2px);
+  border-color: var(--up-primary, #591093);
+}
+.unpri-cert__frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  padding: 12px;
+  background: var(--up-surface, #faf7fc);
+}
+.unpri-cert__frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.unpri-cert__ph {
+  color: var(--up-border, #e7ddf0);
+  font-size: 44px;
+  line-height: 1;
+}
+.unpri-cert__meta {
+  display: block;
+  padding: 12px 14px 14px;
+  border-top: 1px solid var(--up-border, #e7ddf0);
+}
+.unpri-cert__ttl {
+  display: block;
+  color: var(--up-deep, #240437);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.unpri-cert__issuer {
+  display: block;
+  margin-top: 4px;
+  color: var(--up-muted, #6f6577);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.unpri-cert__year {
+  display: block;
+  margin-top: 6px;
+  color: var(--up-primary, #591093);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+}
+
+/* --- struktur organisasi -------------------------------------------------- */
+.unpri-orgChart {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 16px;
+  background: #fff;
+}
+.unpri-orgChart img {
+  display: block;
+  width: 100%;
+}
+.unpri-orgChart figcaption {
+  padding: 10px 14px;
+  border-top: 1px solid var(--up-border, #e7ddf0);
+  color: var(--up-muted, #6f6577);
+  text-align: center;
+  font-size: 12.5px;
+}
+.unpri-orgList {
+  display: grid;
+  gap: 10px;
+}
+.unpri-orgItem {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 13px 16px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 12px;
+  background: #fff;
+}
+.unpri-orgItem__role {
+  color: var(--up-muted, #6f6577);
+  font-size: 12.5px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.unpri-orgItem__name {
+  color: var(--up-deep, #240437);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+/* --- career cards --------------------------------------------------------- */
+.unpri-careerTagline {
+  margin: 0 0 12px;
+  color: var(--up-primary, #591093);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.unpri-careerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+.unpri-careerCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 26px rgba(36, 4, 55, 0.05);
+  transition: 0.15s ease;
+}
+.unpri-careerCard__media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--up-border, #e7ddf0);
+  background: var(--up-soft, #f3eaf8);
+}
+.unpri-careerCard__media img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.unpri-careerCard__ph {
+  position: absolute;
+  color: var(--up-primary, #591093);
+  opacity: 0.22;
+  font-size: 40px;
+  line-height: 1;
+}
+.unpri-careerCard__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 18px 20px;
+}
+.unpri-careerCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--up-primary, #591093);
+  box-shadow: 0 16px 32px rgba(36, 4, 55, 0.09);
+}
+.unpri-careerCard__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: var(--up-primary, #591093);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+}
+.unpri-careerCard__ttl {
+  margin: 0 0 8px;
+  color: var(--up-deep, #240437);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.unpri-careerCard__desc {
+  margin: 0 0 14px;
+  color: var(--up-ink, #201628);
+  font-size: 13.5px;
+  line-height: 1.85;
+}
+.unpri-careerCard__label {
+  margin: auto 0 8px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--up-border, #e7ddf0);
+  color: var(--up-primary, #591093);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.unpri-careerCard__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.unpri-careerCard__list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  color: var(--up-ink, #201628);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.unpri-careerCard__list li:last-child {
+  margin-bottom: 0;
+}
+.unpri-careerCard__list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--up-accent, #f4c542);
+}
+
+/* --- agenda, aktivitas & galeri: masonry board ---------------------------
+   CSS columns rather than grid so tiles of different heights stack without
+   gaps. `--tile-ratio` on each image frame staggers the heights. ---------- */
+.unpri-tileBoard {
+  column-count: 3;
+  column-gap: 16px;
+}
+.unpri-tile {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 20px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.unpri-tile__img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: var(--tile-ratio, 4 / 3);
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--up-soft, #f3eaf8);
+}
+.unpri-tile__img img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 420ms cubic-bezier(0.22, 0.75, 0.3, 1);
+}
+.unpri-tile:hover .unpri-tile__img img {
+  transform: scale(1.04);
+}
+.unpri-tile__ph {
+  position: absolute;
+  color: var(--up-primary, #591093);
+  opacity: 0.2;
+  font-size: 38px;
+  line-height: 1;
+}
+.unpri-tile__cap {
+  padding: 12px 2px 0;
+}
+.unpri-tile__ttl {
+  margin: 0;
+  color: var(--up-deep, #240437);
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.unpri-tile__meta {
+  margin: 5px 0 0;
+  color: var(--up-muted, #6f6577);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .unpri-tileBoard {
+    column-count: 2;
+  }
+}
+@media (max-width: 575px) {
+  .unpri-tileBoard {
+    column-count: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .unpri-tile__img img {
+    transition-duration: 1ms;
+  }
+}
+
+/* --- FAQ ------------------------------------------------------------------- */
+.unpri-faq {
+  display: grid;
+  gap: 10px;
+}
+.unpri-faqItem {
+  overflow: hidden;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 14px;
+  background: #fff;
+  transition: 0.15s ease;
+}
+.unpri-faqItem[open] {
+  border-color: var(--up-primary, #591093);
+  box-shadow: 0 12px 26px rgba(36, 4, 55, 0.06);
+}
+.unpri-faqQ {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 15px 17px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--up-deep, #240437);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.unpri-faqQ::-webkit-details-marker {
+  display: none;
+}
+.unpri-faqQ:hover {
+  background: var(--up-surface, #faf7fc);
+}
+.unpri-faqQ__mark {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 9px;
+  background: var(--up-soft, #f3eaf8);
+  color: var(--up-primary, #591093);
+  font-size: 16px;
+}
+.unpri-faqQ__text {
+  flex: 1 1 auto;
+}
+.unpri-faqQ__chevron {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  margin-top: 8px;
+  border: solid var(--up-primary, #591093);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: transform 0.18s ease;
+}
+.unpri-faqItem[open] .unpri-faqQ__chevron {
+  transform: rotate(-135deg);
+  margin-top: 11px;
+}
+.unpri-faqA {
+  padding: 0 17px 17px 55px;
+}
+.unpri-faqA p {
+  margin: 0 0 10px;
+  color: var(--up-ink, #201628);
+  font-size: 13.5px;
+  line-height: 1.9;
+}
+.unpri-faqA p:last-child {
+  margin-bottom: 0;
+}
+.unpri-faqA .unpri-ul {
+  margin: 10px 0 0;
+}
+
+/* --- responsive ------------------------------------------------------------ */
+@media (max-width: 767px) {
+  .unpri-sambutan__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding: 20px;
+  }
+  .unpri-sambutan__photo {
+    aspect-ratio: 4 / 3;
+  }
+  .unpri-akredBand__label,
+  .unpri-akredBand__sep,
+  .unpri-akredBand__value {
+    font-size: 19px;
+  }
+  .unpri-faqA {
+    padding-left: 17px;
+  }
+}
+
+@media (max-width: 991px) {
+  .unpri-whyCard {
+    flex-basis: calc((100% - 14px) / 2);
+  }
+}
+
+@media (max-width: 575px) {
+  .unpri-whyCard {
+    flex-basis: 100%;
+  }
+  .unpri-valueGrid,
+  .unpri-careerGrid,
+  .unpri-certGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .unpri-def {
+    padding: 13px 14px;
+  }
+}
+
+/* --- alumni cards --------------------------------------------------------- */
+.unpri-alumniGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.unpri-alumniCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 26px rgba(36, 4, 55, 0.05);
+  transition: 0.15s ease;
+}
+.unpri-alumniCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--up-primary, #591093);
+  box-shadow: 0 16px 32px rgba(36, 4, 55, 0.09);
+}
+.unpri-alumniCard__photo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-bottom: 1px solid var(--up-border, #e7ddf0);
+  background: var(--up-soft, #f3eaf8);
+}
+.unpri-alumniCard__photo img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+}
+.unpri-alumniCard__ph {
+  position: absolute;
+  color: var(--up-primary, #591093);
+  opacity: 0.22;
+  font-size: 44px;
+  line-height: 1;
+}
+.unpri-alumniCard__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 18px 20px 20px;
+}
+.unpri-alumniCard__name {
+  margin: 0;
+  color: var(--up-deep, #240437);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.unpri-alumniCard__role {
+  margin: 4px 0 0;
+  color: var(--up-primary, #591093);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.unpri-alumniCard__list {
+  margin: 14px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px dashed var(--up-border, #e7ddf0);
+  list-style: none;
+}
+.unpri-alumniCard__list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.unpri-alumniCard__list li:last-child {
+  margin-bottom: 0;
+}
+.unpri-alumniCard__key {
+  flex: 0 0 auto;
+  color: var(--up-muted, #6f6577);
+  font-size: 11.5px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.unpri-alumniCard__val {
+  flex: 1 1 auto;
+  color: var(--up-ink, #201628);
+  text-align: right;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+.unpri-alumniCard__quote {
+  position: relative;
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--up-surface, #faf7fc);
+  color: var(--up-ink, #201628);
+  font-size: 12.5px;
+  font-style: italic;
+  line-height: 1.75;
+}
+
+/* FAQ answers: emphasis stays black, no coloured runs of text. */
+.unpri-faqA strong,
+.unpri-faqA b {
+  color: var(--up-ink, #201628);
+  font-weight: 900;
+}
+.unpri-faqA em {
+  color: var(--up-ink, #201628);
+}
+.unpri-faqA .unpri-ul li {
+  color: var(--up-ink, #201628);
+}
+
+@media (max-width: 767px) {
+  .unpri-alumniGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* --- dosen tetap cards ----------------------------------------------------
+   Replaces the old horizontal chip strip: each dosen now carries the field
+   set from the "Dosen" form (Nama Lengkap, Gelar Akademik, Sertifikasi,
+   Bidang Ilmu, Fokus Keahlian), which needs a card rather than a chip. ----- */
+.unpri-dosenGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+.unpri-dosenCard {
+  display: block;
+  padding: 18px 20px 20px;
+  border: 1px solid var(--up-border, #e7ddf0);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(36, 4, 55, 0.05);
+  text-decoration: none;
+  transition: transform 220ms cubic-bezier(0.22, 0.75, 0.3, 1),
+    box-shadow 220ms ease, border-color 220ms ease;
+}
+a.unpri-dosenCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--up-primary, #591093);
+  box-shadow: 0 16px 30px rgba(36, 4, 55, 0.1);
+}
+.unpri-dosenCard__head {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.unpri-dosenCard__head .unpri-lecturerAvatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 900;
+}
+.unpri-dosenCard__name {
+  margin: 0;
+  color: var(--up-deep, #240437);
+  font-size: 14.5px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.unpri-dosenCard__list {
+  margin: 14px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px dashed var(--up-border, #e7ddf0);
+  list-style: none;
+}
+.unpri-dosenCard__list li {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 4px 12px;
+  margin-bottom: 9px;
+}
+.unpri-dosenCard__list li:last-child {
+  margin-bottom: 0;
+}
+.unpri-dosenCard__key {
+  color: var(--up-muted, #6f6577);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+.unpri-dosenCard__val {
+  color: var(--up-ink, #201628);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+@media (max-width: 575px) {
+  .unpri-dosenGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .unpri-dosenCard__list li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+}
+
+/* The alumni data blocks now sit inside the Profil Alumni card, directly
+   under the alumni cards. */
+.unpri-alumniGrid + .unpri-defList {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--up-border, #e7ddf0);
+}
+
+/* The "Lihat Semua Berita" button shares the card head row with the title,
+   so it must not stretch or wrap awkwardly on narrow screens. */
+.unpri-cardHead .unpri-btn {
+  flex: 0 0 auto;
+}
+@media (max-width: 575px) {
+  .unpri-cardHead {
+    flex-wrap: wrap;
+  }
+  .unpri-cardHead .unpri-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --- hero buttons on the light wash --------------------------------------
+   Scoped to .unpri-hero so the same classes keep their existing look in the
+   Berita card and the "Lihat Semua Program" link. ------------------------- */
+.unpri-hero .unpri-btn--gold {
+  background: var(--up-primary, #591093);
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(36, 4, 55, 0.18);
+}
+.unpri-hero .unpri-btn--gold:hover {
+  background: var(--up-primary-dark, #420a70);
+  filter: none;
+}
+.unpri-hero .unpri-btn--ghost {
+  background: #fff;
+  border-color: var(--up-border, #e7ddf0);
+  color: var(--up-primary, #591093);
+}
+.unpri-hero .unpri-btn--ghost:hover {
+  background: var(--up-soft, #f3eaf8);
+  border-color: var(--up-primary, #591093);
+}

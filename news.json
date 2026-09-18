@@ -1,0 +1,117 @@
+{
+  "sectionTitle": "Berita & Agenda",
+  "intro": "",
+  "allNews": {
+    "href": "/id/news",
+    "icon": "pe-7s-news-paper",
+    "label": "Lihat Semua Berita"
+  },
+  "items": [
+    {
+      "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
+      "date": "08 September 2026",
+      "title": "Prodi Profesi Dokter FKKG UNPRI Gelar Kuliah Umum Tatalaksana Sepsis",
+      "excerpt": "Kuliah umum menghadirkan konsultan penyakit dalam untuk membahas pembaruan tatalaksana sepsis dan penerapannya di ruang rawat intensif.",
+      "href": "/id/news"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
+      "date": "30 Juli 2026",
+      "title": "Pelantikan dan Pengambilan Sumpah Dokter Periode II Tahun 2026",
+      "excerpt": "Sebanyak sekian lulusan dilantik dan mengucapkan sumpah dokter, menandai berakhirnya tahap pendidikan profesi di lingkungan FKKG UNPRI.",
+      "href": "/id/news"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80",
+      "date": "19 Juli 2026",
+      "title": "Bakti Sosial Kesehatan Mahasiswa Profesi Dokter di Deli Serdang",
+      "excerpt": "Kegiatan pengabdian masyarakat menghadirkan pemeriksaan kesehatan gratis dan edukasi pola hidup sehat bagi warga desa binaan.",
+      "href": "/id/news"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80",
+      "date": "15 Agustus 2026",
+      "title": "Pelatihan BLS dan ACLS Angkatan XII Resmi Dibuka",
+      "excerpt": "Pelatihan bantuan hidup dasar dan lanjut diikuti dokter muda sebagai bekal kompetensi kegawatdaruratan sebelum masuk stase atas.",
+      "href": "/id/news"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80",
+      "date": "21 Juni 2026",
+      "title": "Kunjungan Akademik Mitra Internasional ke Kampus UNPRI",
+      "excerpt": "Delegasi mitra membahas peluang program elektif, pertukaran mahasiswa, dan penelitian bersama di bidang kedokteran klinis.",
+      "href": "/id/news"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80",
+      "date": "04 Juli 2026",
+      "title": "Seminar Nasional Kedokteran Klinis Diikuti Ratusan Peserta",
+      "excerpt": "Seminar membahas perkembangan terkini praktik kedokteran klinis dan penerapan kedokteran berbasis bukti di layanan primer.",
+      "href": "/id/news"
+    }
+  ],
+  "placeholder": "Belum ada berita.",
+  "agenda": {
+    "title": "Agenda, Aktivitas & Galeri",
+    "intro": "",
+    "items": [
+      {
+        "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=700&q=80",
+        "title": "Kuliah Umum: Update Tatalaksana Sepsis",
+        "date": "12 September 2026",
+        "place": "Aula FKKG UNPRI",
+        "ratio": "3/4"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=700&q=80",
+        "title": "Workshop Bedside Teaching untuk Dokter Muda",
+        "date": "28 Agustus 2026",
+        "place": "RS Royal Prima Marelan",
+        "ratio": "4/3"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=700&q=80",
+        "title": "Pelatihan BLS & ACLS Angkatan XII",
+        "date": "15 Agustus 2026",
+        "place": "Skills Lab FKKG UNPRI",
+        "ratio": "1/1"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=700&q=80",
+        "title": "Yudisium dan Pengambilan Sumpah Dokter",
+        "date": "30 Juli 2026",
+        "place": "Gedung Serbaguna UNPRI",
+        "ratio": "3/4"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=700&q=80",
+        "title": "Bakti Sosial Kesehatan Masyarakat",
+        "date": "19 Juli 2026",
+        "place": "Kabupaten Deli Serdang",
+        "ratio": "4/5"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=700&q=80",
+        "title": "Seminar Nasional Kedokteran Klinis",
+        "date": "04 Juli 2026",
+        "place": "Aula FKKG UNPRI",
+        "ratio": "3/2"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=700&q=80",
+        "title": "Morning Report Bersama Supervisor Spesialis",
+        "date": "Setiap Senin",
+        "place": "RS Royal Prima Medan",
+        "ratio": "1/1"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=700&q=80",
+        "title": "Kunjungan Akademik Mitra Internasional",
+        "date": "21 Juni 2026",
+        "place": "Kampus Utama UNPRI",
+        "ratio": "4/3"
+      }
+    ],
+    "placeholder": "Coming Soon"
+  }
+}

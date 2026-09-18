@@ -1,0 +1,125 @@
+{
+  "sectionTitle": "Gambaran Umum",
+
+  "video": {
+    "title": "",
+    "src": "",
+    "poster": ""
+  },
+
+  "stats": {
+    "items": [
+      { "value": "1000", "suffix": "+", "label": "Mahasiswa" },
+      { "value": "200", "suffix": "+", "label": "Alumni" },
+      { "value": "50", "suffix": "+", "label": "Dosen" },
+      { "value": "40", "suffix": "+", "label": "Tenaga Kependidikan" },
+      { "value": "20", "suffix": "", "label": "Mitra Kerja Sama" }
+    ]
+  },
+
+  "sekilas": {
+    "title": "Sekilas Program Studi",
+    "paragraphs": [
+      "Program Studi Profesi Dokter Fakultas Kedokteran dan Kedokteran Gigi Universitas Prima Indonesia hadir sebagai tempat bertumbuhnya generasi profesional kesehatan yang tidak hanya unggul dalam pengetahuan dan keterampilan, tetapi juga memiliki kepedulian, integritas, serta semangat pengabdian yang tinggi.",
+      "Proses pembelajaran dirancang untuk membangun kemampuan berpikir kritis, berinovasi, beradaptasi dengan perkembangan teknologi, serta memiliki keberanian untuk menjadi agen perubahan di tengah masyarakat. Melalui kurikulum berbasis capaian pembelajaran, dosen yang berdedikasi, fasilitas pendidikan modern, dan budaya akademik yang dinamis, mahasiswa memperoleh pengalaman belajar yang komprehensif dan bermakna.",
+      "Lebih dari sekadar mempersiapkan calon dokter, program studi membentuk pribadi yang siap melayani, memimpin, dan memberikan kontribusi nyata bagi peningkatan kualitas kesehatan masyarakat. Di sinilah ilmu pengetahuan, keterampilan klinis, profesionalisme, dan pengabdian bertemu untuk mempersiapkan generasi dokter masa depan."
+    ]
+  },
+
+  "mengapaProfesiDokter": {
+    "title": "Mengapa Memilih Profesi Dokter?",
+    "paragraphs": [
+      "Program Studi Profesi Dokter merupakan tahap akademik penting dalam perjalanan menjadi dokter. Mahasiswa memperoleh fondasi ilmu biomedis, kedokteran klinis, kesehatan masyarakat, penelitian, komunikasi, dan profesionalisme sebagai dasar untuk melanjutkan ke pendidikan profesi dokter.",
+      "Pendidikan dokter bukan hanya tentang menguasai teori dan keterampilan, tetapi juga tentang membangun kemampuan berpikir kritis, mengambil keputusan berbasis bukti, berkomunikasi dengan pasien dan tim kesehatan, serta memahami tanggung jawab etis seorang dokter.",
+      "Setelah menyelesaikan jenjang Profesi Dokter dan memperoleh gelar S.Ked., lulusan dapat melanjutkan ke Pendidikan Profesi Dokter sesuai ketentuan yang berlaku. Pengembangan karier juga dapat mencakup penelitian, akademik, manajemen kesehatan, inovasi kesehatan, serta bidang lain yang relevan dengan kompetensi dan pendidikan lanjutan."
+    ]
+  },
+
+  "mengapaPilihKami": {
+    "title": "Mengapa Memilih Kami?",
+    "subtitle": "Keunggulan Program Studi",
+    "intro": "",
+    "_ICONS": "Pilihan icon: pe-7s-study (toga), pe-7s-note2 (dokumen), pe-7s-users (orang), pe-7s-science (labu lab), pe-7s-monitor (layar), pe-7s-global (globe), pe-7s-star (bintang), pe-7s-culture (rumah sakit), pe-7s-portfolio (koper), pe-7s-medal, pe-7s-ribbon, pe-7s-check, pe-7s-cup, pe-7s-photo, pe-7s-clock.",
+    "items": [
+      {
+        "icon": "pe-7s-study",
+        "title": "Program Matrikulasi \u2014 UNPRI"
+      },
+      {
+        "icon": "pe-7s-note2",
+        "title": "Kurikulum Berbasis Outcome Based Education (OBE)"
+      },
+      {
+        "icon": "pe-7s-users",
+        "title": "Dosen Profesional dan Berpengalaman"
+      },
+      {
+        "icon": "pe-7s-science",
+        "title": "Fasilitas Laboratorium dan Skills Lab Modern"
+      },
+      {
+        "icon": "pe-7s-monitor",
+        "title": "Digital Anatomy Table dan Teknologi Pembelajaran Kedokteran"
+      },
+      {
+        "icon": "pe-7s-global",
+        "title": "Peluang Penelitian, Kompetisi, Pengabdian Masyarakat, dan Kerja Sama Internasional"
+      },
+      {
+        "icon": "pe-7s-star",
+        "title": "Lingkungan Akademik yang Mendukung Pengembangan Karakter dan Profesionalisme"
+      },
+      {
+        "icon": "pe-7s-culture",
+        "title": "Didukung Ekosistem Rumah Sakit dan Layanan Kesehatan dalam Lingkungan UNPRI"
+      }
+    ]
+  },
+
+  "sambutan": {
+    "title": "Sambutan Ketua Program Studi",
+    "photo": "",
+    "name": "Dr. dr. Fioni, M.Biomed., Sp.KKLP.",
+    "role": "Ketua Program Studi Profesi Dokter FKKG UNPRI",
+    "closing": "Salam hangat, Medan",
+    "paragraphs": [
+      "Selamat datang di Program Studi Profesi Dokter Fakultas Kedokteran dan Kedokteran Gigi Universitas Prima Indonesia.",
+      "Memilih program studi bukan sekadar menentukan tempat belajar, tetapi juga menentukan langkah awal menuju masa depan dan pengabdian kepada masyarakat. Di Program Studi Profesi Dokter FKKG UNPRI, kami percaya setiap mahasiswa membawa mimpi, harapan, dan potensi untuk menjadi agen perubahan bagi kesehatan masyarakat.",
+      "Profesi dokter merupakan profesi yang membutuhkan ilmu pengetahuan, keterampilan, kepedulian, integritas, dan profesionalisme. Oleh karena itu, kami berkomitmen menghadirkan lingkungan belajar yang tidak hanya mengembangkan kompetensi akademik, tetapi juga membentuk karakter, empati, kepemimpinan, komunikasi, dan tanggung jawab profesional.",
+      "Melalui kurikulum inovatif yang berorientasi pada capaian pembelajaran, didukung dosen yang kompeten, fasilitas pendidikan modern, pengalaman laboratorium dan keterampilan klinis, serta kesempatan penelitian dan pengabdian masyarakat, mahasiswa dipersiapkan menghadapi tantangan dunia kesehatan yang terus berkembang.",
+      "Kepada para calon mahasiswa, kami mengundang Anda menjadi bagian dari keluarga besar Program Studi Profesi Dokter FKKG UNPRI. Bersama kami, Anda tidak hanya mempelajari ilmu kedokteran, tetapi juga membangun masa depan dan mempersiapkan diri untuk memberikan kontribusi nyata bagi masyarakat."
+    ]
+  },
+
+  "visi": {
+    "kicker": "Visi",
+    "text": "Menghasilkan dokter umum profesional yang berwawasan sociotechnopreneurship dan unggul dalam pencegahan penyakit degeneratif."
+  },
+
+  "misi": {
+    "kicker": "Misi",
+    "items": [
+      "Menyelenggarakan pendidikan profesi kedokteran yang berkualitas untuk menghasilkan dokter umum profesional, berwawasan sociotechnopreneurship, dan unggul dalam pencegahan penyakit degeneratif.",
+      "Menyelenggarakan penelitian inovatif sebagai upaya memperoleh ilmu pengetahuan dan teknologi kesehatan yang unggul dalam bidang pencegahan penyakit degeneratif.",
+      "Menyelenggarakan pengabdian kepada masyarakat dengan perspektif sociotechnopreneurship yang bertujuan meningkatkan derajat kesehatan masyarakat.",
+      "Menyelenggarakan layanan akademik dan non-akademik yang didukung oleh kolaborasi nasional dan internasional."
+    ]
+  },
+
+  "nilai": {
+    "title": "Nilai-nilai Program Studi",
+    "intro": "",
+    "items": [],
+    "placeholder": "Coming Soon"
+  },
+
+  "akreditasi": {
+    "title": "Akreditasi & Sertifikasi",
+    "label": "Akreditasi",
+    "status": "",
+    "note": "",
+    "subtitle": "Sertifikasi",
+    "certificates": [],
+    "placeholder": "Sertifikat dan pengakuan akan ditampilkan di sini."
+  }
+}
