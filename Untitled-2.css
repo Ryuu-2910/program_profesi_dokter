@@ -150,11 +150,6 @@
   transform: translateY(-1px);
   filter: brightness(0.98);
 }
-.unpri-btn--ghost {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.22);
-  color: rgba(255, 255, 255, 0.92);
-}
 .unpri-btn--ghost:hover {
   background: rgba(255, 255, 255, 0.12);
   transform: translateY(-1px);
