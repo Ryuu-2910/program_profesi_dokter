@@ -1322,6 +1322,21 @@
   background: #fff;
   box-shadow: 0 14px 30px rgba(36, 4, 55, 0.06);
 }
+/* "Dosen Tetap" heading above the roster - a centred heading rather than
+   the old outline pill. */
+.unpri-rosterTitle {
+  margin: 0 0 14px;
+  color: var(--up-deep, #240437);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  line-height: 1.35;
+}
+.unpri-lecturers__empty {
+  margin: 0;
+  text-align: center;
+}
 .unpri-lecturers__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
@@ -3174,4 +3189,666 @@ a.unpri-dosenCard:hover {
 .unpri-hero .unpri-btn--ghost:hover {
   background: var(--up-soft, #f3eaf8);
   border-color: var(--up-primary, #591093);
+}
+
+/* ============================================================
+   Ported from Profesi Dokter Gigi: figure / alur stages / kurikulum
+   matrix / bidang ilmu chips / closing box / video grid (Alumni,
+   Temu Pakar, Sarana Prasarana) / dept & person grid.
+   ============================================================ */
+/* --- standalone diagram --------------------------------------------------- */
+.unpri-figure {
+  margin: 0 0 18px;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #E7F0F1);
+  border-radius: 16px;
+  background: var(--up-surface, #FAFCFC);
+}
+.unpri-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.unpri-figure figcaption {
+  padding: 10px 14px;
+  border-top: 1px solid var(--up-border, #E7F0F1);
+  color: var(--up-muted, #979E9E);
+  text-align: center;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+/* --- alur pembelajaran: numbered timeline --------------------------------- */
+.unpri-stages {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.unpri-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 16px;
+  padding-bottom: 26px;
+}
+.unpri-stage:last-child {
+  padding-bottom: 0;
+}
+/* the connecting rail */
+.unpri-stage::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: 6px;
+  left: 19px;
+  width: 2px;
+  background: var(--up-border, #E7F0F1);
+}
+.unpri-stage:last-child::before {
+  display: none;
+}
+.unpri-stage__marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: var(--up-primary, #5F9EA0);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+}
+.unpri-stage__body {
+  padding-top: 4px;
+}
+.unpri-stage__ttl {
+  margin: 0;
+  color: var(--up-deep, #243C3D);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+.unpri-stage__tagline {
+  margin: 5px 0 10px;
+  color: var(--up-primary, #5F9EA0);
+  font-size: 13px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.5;
+}
+.unpri-stage__fig {
+  margin: 14px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #E7F0F1);
+  border-radius: 14px;
+  background: var(--up-surface, #FAFCFC);
+}
+.unpri-stage__fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.unpri-stage__video {
+  margin: 14px 0 0;
+}
+
+@media (max-width: 575px) {
+  .unpri-stage {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 12px;
+  }
+  .unpri-stage__marker {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+  .unpri-stage::before {
+    top: 32px;
+    left: 15px;
+  }
+}
+
+/* --- kurikulum: semester summary + matrix --------------------------------- */
+.unpri-sksRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.unpri-sks {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 16px;
+  border: 1px solid var(--up-border, #E7F0F1);
+  border-top: 3px solid var(--up-primary, #5F9EA0);
+  border-radius: 12px;
+  background: #fff;
+}
+.unpri-sks__term {
+  color: var(--up-muted, #979E9E);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.unpri-sks__num {
+  color: var(--up-deep, #243C3D);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+.unpri-sks__num small {
+  margin-left: 4px;
+  color: var(--up-muted, #979E9E);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.unpri-sks__note {
+  color: var(--up-primary, #5F9EA0);
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.unpri-matrixWrap {
+  overflow-x: auto;
+  border: 1px solid var(--up-border, #E7F0F1);
+  border-radius: 14px;
+}
+.unpri-matrix {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.unpri-matrix th,
+.unpri-matrix td {
+  padding: 11px 12px;
+  border-bottom: 1px solid var(--up-border, #E7F0F1);
+  text-align: center;
+  vertical-align: middle;
+}
+.unpri-matrix thead th {
+  background: var(--up-soft, #EFF5F6);
+  color: var(--up-deep, #243C3D);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.unpri-matrix tbody td {
+  color: var(--up-ink, #07243F);
+  font-weight: 700;
+}
+.unpri-matrix__name {
+  min-width: 230px;
+  text-align: left !important;
+}
+.unpri-matrix__name strong {
+  display: block;
+  color: var(--up-deep, #243C3D) !important;
+  font-size: 13.5px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+.unpri-matrix__name span {
+  display: block;
+  margin-top: 2px;
+  color: var(--up-muted, #979E9E);
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.unpri-matrix td.is-empty {
+  color: var(--up-border, #E7F0F1);
+}
+.unpri-matrix__total {
+  color: var(--up-primary, #5F9EA0) !important;
+  font-weight: 900 !important;
+}
+.unpri-matrix tfoot td {
+  border-bottom: 0;
+  background: var(--up-surface, #FAFCFC);
+  color: var(--up-deep, #243C3D);
+  font-weight: 900;
+}
+.unpri-matrix tfoot td:first-child {
+  text-align: left;
+  font-size: 11.5px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+/* --- bidang ilmu chips ---------------------------------------------------- */
+.unpri-tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.unpri-tag {
+  padding: 9px 15px;
+  border: 1px solid var(--up-border, #E7F0F1);
+  border-radius: 999px;
+  background: var(--up-soft, #EFF5F6);
+  color: var(--up-deep, #243C3D);
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+/* --- closing lines -------------------------------------------------------- */
+.unpri-closing {
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px dashed var(--up-border, #E7F0F1);
+  color: var(--up-primary, #5F9EA0);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.7;
+}
+.unpri-closingBox {
+  margin-top: 18px;
+  padding: 20px 22px;
+  border: 1px solid var(--up-border, #E7F0F1);
+  border-radius: 16px;
+  background: var(--up-soft, #EFF5F6);
+}
+.unpri-closingBox h4 {
+  margin: 0 0 8px;
+  color: var(--up-deep, #243C3D);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.unpri-closingBox .unpri-prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- full-width video (Kurikulum & Karir) ---------------------------------- */
+.unpri-video--full {
+  width: 100%;
+  margin: 0 0 22px;
+}
+/* A thick brand-coloured frame around the player, like a photo mat, instead
+   of a thin hairline border - this is what actually plays: a local .mp4
+   through the plain <video> tag has no channel name, avatar or upload info
+   anywhere on it, so this look only holds if the source stays a direct file
+   link rather than a YouTube embed. */
+.unpri-video--full .unpri-video__frame {
+  aspect-ratio: 16 / 9;
+  padding: 14px;
+  border: 0;
+  border-radius: 22px;
+  background: linear-gradient(160deg, var(--up-primary, #5F9EA0), var(--up-deep, #243C3D));
+  box-shadow: 0 18px 40px rgba(11, 26, 27, 0.22);
+}
+.unpri-video--full .unpri-video__player,
+.unpri-video--full .unpri-video__empty {
+  border-radius: 12px;
+}
+
+/* --- video grid (Alumni / Temu Pakar / Sarana Prasarana) --------------------
+   Flex rather than grid so a trailing row of one or two videos centres itself
+   instead of hanging on the left (5 alumni videos = 3 + 2). Each card is its
+   own player; clicking the frame plays it in place. ------------------------ */
+.unpri-videoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  /* top-aligned: once each card takes its video's own shape the heights
+     differ, and stretching them would reintroduce empty padding */
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 0 22px;
+}
+.unpri-videoCard {
+  display: flex;
+  flex: 0 1 calc((100% - 32px) / 3);
+  flex-direction: column;
+  min-width: 220px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #E7F0F1);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(36, 4, 55, 0.05);
+  transition: transform 220ms cubic-bezier(0.22, 0.75, 0.3, 1),
+    box-shadow 220ms ease, border-color 220ms ease;
+}
+.unpri-videoCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--up-primary, #5F9EA0);
+  box-shadow: 0 16px 30px rgba(36, 4, 55, 0.1);
+}
+/* Thumbnail: a still image with a round play button over it. When the card
+   has a video src the frame is a <button>; clicking swaps it for the player
+   (.is-playing). The button reset below keeps it looking like the image. */
+.unpri-videoCard__frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: var(--up-soft, #EFF5F6);
+  font: inherit;
+  cursor: default;
+}
+.unpri-videoCard__frame.is-playable {
+  cursor: pointer;
+}
+.unpri-videoCard__frame.is-playable:focus-visible {
+  outline: 3px solid var(--up-accent, #f4c542);
+  outline-offset: -3px;
+}
+/* Every card is the same 16:9 block. No tint over the picture, and no black
+   anywhere: a clip whose shape does not match is padded with the page's soft
+   purple. */
+.unpri-videoCard__frame img,
+.unpri-videoCard__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--up-soft, #EFF5F6);
+  transition: transform 420ms cubic-bezier(0.22, 0.75, 0.3, 1);
+  /* The legacy theme file (Untitled-1.css) has a bare, unscoped
+     `video { opacity: 0.4; }` rule left over from its old hero
+     background clip. It matches every <video> on the page, including
+     these, and is what actually washed them out - not a gradient.
+     Force it back to fully opaque here. */
+  opacity: 1;
+}
+/* The still fills the card; a playing clip is shown whole instead, padded
+   with flat soft purple when its shape does not match the card. */
+.unpri-videoCard__media {
+  object-fit: cover;
+}
+.unpri-videoCard:hover .unpri-videoCard__frame img,
+.unpri-videoCard:hover .unpri-videoCard__frame.is-playable .unpri-videoCard__media {
+  transform: scale(1.04);
+}
+/* Playing: show the whole frame rather than a cropped one, and stop the
+   hover zoom so the controls stay where the pointer expects them. */
+.unpri-videoCard__frame.is-playing .unpri-videoCard__media {
+  object-fit: contain;
+  transform: none;
+}
+.unpri-videoCard__frame.is-playing,
+.unpri-videoCard__frame.is-playing .unpri-videoCard__media {
+  background: var(--up-soft, #EFF5F6);
+}
+/* No scrim over the thumbnail. The play button is a solid white circle with
+   its own shadow, so it reads on any picture without tinting it. */
+.unpri-videoCard__frame.is-playing .unpri-videoCard__play {
+  display: none;
+}
+.unpri-videoCard__frame.is-playing {
+  cursor: default;
+}
+.unpri-videoCard__play {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding-left: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--up-primary, #5F9EA0);
+  font-size: 22px;
+  box-shadow: 0 10px 24px rgba(36, 4, 55, 0.22);
+  transition: transform 220ms cubic-bezier(0.22, 0.75, 0.3, 1),
+    background 220ms ease, color 220ms ease;
+}
+.unpri-videoCard:hover .unpri-videoCard__frame.is-playable .unpri-videoCard__play {
+  transform: scale(1.08);
+  background: var(--up-primary, #5F9EA0);
+  color: #fff;
+}
+.unpri-videoCard__frame .unpri-video__player {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--up-soft, #EFF5F6);
+  /* Same legacy `video { opacity: 0.4; }` override as above. */
+  opacity: 1;
+}
+
+/* The single full-width video (Kurikulum & Karir, Yudisium, etc. via
+   renderVideo) uses this player outside a .unpri-videoCard entirely, so
+   it needs its own guard against the same legacy rule. */
+.unpri-video__player {
+  opacity: 1;
+}
+
+.unpri-videoCard__body {
+  padding: 14px 16px 17px;
+}
+.unpri-videoCard__ttl {
+  margin: 0;
+  color: var(--up-deep, #243C3D);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+.unpri-videoCard__sub {
+  margin: 4px 0 0;
+  color: var(--up-muted, #979E9E);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* Two-up variant (Temu Pakar: four videos as a 2x2; Sarana: picture + video
+   side by side). */
+.unpri-videoGrid--2 .unpri-videoCard {
+  flex-basis: calc((100% - 16px) / 2);
+}
+/* A pair with only one half filled in yet. */
+.unpri-videoGrid--single .unpri-videoCard {
+  flex-basis: min(620px, 100%);
+}
+
+/* Inside a card the grid follows the narrative, so it needs space above it
+   rather than below. */
+.unpri-card .unpri-videoGrid {
+  margin: 20px 0 0;
+}
+.unpri-card .unpri-videoGrid + .unpri-alumniGrid,
+.unpri-card .unpri-videoGrid + .unpri-defList,
+.unpri-card .unpri-videoGrid + .unpri-tileBoard {
+  margin-top: 20px;
+}
+
+/* "Dosen Tetap" heading above the roster - replaces the old outline pill.
+   Centred, a step up from body text but below the card titles. */
+.unpri-rosterTitle {
+  margin: 0 0 14px;
+  color: var(--up-deep, #243C3D);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  line-height: 1.35;
+}
+.unpri-card .unpri-lecturers {
+  margin-top: 22px;
+}
+
+/* Dosen roster placeholder while the list is still empty. */
+.unpri-lecturers__empty {
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .unpri-videoCard {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+@media (max-width: 575px) {
+  .unpri-videoCard,
+  .unpri-videoGrid--2 .unpri-videoCard {
+    flex-basis: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .unpri-videoCard,
+  .unpri-videoCard__frame img,
+  .unpri-videoCard__play {
+    transition-duration: 1ms;
+  }
+}
+
+/* --- dosen by department ---------------------------------------------------
+   Each department is a small section: a heading with a rule, then a grid of
+   portrait cards. The portraits are ID-photo shaped, so the frame is 3/4 and
+   the image is anchored to the top - heads never get cropped. ------------- */
+.unpri-dept {
+  margin-top: 22px;
+}
+.unpri-dept:first-of-type {
+  margin-top: 6px;
+}
+.unpri-dept__ttl {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 0 0 14px;
+  color: var(--up-primary, #5F9EA0);
+  font-size: 12.5px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.unpri-dept__ttl::after {
+  content: "";
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--up-border, #E7F0F1);
+}
+
+.unpri-personGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  gap: 14px;
+}
+.unpri-person {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--up-border, #E7F0F1);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 22px rgba(36, 4, 55, 0.05);
+  text-decoration: none;
+  transition: transform 220ms cubic-bezier(0.22, 0.75, 0.3, 1),
+    box-shadow 220ms ease, border-color 220ms ease;
+}
+a.unpri-person:hover {
+  transform: translateY(-2px);
+  border-color: var(--up-primary, #5F9EA0);
+  box-shadow: 0 16px 30px rgba(36, 4, 55, 0.1);
+}
+.unpri-person__photo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--up-soft, #EFF5F6);
+}
+.unpri-person__photo img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+.unpri-person__ph {
+  color: var(--up-primary, #5F9EA0);
+  opacity: 0.22;
+  font-size: 40px;
+  line-height: 1;
+}
+.unpri-person__body {
+  padding: 12px 13px 14px;
+  text-align: center;
+}
+.unpri-person__name {
+  margin: 0;
+  color: var(--up-deep, #243C3D);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+.unpri-person__role {
+  margin: 4px 0 0;
+  color: var(--up-muted, #979E9E);
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+@media (max-width: 575px) {
+  .unpri-personGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .unpri-person__name {
+    font-size: 12.5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .unpri-person {
+    transition-duration: 1ms;
+  }
+}
+
+/* --- picture + video pair (Sarana Prasarana) --------------------------------
+   Two equal media blocks side by side. The caption rides on the image as a
+   small chip instead of a strip underneath, so a picture with no caption
+   does not sit next to a video that has one with mismatched heights. ------ */
+.unpri-videoGrid--media .unpri-videoCard {
+  position: relative;
+  overflow: hidden;
+}
+.unpri-videoGrid--media .unpri-videoCard__body {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  padding: 9px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.93);
+  box-shadow: 0 6px 18px rgba(36, 4, 55, 0.14);
+  pointer-events: none;
+}
+.unpri-videoGrid--media .unpri-videoCard__ttl {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+.unpri-videoGrid--media .unpri-videoCard__sub {
+  margin-top: 2px;
+  font-size: 11.5px;
+}
+/* While it plays the chip would cover the controls. */
+.unpri-videoGrid--media .unpri-videoCard.is-playing .unpri-videoCard__body {
+  display: none;
 }

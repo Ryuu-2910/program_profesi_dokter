@@ -2,10 +2,24 @@
   "sectionTitle": "Pimpinan & Dosen",
   "title": "Pimpinan & Dosen",
   "intro": "",
-  "head": {
+  "kaprodi": {
+    "title": "Ketua Program Studi",
+    "photo": "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/1488/1488-large.jpeg",
     "name": "Dr. dr. Fioni, M.Biomed., Sp.KKLP.",
-    "role": "Ketua Program Studi",
-    "photo": "https://s3.amazonaws.com/assets.unprimdn.ac.id/images/lecturers/1488/1488-large.jpeg"
+    "role": "Ketua Program Studi Profesi Dokter FKKG UNPRI",
+    "closing": "",
+    "paragraphs": [
+      "Sebagai Ketua Program Studi Profesi Dokter FKKG Universitas Prima Indonesia, **Dr. dr. Fioni, M.Biomed., Sp.KKLP.** mengemban peran strategis dalam mengarahkan penyelenggaraan pendidikan profesi yang unggul, berintegritas, dan responsif terhadap perkembangan ilmu kedokteran serta kebutuhan pelayanan kesehatan masyarakat.",
+      "Di bawah kepemimpinannya, Program Studi Profesi Dokter FKKG UNPRI terus mendorong terciptanya proses pendidikan yang tidak hanya menekankan pencapaian kompetensi klinis, tetapi juga membentuk karakter profesional, kepemimpinan, kemampuan komunikasi, serta kepedulian terhadap kebutuhan kesehatan masyarakat. Beliau juga berkomitmen membangun lingkungan akademik yang kolaboratif, disiplin, inovatif, dan berorientasi pada mutu, dengan sinergi yang terus diperkuat antara dosen, mahasiswa, tenaga kependidikan, serta wahana pendidikan klinik.",
+      "**Dr. dr. Fioni, M.Biomed., Sp.KKLP.** membawa semangat untuk menjadikan Program Studi Profesi Dokter FKKG UNPRI sebagai ruang pembelajaran yang membentuk calon dokter secara utuh: **kompeten dalam pelayanan, unggul dalam profesionalisme, adaptif terhadap perubahan, dan berdedikasi bagi masyarakat.** Dengan semangat tersebut, Program Studi Profesi Dokter UNPRI terus melangkah dalam mempersiapkan generasi dokter yang mampu menghadapi tantangan profesi masa depan sekaligus memberikan kontribusi nyata bagi peningkatan kualitas kesehatan masyarakat Indonesia."
+    ]
+  },
+  "narasi": {
+    "title": "Pimpinan & Dosen",
+    "subtitle": "",
+    "paragraphs": [
+      "Program Studi Profesi Dokter FKKG UNPRI didukung oleh dosen tetap yang berpengalaman di bidangnya masing-masing, membimbing mahasiswa mulai dari pembelajaran klinis di kelas hingga praktik langsung bersama pasien di wahana pendidikan."
+    ]
   },
   "sectionLabel": "Dosen Tetap",
   "lecturers": [

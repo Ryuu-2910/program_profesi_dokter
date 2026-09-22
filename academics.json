@@ -46,6 +46,41 @@
       }
     ]
   },
+
+  "alur": {
+    "title": "Alur Pembelajaran Program Studi Profesi Dokter",
+    "intro": "",
+    "figure": { "image": "", "alt": "" },
+    "stages": [],
+    "placeholder": "Alur pembelajaran Program Studi Profesi Dokter sedang disiapkan dan akan segera ditampilkan di sini."
+  },
+
+  "bidangIlmu": {
+    "title": "Bidang Ilmu Kedokteran",
+    "intro": "",
+    "items": [
+      "Ilmu Penyakit Dalam",
+      "Ilmu Bedah",
+      "Obstetri dan Ginekologi",
+      "Ilmu Kesehatan Anak",
+      "Ilmu Kesehatan Jiwa",
+      "Ilmu Penyakit Saraf",
+      "Ilmu Kesehatan Mata",
+      "Ilmu Kesehatan Telinga Hidung Tenggorokan (THT-KL)",
+      "Ilmu Kesehatan Kulit dan Kelamin",
+      "Radiologi",
+      "Anestesiologi dan Terapi Intensif",
+      "Ilmu Kesehatan Masyarakat dan Kedokteran Komunitas"
+    ]
+  },
+
+  "konsentrasi": {
+    "title": "Konsentrasi",
+    "intro": "",
+    "blocks": [],
+    "placeholder": "Belum tersedia"
+  },
+
   "peluangKarier": {
     "title": "Peluang Karier Lulusan Profesi Dokter",
     "tagline": "Membangun Masa Depan, Melayani Kesehatan, Menciptakan Dampak",
@@ -170,8 +205,20 @@
           "NGO & International Organization Staff"
         ]
       }
+    ],
+    "closingTitle": "Your Degree Is Just the Beginning",
+    "closing": [
+      "Sembilan jalur di atas bukanlah batas dari perjalanan seorang dokter. Ilmu pengetahuan terus berkembang. Teknologi terus berubah. Peluang baru akan terus muncul. Yang terpenting adalah memiliki fondasi kompetensi yang kuat, profesionalisme, integritas, kemampuan beradaptasi, dan semangat untuk terus belajar."
     ]
   },
+
+  "mobilitasGlobal": {
+    "title": "Mobilitas Global",
+    "intro": "",
+    "blocks": [],
+    "placeholder": "Belum tersedia"
+  },
+
   "cpl": {
     "title": "Capaian Pembelajaran Lulusan (CPL)",
     "intro": "",
@@ -202,34 +249,7 @@
       }
     ]
   },
-  "fasilitas": {
-    "title": "Fasilitas Pendidikan",
-    "intro": "",
-    "blocks": [],
-    "placeholder": "Coming Soon"
-  },
-  "rumahSakit": {
-    "title": "Rumah Sakit dan Clinical Learning Ecosystem",
-    "intro": "",
-    "blocks": [
-      {
-        "title": "Rumah Sakit dan Fasilitas Kesehatan Pendidikan",
-        "text": ""
-      },
-      {
-        "title": "Clinical Exposure",
-        "text": ""
-      },
-      {
-        "title": "Skills dan Simulation-based Learning",
-        "text": ""
-      },
-      {
-        "title": "Peran Masing-masing Fasilitas",
-        "text": ""
-      }
-    ]
-  },
+
   "kehidupanMahasiswa": {
     "title": "Kehidupan Mahasiswa",
     "intro": "",
@@ -260,6 +280,7 @@
       }
     ]
   },
+
   "prestasi": {
     "title": "Prestasi dan Penghargaan",
     "intro": "",

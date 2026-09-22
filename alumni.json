@@ -1,74 +1,20 @@
 {
   "sectionTitle": "Alumni",
 
-  "video": {
-    "title": "Cerita Alumni",
-    "src": "",
-    "poster": ""
-  },
+  "videos": [],
 
   "profil": {
-    "title": "Profil Alumni",
+    "title": "Cerita Perjalanan, Pengalaman, dan Inspirasi",
+    "subtitle": "Once a Student, Now a Doctor: Suara Alumni Kami",
     "intro": "",
-    "items": [
-      {
-        "photo": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80",
-        "name": "dr. Contoh Nama Alumni",
-        "role": "Angkatan 2018",
-        "details": [
-          { "label": "Tempat Kerja", "value": "RSU Royal Prima Medan" },
-          { "label": "Posisi", "value": "Dokter Umum" },
-          { "label": "Tahun Lulus", "value": "2024" },
-          { "label": "Domisili", "value": "Medan, Sumatera Utara" }
-        ],
-        "quote": "Contoh testimoni alumni tentang pengalaman belajar selama menempuh pendidikan profesi dokter."
-      },
-      {
-        "photo": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80",
-        "name": "dr. Contoh Nama Alumni",
-        "role": "Angkatan 2018",
-        "details": [
-          { "label": "Tempat Kerja", "value": "Puskesmas Kota Medan" },
-          { "label": "Posisi", "value": "Dokter Layanan Primer" },
-          { "label": "Tahun Lulus", "value": "2024" },
-          { "label": "Domisili", "value": "Medan, Sumatera Utara" }
-        ],
-        "quote": "Contoh testimoni alumni tentang pengalaman belajar selama menempuh pendidikan profesi dokter."
-      },
-      {
-        "photo": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80",
-        "name": "dr. Contoh Nama Alumni",
-        "role": "Angkatan 2017",
-        "details": [
-          { "label": "Tempat Kerja", "value": "RS Mata Prima Vision" },
-          { "label": "Posisi", "value": "Dokter Umum" },
-          { "label": "Tahun Lulus", "value": "2023" },
-          { "label": "Domisili", "value": "Medan, Sumatera Utara" }
-        ],
-        "quote": "Contoh testimoni alumni tentang pengalaman belajar selama menempuh pendidikan profesi dokter."
-      },
-      {
-        "photo": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",
-        "name": "dr. Contoh Nama Alumni",
-        "role": "Angkatan 2017",
-        "details": [
-          { "label": "Tempat Kerja", "value": "RSUD Sidikalang" },
-          { "label": "Posisi", "value": "Dokter Umum" },
-          { "label": "Tahun Lulus", "value": "2023" },
-          { "label": "Domisili", "value": "Dairi, Sumatera Utara" }
-        ],
-        "quote": "Contoh testimoni alumni tentang pengalaman belajar selama menempuh pendidikan profesi dokter."
-      }
+    "paragraphs": [
+      "Setiap alumni memiliki cerita tentang proses belajar, tantangan, pencapaian, dan perjalanan yang membentuk langkah profesional mereka. Bagi Program Studi Profesi Dokter UNPRI, alumni bukan hanya bagian dari sejarah program studi, tetapi juga menjadi cerminan dari nilai, pengalaman, dan semangat yang tumbuh selama menempuh pendidikan.",
+      "Melalui kisah para alumni, kami menghadirkan cerita nyata dari lulusan yang kini menapaki berbagai jalur pengabdian dan karier di bidang kedokteran, mulai dari layanan primer, rumah sakit, hingga pendidikan lanjutan. Pengalaman mereka menjadi ruang berbagi yang hangat sekaligus inspiratif bagi mahasiswa dan calon mahasiswa untuk melihat bahwa proses pendidikan tidak berhenti di ruang kuliah atau wahana klinik, tetapi terus berkembang dalam setiap langkah profesional.",
+      "Kenangan tentang pembelajaran, bimbingan dosen, pengalaman klinis bersama pasien, persahabatan, hingga tantangan selama pendidikan menjadi bagian penting yang membentuk karakter dan kepercayaan diri para alumni. Dari sanalah lahir generasi dokter yang membawa semangat untuk terus belajar, berkembang, dan memberikan pelayanan kesehatan terbaik kepada masyarakat."
     ],
-    "placeholder": "Coming Soon"
+    "items": [],
+    "placeholder": "Profil alumni akan ditampilkan di sini."
   },
-
-  "intro": "",
-  "blocks": [
-    { "title": "Data Tracer Study", "text": "" },
-    { "title": "Tingkat Serapan Lulusan", "text": "" },
-    { "title": "Peluang Karier", "text": "" }
-  ],
 
   "placeholder": "Coming Soon"
 }

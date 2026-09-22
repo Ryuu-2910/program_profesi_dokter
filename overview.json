@@ -43,7 +43,7 @@
     "items": [
       {
         "icon": "pe-7s-study",
-        "title": "Program Matrikulasi \u2014 UNPRI"
+        "title": "Program Matrikulasi UNPRI"
       },
       {
         "icon": "pe-7s-note2",
@@ -76,21 +76,6 @@
     ]
   },
 
-  "sambutan": {
-    "title": "Sambutan Ketua Program Studi",
-    "photo": "",
-    "name": "Dr. dr. Fioni, M.Biomed., Sp.KKLP.",
-    "role": "Ketua Program Studi Profesi Dokter FKKG UNPRI",
-    "closing": "Salam hangat, Medan",
-    "paragraphs": [
-      "Selamat datang di Program Studi Profesi Dokter Fakultas Kedokteran dan Kedokteran Gigi Universitas Prima Indonesia.",
-      "Memilih program studi bukan sekadar menentukan tempat belajar, tetapi juga menentukan langkah awal menuju masa depan dan pengabdian kepada masyarakat. Di Program Studi Profesi Dokter FKKG UNPRI, kami percaya setiap mahasiswa membawa mimpi, harapan, dan potensi untuk menjadi agen perubahan bagi kesehatan masyarakat.",
-      "Profesi dokter merupakan profesi yang membutuhkan ilmu pengetahuan, keterampilan, kepedulian, integritas, dan profesionalisme. Oleh karena itu, kami berkomitmen menghadirkan lingkungan belajar yang tidak hanya mengembangkan kompetensi akademik, tetapi juga membentuk karakter, empati, kepemimpinan, komunikasi, dan tanggung jawab profesional.",
-      "Melalui kurikulum inovatif yang berorientasi pada capaian pembelajaran, didukung dosen yang kompeten, fasilitas pendidikan modern, pengalaman laboratorium dan keterampilan klinis, serta kesempatan penelitian dan pengabdian masyarakat, mahasiswa dipersiapkan menghadapi tantangan dunia kesehatan yang terus berkembang.",
-      "Kepada para calon mahasiswa, kami mengundang Anda menjadi bagian dari keluarga besar Program Studi Profesi Dokter FKKG UNPRI. Bersama kami, Anda tidak hanya mempelajari ilmu kedokteran, tetapi juga membangun masa depan dan mempersiapkan diri untuk memberikan kontribusi nyata bagi masyarakat."
-    ]
-  },
-
   "visi": {
     "kicker": "Visi",
     "text": "Menghasilkan dokter umum profesional yang berwawasan sociotechnopreneurship dan unggul dalam pencegahan penyakit degeneratif."
@@ -104,13 +89,6 @@
       "Menyelenggarakan pengabdian kepada masyarakat dengan perspektif sociotechnopreneurship yang bertujuan meningkatkan derajat kesehatan masyarakat.",
       "Menyelenggarakan layanan akademik dan non-akademik yang didukung oleh kolaborasi nasional dan internasional."
     ]
-  },
-
-  "nilai": {
-    "title": "Nilai-nilai Program Studi",
-    "intro": "",
-    "items": [],
-    "placeholder": "Coming Soon"
   },
 
   "akreditasi": {

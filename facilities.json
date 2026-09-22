@@ -1,0 +1,36 @@
+{
+  "sectionTitle": "Sarana Prasarana",
+  "title": "Fasilitas Pendidikan Profesi Dokter",
+  "intro": "",
+  "paragraphs": [],
+  "items": [],
+  "picture": {
+    "image": "",
+    "title": ""
+  },
+  "video": {
+    "src": "",
+    "image": "",
+    "title": ""
+  },
+  "blocksTitle": "Rumah Sakit dan Clinical Learning Ecosystem",
+  "blocks": [
+    {
+      "title": "Rumah Sakit dan Fasilitas Kesehatan Pendidikan",
+      "text": ""
+    },
+    {
+      "title": "Clinical Exposure",
+      "text": ""
+    },
+    {
+      "title": "Skills dan Simulation-based Learning",
+      "text": ""
+    },
+    {
+      "title": "Peran Masing-masing Fasilitas",
+      "text": ""
+    }
+  ],
+  "placeholder": "Foto dan video fasilitas akan ditampilkan di sini."
+}

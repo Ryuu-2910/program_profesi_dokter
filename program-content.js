@@ -398,6 +398,17 @@
   // the layout is already correct before anyone has a video file to drop in.
   // Fill `src` with a YouTube/Vimeo embed URL, or a path to an .mp4/.webm and
   // it switches to a native <video> player on its own.
+  // YouTube links come in several shapes (watch?v=, youtu.be/, /embed/,
+  // shorts/); this pulls the 11-character video id out of any of them.
+  function youtubeId(src) {
+    var m = String(src || "").match(
+      /(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{11})/
+    );
+    return m ? m[1] : "";
+  }
+
+  // Fill `src` with a YouTube/Vimeo embed URL, or a path to an .mp4/.webm and
+  // it switches to a native <video> player on its own.
   function renderVideo(v, extraClass) {
     if (!v) return "";
 
@@ -417,8 +428,10 @@
         (v.poster ? ' poster="' + esc(v.poster) + '"' : "") +
         '><source src="' + esc(src) + '"></video>';
     } else {
+      var ytId = youtubeId(src);
+      var embedSrc = ytId ? "https://www.youtube.com/embed/" + ytId : src;
       inner =
-        '<iframe class="unpri-video__player" src="' + esc(src) + '" ' +
+        '<iframe class="unpri-video__player" src="' + esc(embedSrc) + '" ' +
         'title="' + esc(v.title || "Video") + '" frameborder="0" loading="lazy" ' +
         'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
         "allowfullscreen></iframe>";
@@ -430,6 +443,172 @@
     }
     html += '<div class="unpri-video__frame">' + inner + "</div></figure>";
     return html;
+  }
+
+  /* ---------- shared: video grid (thumbnail cards that expand to play) ---------- */
+
+  function isFileVideo(src) {
+    return /\.(mp4|webm|ogg|ogv|mov)(\?|#|$)/i.test(src);
+  }
+
+  // The embed that replaces a thumbnail once it is clicked. Only used for
+  // YouTube / Vimeo links - a local .mp4 is already a <video> in the card
+  // and just gains controls, so nothing is swapped out for those.
+  function playerFor(src, title) {
+    var yt = youtubeId(src);
+    var url = yt
+      ? "https://www.youtube.com/embed/" + yt + "?autoplay=1&rel=0"
+      : src + (src.indexOf("?") > -1 ? "&" : "?") + "autoplay=1";
+    return (
+      '<iframe class="unpri-video__player" src="' + esc(url) + '" ' +
+      'title="' + esc(title || "Video") + '" frameborder="0" ' +
+      'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
+      "allowfullscreen></iframe>"
+    );
+  }
+
+  // One card:   [ thumbnail ]
+  //             [ title     ]
+  //             [ subtitle  ]
+  //
+  // Entry shape: { "image": "", "title": "", "subtitle": "", "src": "" }
+  //   src    - path to an .mp4 file, or a YouTube / Vimeo link.
+  //   image  - optional. Leave it EMPTY and the thumbnail comes from the
+  //            video itself: a local .mp4 shows its own first frame, a
+  //            YouTube link uses YouTube's thumbnail. Only set `image` to
+  //            override that with a picture of your own.
+  // Alumni may use "name" / "generasi" / "job" instead of title/subtitle:
+  // name becomes the title, generasi and job are joined into the subtitle.
+  function videoCard(v) {
+    if (!v) return "";
+
+    var src = (v.src || "").trim();
+    var title = has(v.title) ? v.title : v.name;
+    var subtitle = has(v.subtitle)
+      ? v.subtitle
+      : [v.generasi, v.job].filter(has).join(" · ");
+
+    var yt = youtubeId(src);
+    var image = has(v.image)
+      ? v.image
+      : yt
+      ? "https://img.youtube.com/vi/" + yt + "/hqdefault.jpg"
+      : "";
+
+    var media;
+    if (!has(image) && src && isFileVideo(src)) {
+      media =
+        '<video class="unpri-videoCard__media" preload="metadata" muted playsinline ' +
+        'src="' + esc(src) + '#t=0.1"></video>';
+    } else if (has(image)) {
+      media =
+        '<img src="' + esc(image) + '" alt="' + esc(title || "Video") +
+        '" loading="lazy" onerror="this.remove();">';
+    } else {
+      media = "";
+    }
+
+    var play = src
+      ? '<span class="unpri-videoCard__play" aria-hidden="true">' + icon("play") + "</span>"
+      : "";
+
+    var body = "";
+    if (has(title) || has(subtitle)) {
+      body =
+        '<figcaption class="unpri-videoCard__body">' +
+        (has(title) ? '<h4 class="unpri-videoCard__ttl">' + esc(title) + "</h4>" : "") +
+        (has(subtitle) ? '<p class="unpri-videoCard__sub">' + rich(subtitle) + "</p>" : "") +
+        "</figcaption>";
+    }
+
+    var frame = src
+      ? '<div class="unpri-videoCard__frame is-playable" role="button" tabindex="0" ' +
+        'data-video-src="' + esc(src) + '" data-video-title="' + esc(title || "") + '" ' +
+        'aria-label="Putar video' + (has(title) ? ": " + esc(title) : "") + '">' +
+        media + play + "</div>"
+      : '<div class="unpri-videoCard__frame">' + media + "</div>";
+
+    return '<figure class="unpri-videoCard">' + frame + body + "</figure>";
+  }
+
+  // `columns` is 3 by default; pass 2 for a two-up layout.
+  function renderVideoGrid(list, columns) {
+    if (!has(list)) return "";
+    return (
+      '<div class="unpri-videoGrid' + (columns === 2 ? " unpri-videoGrid--2" : "") + '">' +
+      list.map(videoCard).join("") +
+      "</div>"
+    );
+  }
+
+  // Picture + video side by side, for a section that has exactly one of each.
+  function renderMediaPair(picture, video) {
+    var cards = [picture, video].filter(function (m) {
+      return m && (has(m.image) || has(m.src));
+    });
+    if (!cards.length) return "";
+    return (
+      '<div class="unpri-videoGrid unpri-videoGrid--media ' +
+      (cards.length === 1 ? "unpri-videoGrid--single" : "unpri-videoGrid--2") +
+      '">' +
+      cards.map(videoCard).join("") +
+      "</div>"
+    );
+  }
+
+  // One delegated listener for every video card on the page, since the
+  // cards are rendered after this script runs.
+  function initVideoCards() {
+    function play(frame) {
+      var src = frame.getAttribute("data-video-src");
+      if (!src) return;
+
+      var vid = frame.querySelector("video");
+      if (vid) {
+        vid.setAttribute("controls", "controls");
+        vid.muted = false;
+        try {
+          vid.currentTime = 0;
+        } catch (err) {
+          /* metadata not in yet; it will start from the poster offset */
+        }
+        var p = vid.play();
+        if (p && p.catch) p.catch(function () {});
+      } else {
+        frame.innerHTML = playerFor(src, frame.getAttribute("data-video-title"));
+      }
+
+      frame.className = "unpri-videoCard__frame is-playing";
+      if (frame.parentNode && frame.parentNode.className) {
+        frame.parentNode.className += " is-playing";
+      }
+      frame.removeAttribute("role");
+      frame.removeAttribute("tabindex");
+      frame.removeAttribute("aria-label");
+      frame.removeAttribute("data-video-src");
+    }
+
+    function frameFrom(target) {
+      var node = target;
+      while (node && node !== document) {
+        if (node.getAttribute && node.getAttribute("data-video-src")) return node;
+        node = node.parentNode;
+      }
+      return null;
+    }
+
+    document.addEventListener("click", function (e) {
+      var frame = frameFrom(e.target);
+      if (frame) play(frame);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" && e.key !== " " && e.key !== "Spacebar") return;
+      var frame = frameFrom(e.target);
+      if (!frame) return;
+      e.preventDefault();
+      play(frame);
+    });
   }
 
   /* ---------- shared: statistik strip ---------- */
@@ -623,20 +802,10 @@
       placeholder: why.placeholder
     });
 
-    // 4. Sambutan Ketua Program Studi
-    var sambutan = d.sambutan || {};
-    html += block({
-      id: "sambutan",
-      icon: "pe-7s-chat",
-      title: sambutan.title || "Sambutan Ketua Program Studi",
-      inner: renderSambutan(sambutan),
-      placeholder: sambutan.placeholder
-    });
-
-    // 5. Alumni - filled from alumni.json once this panel is in the DOM.
-    html += '<div data-alumni-slot></div>';
-
-    // 6. Visi & Misi - two columns on one row.
+    // 4. Visi & Misi - two columns on one row.
+    //    (Sambutan Ketua Program Studi now lives in Struktural & Dosen as
+    //    the Kaprodi profile, and Alumni has its own tab, so neither one
+    //    sits here anymore.)
     var visi = "";
     if (d.visi) {
       visi =
@@ -677,18 +846,7 @@
       inner: visi || misi ? '<div class="unpri-vm">' + visi + misi + "</div>" : ""
     });
 
-    // 7. Nilai-nilai Program Studi
-    var nilai = d.nilai || {};
-    html += block({
-      id: "nilai",
-      icon: "pe-7s-medal",
-      title: nilai.title || "Nilai-nilai Program Studi",
-      intro: nilai.intro,
-      inner: renderValues(nilai.items),
-      placeholder: nilai.placeholder
-    });
-
-    // 8. Akreditasi + sertifikasi
+    // 5. Akreditasi + sertifikasi
     var akred = d.akreditasi || {};
     html += block({
       id: "akreditasi",
@@ -748,6 +906,126 @@
     );
   }
 
+  function renderFigure(fig) {
+    if (!fig || !has(fig.image)) return "";
+    var img =
+      '<img src="' + esc(fig.image) + '" alt="' + esc(fig.alt || fig.caption || "Diagram") +
+      '" loading="lazy" onerror="this.remove();">';
+    return (
+      '<figure class="unpri-figure">' +
+      '<a href="' + esc(fig.image) + '" target="_blank" rel="noopener">' + img + "</a>" +
+      (has(fig.caption) ? "<figcaption>" + esc(fig.caption) + "</figcaption>" : "") +
+      "</figure>"
+    );
+  }
+
+  // Stages of the alur pembelajaran: a numbered vertical timeline. Each stage
+  // takes a title, an English tagline, body paragraphs and an optional image.
+  function renderStages(list) {
+    if (!has(list)) return "";
+    return (
+      '<ol class="unpri-stages">' +
+      list
+        .map(function (st, i) {
+          var body = paragraphs(st.paragraphs);
+          if (!has(body) && has(st.text)) body = "<p>" + rich(st.text) + "</p>";
+
+          return (
+            '<li class="unpri-stage">' +
+            '<span class="unpri-stage__marker">' + esc(st.marker || i + 1) + "</span>" +
+            '<div class="unpri-stage__body">' +
+            '<h4 class="unpri-stage__ttl">' + esc(st.title) + "</h4>" +
+            (has(st.tagline)
+              ? '<p class="unpri-stage__tagline">' + esc(st.tagline) + "</p>"
+              : "") +
+            (has(body) ? '<div class="unpri-prose">' + body + "</div>" : "") +
+            (has(st.items) ? bullets(st.items) : "") +
+            (has(st.image)
+              ? '<figure class="unpri-stage__fig">' +
+                '<a href="' + esc(st.image) + '" target="_blank" rel="noopener">' +
+                '<img src="' + esc(st.image) + '" alt="' + esc(st.title) +
+                '" loading="lazy" onerror="this.remove();"></a></figure>'
+              : "") +
+            (has(st.video)
+              ? renderVideo(st.video, "unpri-stage__video")
+              : "") +
+            "</div></li>"
+          );
+        })
+        .join("") +
+      "</ol>"
+    );
+  }
+
+  // Kurikulum matrix. Rendered as a real table rather than a screenshot so it
+  // stays readable on a phone and the numbers can be corrected in the JSON.
+  function renderMatrix(m) {
+    if (!m || !has(m.rows)) return "";
+
+    var terms = m.terms || [];
+    var summary = "";
+    if (has(m.summary)) {
+      summary =
+        '<div class="unpri-sksRow">' +
+        m.summary
+          .map(function (t) {
+            return (
+              '<div class="unpri-sks">' +
+              '<span class="unpri-sks__term">' + esc(t.term) + "</span>" +
+              '<span class="unpri-sks__num">' + esc(t.sks) + '<small>SKS</small></span>' +
+              '<span class="unpri-sks__note">' + esc(t.note) + "</span>" +
+              "</div>"
+            );
+          })
+          .join("") +
+        "</div>";
+    }
+
+    var head =
+      "<thead><tr><th>No</th><th>Mata Kuliah</th>" +
+      terms.map(function (t) {
+        return "<th>" + esc(t) + "</th>";
+      }).join("") +
+      "<th>Total</th></tr></thead>";
+
+    var body =
+      "<tbody>" +
+      m.rows
+        .map(function (r, i) {
+          return (
+            "<tr><td>" + (i + 1) + "</td>" +
+            '<td class="unpri-matrix__name"><strong>' + esc(r.name) + "</strong>" +
+            (has(r.note) ? "<span>" + esc(r.note) + "</span>" : "") +
+            "</td>" +
+            (r.sks || [])
+              .map(function (v) {
+                return has(v) ? "<td>" + esc(v) + "</td>" : '<td class="is-empty">&mdash;</td>';
+              })
+              .join("") +
+            '<td class="unpri-matrix__total">' + esc(r.total) + "</td></tr>"
+          );
+        })
+        .join("") +
+      "</tbody>";
+
+    var foot = "";
+    if (has(m.totals)) {
+      foot =
+        '<tfoot><tr><td colspan="2">' + esc(m.totalsLabel || "Total SKS Beban Studi") + "</td>" +
+        m.totals.map(function (v) {
+          return "<td>" + esc(v) + "</td>";
+        }).join("") +
+        '<td class="unpri-matrix__total">' + esc(m.grandTotal) + "</td></tr></tfoot>";
+    }
+
+    return (
+      summary +
+      '<div class="unpri-matrixWrap"><table class="unpri-matrix">' +
+      head + body + foot +
+      "</table></div>"
+    );
+  }
+
   function renderAcademics(d) {
     var html = sectionTitle(d.sectionTitle || "Akademik & Karier");
 
@@ -756,9 +1034,49 @@
       id: "kurikulum",
       icon: "pe-7s-note2",
       title: kur.title || "Kurikulum dan Pembelajaran",
+      subtitle: kur.subtitle,
       intro: kur.intro,
-      inner: defBlocks(kur.blocks),
+      inner: renderMatrix(kur.matrix) + defBlocks(kur.blocks),
       placeholder: kur.placeholder
+    });
+
+    // Alur pembelajaran - the stage-by-stage clinical journey.
+    var alur = d.alur || {};
+    html += block({
+      id: "alur",
+      icon: "pe-7s-check",
+      title: alur.title || "Alur Pembelajaran",
+      subtitle: alur.subtitle,
+      intro: alur.intro,
+      inner: renderFigure(alur.figure) + renderStages(alur.stages),
+      placeholder: alur.placeholder || "Belum tersedia"
+    });
+
+    // Bidang ilmu - a plain chip list of the clinical departments.
+    var bidang = d.bidangIlmu || {};
+    var chips = (bidang.items || [])
+      .filter(has)
+      .map(function (t) {
+        return '<span class="unpri-tag">' + esc(t) + "</span>";
+      })
+      .join("");
+    html += block({
+      id: "bidang-ilmu",
+      icon: "pe-7s-study",
+      title: bidang.title || "Bidang Ilmu Kedokteran",
+      intro: bidang.intro,
+      inner: has(chips) ? '<div class="unpri-tagRow">' + chips + "</div>" : "",
+      placeholder: bidang.placeholder || "Belum tersedia"
+    });
+
+    var konsen = d.konsentrasi || {};
+    html += block({
+      id: "konsentrasi",
+      icon: "pe-7s-portfolio",
+      title: konsen.title || "Konsentrasi",
+      intro: konsen.intro,
+      inner: defBlocks(konsen.blocks),
+      placeholder: konsen.placeholder || "Belum tersedia"
     });
 
     var karier = d.peluangKarier || {};
@@ -768,15 +1086,38 @@
     }
     if (has(karier.paragraphs)) karierInner += paragraphs(karier.paragraphs);
     karierInner += renderCareerCards(karier.cards);
+    if (has(karier.closing)) {
+      karierInner +=
+        '<div class="unpri-closingBox">' +
+        (has(karier.closingTitle)
+          ? "<h4>" + esc(karier.closingTitle) + "</h4>"
+          : "") +
+        paragraphs(karier.closing) +
+        "</div>";
+    }
 
     html += block({
       id: "karier",
       icon: "pe-7s-portfolio",
       title: karier.title || "Peluang Karier Lulusan Profesi Dokter",
+      subtitle: karier.subtitle,
       inner: karierInner,
       placeholder: karier.placeholder
     });
 
+    var global = d.mobilitasGlobal || {};
+    html += block({
+      id: "mobilitas",
+      icon: "pe-7s-global",
+      title: global.title || "Mobilitas Global",
+      intro: global.intro,
+      inner: defBlocks(global.blocks),
+      placeholder: global.placeholder || "Belum tersedia"
+    });
+
+    // The sections below are extra content specific to Profesi Dokter, with
+    // no direct equivalent on the Profesi Dokter Gigi page - kept here
+    // rather than dropped, since the material is real.
     var cpl = d.cpl || {};
     html += block({
       id: "cpl",
@@ -785,28 +1126,6 @@
       intro: cpl.intro,
       inner: defBlocks(cpl.blocks),
       placeholder: cpl.placeholder
-    });
-
-    // Fasilitas Pendidikan - layout not decided yet, so this stays a
-    // deliberate "Coming Soon" block.
-    var fas = d.fasilitas || {};
-    html += block({
-      id: "fasilitas",
-      icon: "pe-7s-culture",
-      title: fas.title || "Fasilitas Pendidikan",
-      intro: fas.intro,
-      inner: has(fas.blocks) ? defBlocks(fas.blocks) : "",
-      placeholder: fas.placeholder || "Coming Soon"
-    });
-
-    var rs = d.rumahSakit || {};
-    html += block({
-      id: "clinical",
-      icon: "pe-7s-culture",
-      title: rs.title || "Rumah Sakit dan Clinical Learning Ecosystem",
-      intro: rs.intro,
-      inner: defBlocks(rs.blocks),
-      placeholder: rs.placeholder
     });
 
     var life = d.kehidupanMahasiswa || {};
@@ -837,20 +1156,25 @@
      ==================================================================== */
 
   function renderLecturers(d) {
-    var html = sectionTitle(d.sectionTitle || "Pimpinan & Dosen");
-    var inner = "";
-    var head = d.head;
+    var html = sectionTitle(d.sectionTitle || "Struktural & Dosen");
 
-    if (head && (has(head.name) || has(head.photo))) {
-      inner +=
-        '<div class="unpri-pmuLead">' +
-        '<div class="unpri-avatar unpri-avatar--lg">' +
-        (has(head.photo) ? '<img src="' + esc(head.photo) + '" alt="' + esc(head.name) + '">' : "") +
-        "</div><div>" +
-        '<p class="unpri-pmuLead__name">' + esc(head.name) + "</p>" +
-        '<p class="unpri-pmuLead__role">' + esc(head.role) + "</p>" +
-        "</div></div>";
+    // Kaprodi profile: portrait plus the write-up about them. This is the
+    // same bio that used to be the standalone "Sambutan" block in Gambaran
+    // Umum - it now lives here instead, next to the rest of the teaching
+    // staff, so the Kaprodi is not introduced twice on the page.
+    var kaprodi = d.kaprodi || {};
+    if (has(kaprodi.paragraphs) || has(kaprodi.name)) {
+      html += block({
+        id: "kaprodi",
+        icon: "pe-7s-chat",
+        title: kaprodi.title || "Ketua Program Studi",
+        inner: renderSambutan(kaprodi),
+        placeholder: kaprodi.placeholder
+      });
     }
+
+    var narasi = d.narasi || {};
+    var inner = paragraphs(narasi.paragraphs);
 
     // One card per dosen. The field set mirrors the "Dosen" form in the
     // Isi Website doc: Nama Lengkap (the heading) plus Gelar Akademik,
@@ -910,22 +1234,26 @@
       })
       .join("");
 
-    if (has(cards)) {
-      inner +=
-        '<div class="unpri-lecturers">' +
-        '<span class="unpri-badge unpri-badge--outline">' +
-        esc(d.sectionLabel || "Dosen Tetap") + "</span>" +
-        '<div class="unpri-dosenGrid">' + cards + "</div>" +
-        "</div>";
-    }
+    // Roster under the narrative, introduced by a centred heading rather
+    // than the old outline pill. Until names are added a short line sits
+    // under the heading, so the card reads as unfinished rather than
+    // broken.
+    inner +=
+      '<div class="unpri-lecturers">' +
+      '<h4 class="unpri-rosterTitle">' + esc(d.sectionLabel || "Dosen Tetap") + "</h4>" +
+      (has(cards)
+        ? '<div class="unpri-dosenGrid">' + cards + "</div>"
+        : '<p class="unpri-defEmpty unpri-lecturers__empty">' +
+          esc(d.placeholder || "Daftar dosen akan ditampilkan di sini.") + "</p>") +
+      "</div>";
 
     html += block({
       id: "pimpinan",
       icon: "pe-7s-users",
-      title: d.title || "Pimpinan & Dosen",
+      title: narasi.title || d.title || "Struktural & Dosen",
+      subtitle: narasi.subtitle,
       intro: d.intro,
-      inner: inner,
-      placeholder: d.placeholder
+      inner: inner
     });
 
     return html;
@@ -986,26 +1314,159 @@
   // Umum panel, just above Visi & Misi. Kept in its own file so the alumni
   // data stays easy to find and edit.
   function renderAlumni(d) {
-    // "Cerita Alumni" video.
-    var html = renderVideo(d.video, "unpri-video--alumni");
+    var html = sectionTitle(d.sectionTitle || "Alumni");
 
-    // Tracer study, serapan lulusan and peluang karier live inside the same
-    // Profil Alumni card as the alumni themselves - they are facts about the
-    // same group of people, not a separate section.
+    // Everything lives in the one "Cerita Perjalanan" card: the narrative,
+    // then the alumni video grid (video on top, name / generasi / pekerjaan
+    // underneath), then any written profiles and the tracer-study blocks.
     var profil = d.profil || {};
-    var inner = renderAlumniCards(profil.items);
+    var inner = renderVideoGrid(d.videos) + renderAlumniCards(profil.items);
     if (has(d.blocks)) inner += defBlocks(d.blocks);
 
     html += block({
       id: "alumni-profil",
       icon: "pe-7s-graph3",
       title: profil.title || "Profil Alumni",
+      subtitle: profil.subtitle,
       intro: profil.intro,
-      inner: inner,
+      inner: paragraphs(profil.paragraphs) + inner,
       placeholder: profil.placeholder
     });
 
     return html;
+  }
+
+  /* ====================================================================
+     SARANA PRASARANA
+     ==================================================================== */
+
+  // Facility tiles: a photo with a name and a short line under it. Same
+  // masonry board as the agenda, so the photos can be any shape.
+  function renderFacilities(d) {
+    var items = (d.items || []).filter(function (f) {
+      return has(f.title) || has(f.image);
+    });
+
+    var inner = "";
+    if (items.length) {
+      inner =
+        '<div class="unpri-tileBoard">' +
+        items
+          .map(function (f) {
+            return (
+              '<figure class="unpri-tile">' +
+              '<div class="unpri-tile__img" style="--tile-ratio: ' +
+              esc(f.ratio || "4/3") + '">' +
+              (has(f.image)
+                ? '<img src="' + esc(f.image) + '" alt="' + esc(f.title || "Sarana") +
+                  '" loading="lazy" onerror="this.remove();">'
+                : "") +
+              '<span class="unpri-tile__ph" aria-hidden="true">' + icon("pe-7s-photo") + "</span>" +
+              "</div>" +
+              '<figcaption class="unpri-tile__cap">' +
+              (has(f.title) ? '<h4 class="unpri-tile__ttl">' + esc(f.title) + "</h4>" : "") +
+              (has(f.text) ? '<p class="unpri-tile__meta">' + rich(f.text) + "</p>" : "") +
+              "</figcaption></figure>"
+            );
+          })
+          .join("") +
+        "</div>";
+    }
+
+    var html =
+      sectionTitle(d.sectionTitle || "Sarana Prasarana") +
+      block({
+        id: "sarana",
+        icon: "pe-7s-culture",
+        title: d.title || "Sarana & Prasarana",
+        subtitle: d.subtitle,
+        intro: d.intro,
+        inner:
+          paragraphs(d.paragraphs) +
+          (d.picture || d.video
+            ? renderMediaPair(d.picture, d.video)
+            : renderVideoGrid(d.videos)) +
+          inner,
+        placeholder: d.placeholder || "Belum tersedia"
+      });
+
+    if (has(d.blocks)) {
+      html += block({
+        id: "sarana-detail",
+        icon: "pe-7s-note2",
+        title: d.blocksTitle || "Keterangan Sarana",
+        inner: defBlocks(d.blocks)
+      });
+    }
+
+    return html;
+  }
+
+  /* ====================================================================
+     TEMU PAKAR KEDOKTERAN
+     ==================================================================== */
+
+  // Sessions with a speaker, a topic and a date. Same card shape as the
+  // alumni profiles, since both are "a person plus a few labelled facts".
+  function renderTemuPakar(d) {
+    var items = (d.items || []).filter(function (e) {
+      return has(e.name) || has(e.title);
+    });
+
+    var inner = "";
+    if (items.length) {
+      inner =
+        '<div class="unpri-alumniGrid">' +
+        items
+          .map(function (e) {
+            var photo =
+              '<div class="unpri-alumniCard__photo">' +
+              (has(e.photo)
+                ? '<img src="' + esc(e.photo) + '" alt="' + esc(e.name || "Pakar") +
+                  '" loading="lazy" onerror="this.remove();">'
+                : "") +
+              '<span class="unpri-alumniCard__ph" aria-hidden="true">' +
+              icon("pe-7s-users") + "</span></div>";
+
+            var rows = (e.details || [])
+              .filter(function (r) {
+                return has(r.label);
+              })
+              .map(function (r) {
+                return (
+                  '<li><span class="unpri-alumniCard__key">' + esc(r.label) + "</span>" +
+                  '<span class="unpri-alumniCard__val">' +
+                  (has(r.value) ? rich(r.value) : "&mdash;") + "</span></li>"
+                );
+              })
+              .join("");
+
+            return (
+              '<article class="unpri-alumniCard">' + photo +
+              '<div class="unpri-alumniCard__body">' +
+              '<h4 class="unpri-alumniCard__name">' + esc(e.name || e.title) + "</h4>" +
+              (has(e.role) ? '<p class="unpri-alumniCard__role">' + esc(e.role) + "</p>" : "") +
+              (has(rows) ? '<ul class="unpri-alumniCard__list">' + rows + "</ul>" : "") +
+              (has(e.summary) ? '<p class="unpri-alumniCard__quote">' + rich(e.summary) + "</p>" : "") +
+              "</div></article>"
+            );
+          })
+          .join("") +
+        "</div>";
+    }
+
+    return (
+      sectionTitle(d.sectionTitle || "Temu Pakar Kedokteran") +
+      block({
+        id: "temupakar",
+        icon: "pe-7s-chat",
+        title: d.title || "Temu Pakar Kedokteran",
+        subtitle: d.subtitle,
+        intro: d.intro,
+        inner: paragraphs(d.paragraphs) + renderVideoGrid(d.videos, 2) + inner,
+        placeholder: d.placeholder || "Belum tersedia"
+      })
+    );
   }
 
   /* ====================================================================
@@ -1333,14 +1794,13 @@
 
   function boot() {
     initFaqAccordion();
-    // Gambaran Umum first; the alumni block is rendered into the slot it
-    // leaves behind, so it has to wait for the panel to exist.
-    load("overview.json", '[data-panel="overview"]', "Gambaran Umum", renderOverview,
-      function () {
-        load("alumni.json", "[data-alumni-slot]", "Alumni", renderAlumni);
-      });
+    initVideoCards();
+    load("overview.json", '[data-panel="overview"]', "Gambaran Umum", renderOverview);
     load("academics.json", '[data-panel="academics"]', "Akademik & Karier", renderAcademics);
-    load("lecturers.json", '[data-panel="lecturers"]', "Pimpinan & Dosen", renderLecturers);
+    load("lecturers.json", '[data-panel="lecturers"]', "Struktural & Dosen", renderLecturers);
+    load("facilities.json", '[data-panel="facilities"]', "Sarana Prasarana", renderFacilities);
+    load("temupakar.json", '[data-panel="temupakar"]', "Temu Pakar Kedokteran", renderTemuPakar);
+    load("alumni.json", '[data-panel="alumni"]', "Alumni", renderAlumni);
     load("news.json", '[data-panel="news"]', "Berita & Agenda", renderNews);
     load("partners.json", '[data-panel="partners"]', "Mitra", renderPartners);
     load("faq.json", '[data-panel="faq"]', "FAQ", renderFaq);
